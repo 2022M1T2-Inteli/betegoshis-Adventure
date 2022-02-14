@@ -6,9 +6,9 @@
 
 # Nome do Projeto
 
-## Nome do Grupo
+## Nome do Grupo: BeTeGoshi
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://github.com/sofipimazzoni">Sofia</a>, <a href="https://github.com/YuSoSerius">Pedro Henrique</a>, <a href="https://github.com/gaebizinha">Gabriela</a>, <a href="https://github.com/R0drigu3svi">Vitória</a>, <a href="https://github.com/Lukovsk">Lucas</a>, <a href="https://github.com/joaoalca">João</a>, <a href="https://github.com/danielquintaos">Daniel</a>
 
 ## Descrição
 
