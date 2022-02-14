@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://github.com/sofipimazzoni">Sofia</a>, <a href="https://github.com/YuSoSerius">Pedro henrique</a>, <a href="https://github.com/gaebizinha">Gabriela</a>, <a href="https://github.com/R0drigu3svi">Vitória</a>, <a href="https://github.com/Lukovsk">Lucas</a>, <a href="https://github.com/joaoalca">João</a>, <a href="https://github.com/danielquintaos">Daniel</a>
+## Integrantes: <a href="https://github.com/sofipimazzoni">Sofia</a>, <a href="https://github.com/YuSoSerius">Pedro Henrique</a>, <a href="https://github.com/gaebizinha">Gabriela</a>, <a href="https://github.com/R0drigu3svi">Vitória</a>, <a href="https://github.com/Lukovsk">Lucas</a>, <a href="https://github.com/joaoalca">João</a>, <a href="https://github.com/danielquintaos">Daniel</a>
 
 ## Descrição
 
