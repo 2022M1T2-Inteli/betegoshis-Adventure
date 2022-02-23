@@ -1,0 +1,214 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Personagem Principal Principalmente lindo.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 92.7718, 26.885 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "correndinho pra baixo"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 21, 22, 23, 18 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "correndinho pra cima"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38, 9, 10, 11, 6 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "correndinho pra direita"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "correndinho pra esquerda"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15, 16, 17, 12 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "paradinhozinho"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 1387, 604 )
+scale = Vector2( 0.474283, 0.557933 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.10767, 1.79224 )
+scale = Vector2( 4.7296, 3.77268 )
+texture = ExtResource( 3 )
+hframes = 12
+vframes = 8
+frame = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.1084, 68.1085 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.10941, 0.000198364 )
+script = ExtResource( 2 )
+
+[node name="Esquerda" type="Button" parent="Camera2D"]
+margin_left = -902.0
+margin_top = 260.0
+margin_right = -741.0
+margin_bottom = 386.0
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Direita" type="Button" parent="Camera2D"]
+margin_left = -586.147
+margin_top = 263.472
+margin_right = -422.147
+margin_bottom = 385.472
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baixo" type="Button" parent="Camera2D"]
+margin_left = -742.172
+margin_top = 381.766
+margin_right = -586.172
+margin_bottom = 510.766
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cima" type="Button" parent="Camera2D"]
+margin_left = -742.172
+margin_top = 136.217
+margin_right = -582.172
+margin_bottom = 264.217
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Camera2D"]
+
+[node name="Button" type="Button" parent="Camera2D"]
+margin_left = 578.0
+margin_top = 294.0
+margin_right = 1075.0
+margin_bottom = 536.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 792.777
+margin_top = -534.115
+margin_right = 860.777
+margin_bottom = -520.115
+rect_scale = Vector2( 4.21782, 4.94442 )
+text = "R$1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+"anims/correndinho pra baixo" = SubResource( 3 )
+"anims/correndinho pra cima" = SubResource( 4 )
+"anims/correndinho pra direita" = SubResource( 5 )
+"anims/correndinho pra esquerda" = SubResource( 6 )
+anims/paradinhozinho = SubResource( 7 )
+
+[connection signal="button_down" from="Camera2D/Esquerda" to="." method="_on_Esquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Esquerda" to="." method="_on_Esquerda_button_up"]
+[connection signal="button_down" from="Camera2D/Direita" to="." method="_on_Direita_button_down"]
+[connection signal="button_up" from="Camera2D/Direita" to="." method="_on_Direita_button_up"]
+[connection signal="button_down" from="Camera2D/Baixo" to="." method="_on_Baixo_button_down"]
+[connection signal="button_up" from="Camera2D/Baixo" to="." method="_on_Baixo_button_up"]
+[connection signal="button_down" from="Camera2D/Cima" to="." method="_on_Cima_button_down"]
+[connection signal="button_up" from="Camera2D/Cima" to="." method="_on_Cima_button_up"]
