@@ -42,8 +42,8 @@ func _on_Cassino_TP2_body_entered(_body): #sai DO cassino
 
 
 func _on_TP_Sala_de_Aula_body_entered(_body): #sai da sala de aula
-	self.position.x = 1376
-	self.position.y = -111
+	self.position.x = 1390
+	self.position.y = -830
 
 
 
@@ -82,3 +82,12 @@ func _on_Esquerda_button_down():
 
 func _on_Esquerda_button_up():
 	irEsquerda = false
+
+var contadorBotaoConfig = 0
+
+func _on_Config_pressed():
+	contadorBotaoConfig += 1
+	if contadorBotaoConfig%2 == 1:
+		$Camera2D/Config/Sprite.visible = true
+	if contadorBotaoConfig%2 == 0:
+		$Camera2D/Config/Sprite.visible = false

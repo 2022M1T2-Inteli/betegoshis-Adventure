@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Action RPG Resources/Player/Personagem Principal Principalmente lindo.png" type="Texture" id=3]
+[ext_resource path="res://Gastos diários.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 92.7718, 26.885 )
@@ -131,40 +133,40 @@ position = Vector2( -2.10941, 0.000198364 )
 script = ExtResource( 2 )
 
 [node name="Esquerda" type="Button" parent="Camera2D"]
-margin_left = -1499.1
-margin_top = 385.463
-margin_right = -1338.1
-margin_bottom = 511.463
+margin_left = -1227.11
+margin_top = 315.562
+margin_right = -1066.11
+margin_bottom = 441.562
 text = "<"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Direita" type="Button" parent="Camera2D"]
-margin_left = -1183.25
-margin_top = 388.935
-margin_right = -1019.25
-margin_bottom = 510.935
+margin_left = -911.264
+margin_top = 319.034
+margin_right = -747.264
+margin_bottom = 441.034
 text = ">"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Baixo" type="Button" parent="Camera2D"]
-margin_left = -1339.28
-margin_top = 507.229
-margin_right = -1183.28
-margin_bottom = 636.229
+margin_left = -1067.29
+margin_top = 437.328
+margin_right = -911.294
+margin_bottom = 566.328
 text = "v"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cima" type="Button" parent="Camera2D"]
-margin_left = -1339.28
-margin_top = 261.68
-margin_right = -1179.28
-margin_bottom = 389.68
+margin_left = -1067.29
+margin_top = 191.779
+margin_right = -907.294
+margin_bottom = 319.779
 text = "^"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -186,6 +188,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Config" type="Button" parent="Camera2D"]
+margin_left = -1018.38
+margin_top = -509.022
+margin_right = -816.378
+margin_bottom = -375.022
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Config"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 0.141176, 0.141176, 1 )
+position = Vector2( 959.994, 480.596 )
+scale = Vector2( 0.56856, 0.530493 )
+texture = ExtResource( 4 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 "anims/correndinho pra baixo" = SubResource( 3 )
@@ -202,3 +222,6 @@ anims/paradinhozinho = SubResource( 7 )
 [connection signal="button_up" from="Camera2D/Baixo" to="." method="_on_Baixo_button_up"]
 [connection signal="button_down" from="Camera2D/Cima" to="." method="_on_Cima_button_down"]
 [connection signal="button_up" from="Camera2D/Cima" to="." method="_on_Cima_button_up"]
+[connection signal="button_down" from="Camera2D/Config" to="." method="_on_Config_button_down"]
+[connection signal="button_up" from="Camera2D/Config" to="." method="_on_Config_button_up"]
+[connection signal="pressed" from="Camera2D/Config" to="." method="_on_Config_pressed"]
