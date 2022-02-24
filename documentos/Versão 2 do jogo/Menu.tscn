@@ -1,0 +1,69 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu.gd" type="Script" id=1]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Botões" type="HBoxContainer" parent="."]
+anchor_left = 0.04
+anchor_top = 0.022
+anchor_right = 0.04
+anchor_bottom = 0.022
+margin_left = 363.04
+margin_top = 275.8
+margin_right = 575.04
+margin_bottom = 348.8
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Configurações" type="Button" parent="Botões"]
+margin_right = 101.0
+margin_bottom = 73.0
+text = "Configurações"
+
+[node name="Iniciar" type="Button" parent="Botões"]
+margin_left = 105.0
+margin_right = 173.0
+margin_bottom = 73.0
+text = "Começar"
+
+[node name="Sair" type="Button" parent="Botões"]
+margin_left = 177.0
+margin_right = 212.0
+margin_bottom = 73.0
+text = "Sair"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 426.0
+margin_top = 208.0
+margin_right = 592.0
+margin_bottom = 222.0
+text = "Colocais vosso nome aqui"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 420.0
+margin_top = 189.0
+margin_right = 631.0
+margin_bottom = 241.0
+text = "Colocais vosso nome aqui"
+syntax_highlighting = true
+fold_gutter = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[connection signal="pressed" from="Botões/Iniciar" to="." method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="Botões/Sair" to="." method="_on_Sair_pressed"]
