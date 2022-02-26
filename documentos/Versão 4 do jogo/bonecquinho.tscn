@@ -1,0 +1,225 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Personagem Principal Principalmente lindo.png" type="Texture" id=3]
+[ext_resource path="res://Gastos diários.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47.4401, 18.8194 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "correndinho pra baixo"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 21, 22, 23, 18 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "correndinho pra cima"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 36, 37, 38, 9, 10, 11, 6 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "correndinho pra direita"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 3, 4, 5, 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "correndinho pra esquerda"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15, 16, 17, 12 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "paradinhozinho"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 1387, 604 )
+scale = Vector2( 0.474283, 0.557933 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.10767, 1.79224 )
+scale = Vector2( 3.37096, 2.55712 )
+texture = ExtResource( 3 )
+hframes = 12
+vframes = 8
+frame = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.1626, 49.2891 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.10843, 7.62937e-05 )
+script = ExtResource( 2 )
+
+[node name="Esquerda" type="Button" parent="Camera2D"]
+margin_left = -1028.92
+margin_top = 260.0
+margin_right = -867.921
+margin_bottom = 386.0
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Direita" type="Button" parent="Camera2D"]
+margin_left = -713.076
+margin_top = 263.472
+margin_right = -549.076
+margin_bottom = 385.472
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baixo" type="Button" parent="Camera2D"]
+margin_left = -869.102
+margin_top = 381.766
+margin_right = -713.106
+margin_bottom = 510.766
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cima" type="Button" parent="Camera2D"]
+margin_left = -869.102
+margin_top = 136.217
+margin_right = -709.106
+margin_bottom = 264.217
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 792.777
+margin_top = -534.115
+margin_right = 860.777
+margin_bottom = -520.115
+rect_scale = Vector2( 4.21782, 4.94442 )
+text = "R$1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Config" type="Button" parent="Camera2D"]
+margin_left = -1018.38
+margin_top = -509.022
+margin_right = -816.378
+margin_bottom = -375.022
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Config"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 0.141176, 0.141176, 1 )
+position = Vector2( 959.994, 480.596 )
+scale = Vector2( 0.56856, 0.530493 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+"anims/correndinho pra baixo" = SubResource( 3 )
+"anims/correndinho pra cima" = SubResource( 4 )
+"anims/correndinho pra direita" = SubResource( 5 )
+"anims/correndinho pra esquerda" = SubResource( 6 )
+anims/paradinhozinho = SubResource( 7 )
+
+[connection signal="button_down" from="Camera2D/Esquerda" to="." method="_on_Esquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Esquerda" to="." method="_on_Esquerda_button_up"]
+[connection signal="button_down" from="Camera2D/Direita" to="." method="_on_Direita_button_down"]
+[connection signal="button_up" from="Camera2D/Direita" to="." method="_on_Direita_button_up"]
+[connection signal="button_down" from="Camera2D/Baixo" to="." method="_on_Baixo_button_down"]
+[connection signal="button_up" from="Camera2D/Baixo" to="." method="_on_Baixo_button_up"]
+[connection signal="button_down" from="Camera2D/Cima" to="." method="_on_Cima_button_down"]
+[connection signal="button_up" from="Camera2D/Cima" to="." method="_on_Cima_button_up"]
+[connection signal="button_down" from="Camera2D/Config" to="." method="_on_Config_button_down"]
+[connection signal="button_up" from="Camera2D/Config" to="." method="_on_Config_button_up"]
+[connection signal="pressed" from="Camera2D/Config" to="." method="_on_Config_pressed"]
