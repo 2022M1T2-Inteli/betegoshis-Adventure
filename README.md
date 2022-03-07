@@ -101,6 +101,7 @@ Através da cópia/clone/ download do repositório, altere os dados do readme.md
 Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
+Entre no Github e baixe link fornecido. Logo após o clique, entre no Godot e importe o jogo. 
 
 -<a href="https://godotengine.org/download">GODOT</a>
 
