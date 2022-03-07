@@ -24,9 +24,10 @@ Nosso projeto é um jogo que tem como finalidade ensinar educação financeira.
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
-<br><br>
-May the force be with you!
+O objetivo do projeto é multilateral. Analisando a partir do lado privado, o objetivo é ensinar aos alunos Inteli como desenvolver um jogo e como realizar um projeto. Analisando a partir do lado público, o objetivo primordial é ensinar educação financeira para adolescentes e jovens de uma forma divertida e lúdica, isto é, o jogo está sendo criado para que indivíduos aprendam a administrar o próprio dinheiro (posto que há um déficit na cultura de educação financeira na sociedade).
+O jogo estimulará o hábito de organização da própria vida financeira, implementando cenários com a abstração da teoria por trás da educação financeira, e cenários que demonstram situações onde esses conhecimentos podem e devem ser aplicados. Será um jogo com os cenários abertos, nos quais haverão diversas interações com o universo do avatar. Além disso, os cenários seguirão uma temática de cidade, com um dos cenários-palco sendo a universidade, onde o protagonista/jogador aprenderá conceitos relacionados à Educação Financeira. Nos demais cenários, aplicar esses conceitos na prática será necessário. Não aplicando, ou aplicando incorretamente, penalidades serão administradas.
+O jogo está sendo criado a partir do zero em um contexto universitário, em parceria com empresas que notaram problemas que podiam ser resolvidos por meio de sua gamificação.
+
 <br><br>
 
 ## 🛠 Estrutura de pastas
