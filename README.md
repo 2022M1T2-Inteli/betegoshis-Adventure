@@ -8,7 +8,7 @@
 
 ## Nome do Grupo: BeTeGoshi
 
-## Integrantes: <a href="https://github.com/sofipimazzoni">Sofia Pimazzoni</a>, <a href="https://github.com/YuSoSerius">Pedro Henrique</a>, <a href="https://github.com/gaebizinha">Gabriela</a>, <a href="https://github.com/R0drigu3svi">Vitória</a>, <a href="https://github.com/Lukovsk">Lucas</a>, <a href="https://github.com/joaoalca">João</a>, <a href="https://github.com/danielquintaos">Daniel</a>
+## Integrantes: <a href="https://github.com/sofipimazzoni">Sofia Pimazzoni</a>, <a href="https://github.com/YuSoSerius">Pedro Henrique Oliveira</a>, <a href="https://github.com/gaebizinha">Gabriela Silva</a>, <a href="https://github.com/R0drigu3svi">Vitória Rodrigues</a>, <a href="https://github.com/Lukovsk">Lucas Henrique Sales</a>, <a href="https://github.com/joaoalca">João Pedro Alcaraz</a>, <a href="https://github.com/danielquintaos">Daniel Quintão</a>
 
 ## Descrição
 
