@@ -1,0 +1,633 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Fox sheet.png" type="Texture" id=3]
+[ext_resource path="res://Gastos diários.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://ipad.png" type="Texture" id=6]
+[ext_resource path="res://Config.gd" type="Script" id=7]
+[ext_resource path="res://MAPA VERSAO 1.png" type="Texture" id=8]
+[ext_resource path="res://onibus img.png" type="Texture" id=9]
+[ext_resource path="res://taxi img.png" type="Texture" id=10]
+[ext_resource path="res://metro img.png" type="Texture" id=11]
+[ext_resource path="res://bike img.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48.262, 20.4397 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "correndinho pra baixo"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "correndinho pra cima"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "correndinho pra direita"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "correndinho pra esquerda"
+length = 0.35
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "paradinhonzino pra esquerda"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "paradinhozinho"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "paradinhozinho pra cima"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "paradinhozinho pra direita"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 1389, 604 )
+scale = Vector2( 0.474283, 0.557933 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.10815, 8.96167 )
+scale = Vector2( 4.76439, 3.61414 )
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.0542, 47.8759 )
+scale = Vector2( 0.93928, 0.93928 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.10843, 7.62937e-05 )
+script = ExtResource( 2 )
+
+[node name="Controles" type="Sprite" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0.109804 )
+position = Vector2( 428.015, -265.265 )
+scale = Vector2( 1.405, 1.5123 )
+
+[node name="Esquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -1057.97
+margin_top = 263.107
+margin_right = -896.975
+margin_bottom = 389.107
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Direita" type="Button" parent="Camera2D/Controles"]
+margin_left = -679.805
+margin_top = 263.107
+margin_right = -515.805
+margin_bottom = 385.107
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Baixo" type="Button" parent="Camera2D/Controles"]
+margin_left = -868.89
+margin_top = 411.252
+margin_right = -712.89
+margin_bottom = 530.252
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Cima" type="Button" parent="Camera2D/Controles"]
+margin_left = -870.39
+margin_top = 117.331
+margin_right = -710.39
+margin_bottom = 236.331
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="BaixoEsquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -1023.46
+margin_top = 380.438
+margin_right = -860.459
+margin_bottom = 500.438
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="BaixoDireita" type="Button" parent="Camera2D/Controles"]
+margin_left = -720.323
+margin_top = 379.253
+margin_right = -553.323
+margin_bottom = 499.253
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CimaDireita" type="Button" parent="Camera2D/Controles"]
+margin_left = -720.323
+margin_top = 154.072
+margin_right = -553.323
+margin_bottom = 274.072
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CimaEsquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -1020.46
+margin_top = 155.257
+margin_right = -857.457
+margin_bottom = 275.257
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Camera2D"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1066.87
+margin_top = -523.36
+margin_right = -998.873
+margin_bottom = -509.36
+rect_scale = Vector2( 4.21782, 4.94442 )
+text = "R$1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Config" type="Button" parent="Camera2D"]
+margin_left = 848.0
+margin_top = -523.0
+margin_right = 1048.0
+margin_bottom = -389.0
+rect_scale = Vector2( 1.05992, 0.923897 )
+text = "iPAD"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ipad" type="Sprite" parent="Camera2D/Config"]
+position = Vector2( 101.261, 65.9584 )
+scale = Vector2( 0.847473, 0.793231 )
+texture = ExtResource( 6 )
+
+[node name="iPad" type="Panel" parent="Camera2D/Config"]
+visible = false
+margin_left = -43.7634
+margin_top = 65.9589
+margin_right = -3.76343
+margin_bottom = 105.959
+rect_scale = Vector2( 1.21806, 1.02943 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="Sprite" parent="Camera2D/Config/iPad"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 0.141176, 0.141176, 1 )
+position = Vector2( -631.576, 481.801 )
+scale = Vector2( 0.618357, 0.601177 )
+texture = ExtResource( 4 )
+
+[node name="apps" type="Sprite" parent="Camera2D/Config/iPad"]
+position = Vector2( 160.121, 845.118 )
+
+[node name="AjustesB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -1319.89, -627.316 )
+scale = Vector2( 2.06068, 2.06068 )
+
+[node name="Ajustesimg" type="Sprite" parent="Camera2D/Config/iPad/apps/AjustesB"]
+texture = ExtResource( 5 )
+
+[node name="Ajustestxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/AjustesB"]
+margin_left = -23.1929
+margin_top = -51.9775
+margin_right = 33.8071
+margin_bottom = -32.9775
+text = "Ajustes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgendaB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -961.451, -625.523 )
+scale = Vector2( 2.09348, 2.09348 )
+
+[node name="Agendaimg" type="Sprite" parent="Camera2D/Config/iPad/apps/AgendaB"]
+texture = ExtResource( 5 )
+
+[node name="Agendatxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/AgendaB"]
+margin_left = -25.3013
+margin_top = -53.7698
+margin_right = 29.6987
+margin_bottom = -35.7698
+text = "Agenda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BancoB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -782.233, -627.315 )
+scale = Vector2( 2.10424, 2.10424 )
+
+[node name="Bancoimg" type="Sprite" parent="Camera2D/Config/iPad/apps/BancoB"]
+texture = ExtResource( 5 )
+
+[node name="Bancotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/BancoB"]
+margin_left = -21.0845
+margin_top = -50.1852
+margin_right = 27.9155
+margin_bottom = -34.1852
+text = "Banco"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RevisaoB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -603.015, -623.731 )
+scale = Vector2( 2.11015, 2.11015 )
+
+[node name="Revisaoimg" type="Sprite" parent="Camera2D/Config/iPad/apps/RevisaoB"]
+texture = ExtResource( 5 )
+
+[node name="Revisaotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/RevisaoB"]
+margin_left = -27.4097
+margin_top = -55.5623
+margin_right = 31.5903
+margin_bottom = -33.5623
+text = "Revisão"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapaB" type="Button" parent="Camera2D/Config/iPad/apps"]
+margin_left = -1189.16
+margin_top = -673.916
+margin_right = -1137.16
+margin_bottom = -622.916
+rect_scale = Vector2( 2.0407, 2.0407 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapaimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB"]
+position = Vector2( 24.745, 24.0271 )
+texture = ExtResource( 5 )
+
+[node name="Mapatxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB"]
+margin_left = 4.86536
+margin_top = -28.2794
+margin_right = 44.8654
+margin_bottom = -6.27945
+rect_scale = Vector2( 0.959009, 0.959009 )
+text = "Mapa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapaI" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB"]
+visible = false
+position = Vector2( 188.147, 145.123 )
+scale = Vector2( 0.39504, 0.39504 )
+texture = ExtResource( 8 )
+
+[node name="Taxiimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( -593.49, 376.97 )
+scale = Vector2( 0.696841, 0.65048 )
+texture = ExtResource( 10 )
+
+[node name="TaxiB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Taxiimg"]
+show_behind_parent = true
+margin_left = -177.443
+margin_top = -151.81
+margin_right = 179.557
+margin_bottom = 190.19
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Taxitxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Taxiimg"]
+margin_left = -101.857
+margin_top = -175.292
+margin_right = 58.1426
+margin_bottom = -86.2922
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onibusimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( 127.627, 369.345 )
+scale = Vector2( 0.578323, 0.578323 )
+texture = ExtResource( 9 )
+
+[node name="OnibusB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Onibusimg"]
+show_behind_parent = true
+margin_left = -217.0
+margin_top = -150.0
+margin_right = 256.0
+margin_bottom = 186.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onibustxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Onibusimg"]
+margin_left = -45.5378
+margin_top = -238.483
+margin_right = 114.462
+margin_bottom = -149.483
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metroimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( 564.088, 372.852 )
+scale = Vector2( 0.741862, 0.659211 )
+texture = ExtResource( 11 )
+
+[node name="MetroB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Metroimg"]
+show_behind_parent = true
+margin_left = -244.0
+margin_top = -130.0
+margin_right = 201.0
+margin_bottom = 170.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metrotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Metroimg"]
+margin_left = 91.0
+margin_top = 102.0
+margin_right = 251.0
+margin_bottom = 191.0
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bikeimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( -221.637, 376.414 )
+scale = Vector2( 0.353553, 0.353553 )
+texture = ExtResource( 12 )
+
+[node name="BikeB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Bikeimg"]
+show_behind_parent = true
+margin_left = -267.0
+margin_top = -364.0
+margin_right = 214.0
+margin_bottom = 297.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Biketxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Bikeimg"]
+margin_left = -112.272
+margin_top = -469.596
+margin_right = 47.728
+margin_bottom = -380.596
+bbcode_enabled = true
+bbcode_text = "
+
+[center][b]Taxi[i][/center]
+"
+text = "
+
+Taxi[/center]
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseMAPButton" type="Button" parent="Camera2D/Config/iPad/apps/MapaB"]
+visible = false
+margin_left = 420.229
+margin_top = -50.6494
+margin_right = 441.229
+margin_bottom = -30.6494
+rect_scale = Vector2( 1.39601, 1.39601 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ipad" type="Sprite" parent="Camera2D/Config/iPad"]
+position = Vector2( -647.414, 470.521 )
+scale = Vector2( 5.97263, 5.57275 )
+texture = ExtResource( 6 )
+
+[node name="CloseiPad" type="Button" parent="Camera2D/Config/iPad"]
+margin_left = -42.0
+margin_top = 19.0
+margin_right = -18.0
+margin_bottom = 43.0
+rect_scale = Vector2( 2.77434, 2.77434 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+"anims/correndinho pra baixo" = SubResource( 3 )
+"anims/correndinho pra cima" = SubResource( 4 )
+"anims/correndinho pra direita" = SubResource( 5 )
+"anims/correndinho pra esquerda" = SubResource( 6 )
+"anims/paradinhonzino pra esquerda" = SubResource( 8 )
+anims/paradinhozinho = SubResource( 7 )
+"anims/paradinhozinho pra cima" = SubResource( 9 )
+"anims/paradinhozinho pra direita" = SubResource( 10 )
+
+[connection signal="mouse_entered" from="Camera2D/Controles/Esquerda" to="." method="_on_Esquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Esquerda" to="." method="_on_Esquerda_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Direita" to="." method="_on_Direita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Direita" to="." method="_on_Direita_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Baixo" to="." method="_on_Baixo_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Baixo" to="." method="_on_Baixo_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Cima" to="." method="_on_Cima_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Cima" to="." method="_on_Cima_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_mouse_exited"]
+[connection signal="pressed" from="Camera2D/Config" to="." method="_on_Config_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB" to="Camera2D/Config" method="_on_MapaB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/CloseMAPButton" to="Camera2D/Config" method="_on_CloseMAPButton_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/CloseiPad" to="." method="_on_CloseiPad_pressed"]
