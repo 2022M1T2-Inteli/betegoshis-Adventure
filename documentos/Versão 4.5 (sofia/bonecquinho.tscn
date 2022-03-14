@@ -1,0 +1,982 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Fox sheet.png" type="Texture" id=3]
+[ext_resource path="res://Action RPG Resources/Player/caradoBTG.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://ipad.png" type="Texture" id=6]
+[ext_resource path="res://Config.gd" type="Script" id=7]
+[ext_resource path="res://MAPA VERSAO 1.png" type="Texture" id=8]
+[ext_resource path="res://onibus img.png" type="Texture" id=9]
+[ext_resource path="res://taxi img.png" type="Texture" id=10]
+[ext_resource path="res://metro img.png" type="Texture" id=11]
+[ext_resource path="res://bike img.png" type="Texture" id=12]
+[ext_resource path="res://control pad.png" type="Texture" id=13]
+[ext_resource path="res://Falas.gd" type="Script" id=14]
+[ext_resource path="res://TouchScreenButton.gd" type="Script" id=15]
+[ext_resource path="res://circulo cinza.png" type="Texture" id=16]
+[ext_resource path="res://fundinho.png" type="Texture" id=17]
+[ext_resource path="res://Action RPG Resources/Player/secretaria.png" type="Texture" id=18]
+[ext_resource path="res://Ajustesimg.png" type="Texture" id=19]
+[ext_resource path="res://Mapaimg.png" type="Texture" id=20]
+[ext_resource path="res://professora.png" type="Texture" id=21]
+[ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular.ttf" type="DynamicFontData" id=22]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 46.0172, 20.4397 )
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "gif fundo"
+length = 0.62
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 22 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "correndinho pra baixo"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "correndinho pra cima"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "correndinho pra direita"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "correndinho pra esquerda"
+length = 0.35
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "paradinhonzino pra esquerda"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "paradinhozinho"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "paradinhozinho pra cima"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "paradinhozinho pra direita"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 1402, 612 )
+scale = Vector2( 0.474283, 0.557933 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.000244141, 10.7539 )
+scale = Vector2( 4.76439, 3.61414 )
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.0542, 47.8759 )
+scale = Vector2( 0.93928, 0.93928 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.10843, 7.62937e-05 )
+script = ExtResource( 2 )
+
+[node name="Fundo" type="Sprite" parent="Camera2D"]
+position = Vector2( -844.757, -481.02 )
+scale = Vector2( 0.952003, 0.200745 )
+texture = ExtResource( 17 )
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Fundo"]
+anims/RESET = SubResource( 11 )
+"anims/gif fundo" = SubResource( 12 )
+
+[node name="JoyStick" type="Sprite" parent="Camera2D"]
+visible = false
+position = Vector2( -790.282, 296.176 )
+scale = Vector2( 1.13375, 1.13375 )
+texture = ExtResource( 16 )
+
+[node name="JoyStickButton" type="TouchScreenButton" parent="Camera2D/JoyStick"]
+modulate = Color( 0, 0.392157, 1, 1 )
+position = Vector2( -108.202, -69.9482 )
+scale = Vector2( 0.770549, 0.770549 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 16 )
+script = ExtResource( 15 )
+
+[node name="Controles" type="Sprite" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 428.015, -265.265 )
+scale = Vector2( 1.405, 1.5123 )
+
+[node name="ControlPad" type="Sprite" parent="Camera2D/Controles"]
+modulate = Color( 0, 0, 0, 0.545098 )
+position = Vector2( -793.856, 343.699 )
+scale = Vector2( 2.20283, 1.73549 )
+texture = ExtResource( 13 )
+
+[node name="Esquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -1013.0
+margin_top = 263.0
+margin_right = -897.0
+margin_bottom = 389.0
+text = "<"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Direita" type="Button" parent="Camera2D/Controles"]
+margin_left = -680.0
+margin_top = 263.0
+margin_right = -569.0
+margin_bottom = 385.0
+text = ">"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Baixo" type="Button" parent="Camera2D/Controles"]
+margin_left = -869.0
+margin_top = 411.0
+margin_right = -713.0
+margin_bottom = 506.0
+text = "v"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Cima" type="Button" parent="Camera2D/Controles"]
+margin_left = -870.0
+margin_top = 151.0
+margin_right = -710.0
+margin_bottom = 237.0
+text = "^"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="BaixoEsquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -968.0
+margin_top = 380.0
+margin_right = -860.0
+margin_bottom = 459.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="BaixoDireita" type="Button" parent="Camera2D/Controles"]
+margin_left = -720.0
+margin_top = 379.0
+margin_right = -613.0
+margin_bottom = 456.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CimaDireita" type="Button" parent="Camera2D/Controles"]
+margin_left = -720.0
+margin_top = 196.0
+margin_right = -611.0
+margin_bottom = 275.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CimaEsquerda" type="Button" parent="Camera2D/Controles"]
+margin_left = -961.0
+margin_top = 199.0
+margin_right = -858.0
+margin_bottom = 275.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Dinheiro dele" type="RichTextLabel" parent="Camera2D"]
+modulate = Color( 1, 0.0117647, 0.0117647, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1079.52
+margin_top = -532.322
+margin_right = -994.528
+margin_bottom = -516.322
+rect_scale = Vector2( 6.73009, 7.83506 )
+text = "R$1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Config" type="Button" parent="Camera2D"]
+margin_left = 848.0
+margin_top = -523.0
+margin_right = 1048.0
+margin_bottom = -389.0
+rect_scale = Vector2( 1.05992, 0.923897 )
+text = "iPAD"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ipad" type="Sprite" parent="Camera2D/Config"]
+position = Vector2( 77.4448, 82.9292 )
+rotation = -1.56813
+scale = Vector2( 0.847473, 0.793231 )
+texture = ExtResource( 6 )
+
+[node name="iPad" type="Panel" parent="Camera2D/Config"]
+visible = false
+margin_left = -43.7634
+margin_top = 65.9589
+margin_right = -3.76343
+margin_bottom = 105.959
+rect_scale = Vector2( 1.21806, 1.02943 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ipad" type="Sprite" parent="Camera2D/Config/iPad"]
+position = Vector2( -649.406, 501.451 )
+rotation = -1.57054
+scale = Vector2( 4.45136, 4.15333 )
+texture = ExtResource( 6 )
+
+[node name="CloseiPad" type="Button" parent="Camera2D/Config/iPad"]
+margin_left = -204.455
+margin_top = 139.074
+margin_right = -180.455
+margin_bottom = 163.074
+rect_scale = Vector2( 2.77434, 2.77434 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="apps" type="Sprite" parent="Camera2D/Config/iPad"]
+position = Vector2( 160.121, 845.118 )
+
+[node name="AjustesB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -1262.8, -144.461 )
+scale = Vector2( 2.06068, 2.06068 )
+
+[node name="Ajustesimg" type="Sprite" parent="Camera2D/Config/iPad/apps/AjustesB"]
+scale = Vector2( 0.140458, 0.140458 )
+texture = ExtResource( 19 )
+
+[node name="Ajustestxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/AjustesB"]
+margin_left = -23.1929
+margin_top = -51.9775
+margin_right = 33.8071
+margin_bottom = -32.9775
+text = "Ajustes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgendaB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -411.937, -142.576 )
+scale = Vector2( 2.09348, 2.09348 )
+
+[node name="Agendaimg" type="Sprite" parent="Camera2D/Config/iPad/apps/AgendaB"]
+texture = ExtResource( 5 )
+
+[node name="Agendatxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/AgendaB"]
+margin_left = -25.3013
+margin_top = -53.7698
+margin_right = 29.6987
+margin_bottom = -35.7698
+text = "Agenda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BancoB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -1246.47, -464.827 )
+scale = Vector2( 2.10424, 2.10424 )
+
+[node name="Bancoimg" type="Sprite" parent="Camera2D/Config/iPad/apps/BancoB"]
+texture = ExtResource( 5 )
+
+[node name="Bancotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/BancoB"]
+margin_left = -21.0845
+margin_top = -50.1852
+margin_right = 27.9155
+margin_bottom = -34.1852
+text = "Banco"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RevisaoB" type="TouchScreenButton" parent="Camera2D/Config/iPad/apps"]
+position = Vector2( -733.663, -133.154 )
+scale = Vector2( 2.11015, 2.11015 )
+
+[node name="Revisaoimg" type="Sprite" parent="Camera2D/Config/iPad/apps/RevisaoB"]
+texture = ExtResource( 5 )
+
+[node name="Revisaotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/RevisaoB"]
+margin_left = -27.4097
+margin_top = -55.5623
+margin_right = 31.5903
+margin_bottom = -33.5623
+text = "Revisão"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapaB" type="Button" parent="Camera2D/Config/iPad/apps"]
+margin_left = -795.722
+margin_top = -532.669
+margin_right = -743.722
+margin_bottom = -481.669
+rect_scale = Vector2( 2.23128, 2.0299 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapaimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB"]
+position = Vector2( 23.4214, 23.2095 )
+scale = Vector2( 0.134129, 0.152332 )
+texture = ExtResource( 20 )
+
+[node name="Mapatxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB"]
+margin_left = 4.86536
+margin_top = -28.2794
+margin_right = 44.8654
+margin_bottom = -6.27945
+rect_scale = Vector2( 0.959009, 0.959009 )
+text = "Mapa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapaI" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB"]
+visible = false
+position = Vector2( -18.2981, 85.4105 )
+scale = Vector2( 0.308477, 0.29865 )
+texture = ExtResource( 8 )
+
+[node name="Taxiimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( -593.49, 376.97 )
+scale = Vector2( 0.696841, 0.65048 )
+texture = ExtResource( 10 )
+
+[node name="TaxiB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Taxiimg"]
+show_behind_parent = true
+margin_left = -177.443
+margin_top = -151.81
+margin_right = 179.557
+margin_bottom = 190.19
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Taxitxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Taxiimg"]
+margin_left = -101.857
+margin_top = -175.292
+margin_right = 58.1426
+margin_bottom = -86.2922
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onibusimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( 127.627, 369.345 )
+scale = Vector2( 0.578323, 0.578323 )
+texture = ExtResource( 9 )
+
+[node name="OnibusB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Onibusimg"]
+show_behind_parent = true
+margin_left = -217.0
+margin_top = -150.0
+margin_right = 256.0
+margin_bottom = 186.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Onibustxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Onibusimg"]
+margin_left = -45.5378
+margin_top = -238.483
+margin_right = 114.462
+margin_bottom = -149.483
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metroimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( 564.088, 372.852 )
+scale = Vector2( 0.741862, 0.659211 )
+texture = ExtResource( 11 )
+
+[node name="MetroB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Metroimg"]
+show_behind_parent = true
+margin_left = -244.0
+margin_top = -130.0
+margin_right = 201.0
+margin_bottom = 170.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metrotxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Metroimg"]
+margin_left = 91.0
+margin_top = 102.0
+margin_right = 251.0
+margin_bottom = 191.0
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Taxi[/center]
+"
+text = "
+
+Taxi
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bikeimg" type="Sprite" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+position = Vector2( -221.637, 376.414 )
+scale = Vector2( 0.353553, 0.353553 )
+texture = ExtResource( 12 )
+
+[node name="BikeB" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Bikeimg"]
+show_behind_parent = true
+margin_left = -267.0
+margin_top = -364.0
+margin_right = 214.0
+margin_bottom = 297.0
+text = "                                                                                    "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Biketxt" type="RichTextLabel" parent="Camera2D/Config/iPad/apps/MapaB/MapaI/Bikeimg"]
+margin_left = -112.272
+margin_top = -469.596
+margin_right = 47.728
+margin_bottom = -380.596
+bbcode_enabled = true
+bbcode_text = "
+
+[center][b]Taxi[i][/center]
+"
+text = "
+
+Taxi[/center]
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FaculdadeTP" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -389.0
+margin_top = -498.0
+margin_right = -4.0
+margin_bottom = -397.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BancoTPad" type="Button" parent="Camera2D/Config/iPad/apps/MapaB/MapaI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -301.333
+margin_top = 83.9314
+margin_right = -90.333
+margin_bottom = 142.931
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseMAPButton" type="Button" parent="Camera2D/Config/iPad/apps/MapaB"]
+visible = false
+margin_left = 187.373
+margin_top = -74.27
+margin_right = 208.373
+margin_bottom = -54.27
+rect_scale = Vector2( 1.28428, 1.28428 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Falas" type="Sprite" parent="Camera2D"]
+script = ExtResource( 14 )
+
+[node name="GuilhermeFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( -400.605, 462.421 )
+scale = Vector2( 2.37166, 2.37166 )
+texture = ExtResource( 4 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/GuilhermeFalas"]
+modulate = Color( 1, 1, 1, 0.301961 )
+show_behind_parent = true
+margin_left = -284.0
+margin_top = -141.0
+margin_right = 622.0
+margin_bottom = 35.0
+color = Color( 0.152941, 0.992157, 1, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/GuilhermeFalas"]
+margin_left = -284.0
+margin_top = -1.0
+margin_right = -144.0
+margin_bottom = 32.0
+color = Color( 0, 0.243137, 0.705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeGui" type="Label" parent="Camera2D/Falas/GuilhermeFalas"]
+modulate = Color( 0.898039, 1, 0, 1 )
+margin_left = -283.596
+margin_top = 3.02295
+margin_right = -215.596
+margin_bottom = 17.0229
+rect_scale = Vector2( 2.05214, 2.05214 )
+text = "Guilherme"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaGuilherme" type="RichTextLabel" parent="Camera2D/Falas/GuilhermeFalas"]
+margin_left = -138.0
+margin_top = -141.0
+margin_right = 57.0
+margin_bottom = -77.0
+rect_scale = Vector2( 2.75237, 2.75237 )
+text = "Olá, eu sou Guilherme, o banqueiro do BeTeJóia. Prazer em te conhecer"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GuiFalasButton" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -283.0
+margin_top = -141.0
+margin_right = 626.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvsaGui" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+visible = false
+margin_left = 417.0
+margin_top = -20.0
+margin_right = 497.0
+margin_bottom = 3.0
+rect_scale = Vector2( 1.80497, 1.80497 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PagarBoleto" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+visible = false
+margin_left = 411.615
+margin_top = -117.138
+margin_right = 503.615
+margin_bottom = -94.1378
+rect_scale = Vector2( 1.80497, 1.80497 )
+text = "Pagar Boleto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecretariaFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( -406.93, 460.629 )
+scale = Vector2( 2.39339, 2.39339 )
+texture = ExtResource( 18 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/SecretariaFalas"]
+show_behind_parent = true
+margin_left = -277.0
+margin_top = -138.0
+margin_right = 625.0
+margin_bottom = 34.0
+color = Color( 0.960784, 0.529412, 0.529412, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/SecretariaFalas"]
+margin_left = -280.0
+margin_right = -137.0
+margin_bottom = 34.0
+color = Color( 0.737255, 0.380392, 0.380392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeSecretaria" type="Label" parent="Camera2D/Falas/SecretariaFalas"]
+margin_left = -277.498
+margin_top = 4.49316
+margin_right = -214.498
+margin_bottom = 18.4932
+rect_scale = Vector2( 2.17185, 2.06876 )
+text = "Secretária"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaSecretaria" type="RichTextLabel" parent="Camera2D/Falas/SecretariaFalas"]
+margin_left = -138.0
+margin_top = -135.0
+margin_right = 63.0
+margin_bottom = -77.0
+rect_scale = Vector2( 2.85628, 2.85628 )
+text = "Olá, eu sou Amélia, a Secretária do INEDFIBA. Prazer em conhecer você."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecrFalasButton" type="Button" parent="Camera2D/Falas/SecretariaFalas"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -276.0
+margin_top = -140.0
+margin_right = 626.0
+margin_bottom = 33.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvsaSecr" type="Button" parent="Camera2D/Falas/SecretariaFalas"]
+visible = false
+margin_left = 448.402
+margin_top = -12.7307
+margin_right = 517.402
+margin_bottom = 9.26929
+rect_scale = Vector2( 1.44286, 1.44286 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfessoraFalas" type="Sprite" parent="Camera2D/Falas"]
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -900.0
+margin_top = 133.0
+margin_right = 1079.0
+margin_bottom = 534.0
+color = Color( 1, 0.498039, 0.498039, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -1071.0
+margin_top = 455.0
+margin_right = -725.0
+margin_bottom = 531.0
+rect_scale = Vector2( 1, 0.997385 )
+color = Color( 1, 0.717647, 0.717647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaProfessora" type="RichTextLabel" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -668.0
+margin_top = 163.0
+margin_right = -201.0
+margin_bottom = 256.0
+rect_scale = Vector2( 3.70388, 3.70388 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Olá, eu me chamo Dorothy. Serei sua professora nessa jornada pela educação financeira."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeProfessora" type="Label" parent="Camera2D/Falas/ProfessoraFalas"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -1018.38
+margin_top = 451.667
+margin_right = -925.38
+margin_bottom = 476.667
+rect_scale = Vector2( 2.8936, 3.48575 )
+custom_fonts/font = SubResource( 14 )
+text = "Dorothy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/ProfessoraFalas"]
+position = Vector2( -1394.24, 453.768 )
+scale = Vector2( -2.31186, 2.30117 )
+texture = ExtResource( 21 )
+
+[node name="ProfFalasButton" type="Button" parent="Camera2D/Falas/ProfessoraFalas"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -1067.0
+margin_top = 134.0
+margin_right = 1077.0
+margin_bottom = 529.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarAula" type="Button" parent="Camera2D/Falas/ProfessoraFalas"]
+visible = false
+margin_left = 809.643
+margin_top = 433.744
+margin_right = 890.643
+margin_bottom = 461.744
+rect_scale = Vector2( 2.87482, 2.87482 )
+custom_fonts/font = SubResource( 15 )
+text = "AULA 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+"anims/correndinho pra baixo" = SubResource( 3 )
+"anims/correndinho pra cima" = SubResource( 4 )
+"anims/correndinho pra direita" = SubResource( 5 )
+"anims/correndinho pra esquerda" = SubResource( 6 )
+"anims/paradinhonzino pra esquerda" = SubResource( 8 )
+anims/paradinhozinho = SubResource( 7 )
+"anims/paradinhozinho pra cima" = SubResource( 9 )
+"anims/paradinhozinho pra direita" = SubResource( 10 )
+
+[connection signal="mouse_entered" from="Camera2D/Controles/Esquerda" to="." method="_on_Esquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Esquerda" to="." method="_on_Esquerda_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Direita" to="." method="_on_Direita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Direita" to="." method="_on_Direita_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Baixo" to="." method="_on_Baixo_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Baixo" to="." method="_on_Baixo_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/Controles/Cima" to="." method="_on_Cima_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/Cima" to="." method="_on_Cima_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/BaixoEsquerda" to="." method="_on_BaixoEsquerda_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/BaixoDireita" to="." method="_on_BaixoDireita_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/CimaDireita" to="." method="_on_CimaDireita_mouse_exited"]
+[connection signal="button_down" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_button_up"]
+[connection signal="mouse_entered" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/Controles/CimaEsquerda" to="." method="_on_CimaEsquerda_mouse_exited"]
+[connection signal="pressed" from="Camera2D/Config" to="." method="_on_Config_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/CloseiPad" to="." method="_on_CloseiPad_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB" to="Camera2D/Config" method="_on_MapaB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/Taxiimg/TaxiB" to="." method="_on_TaxiB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/Onibusimg/OnibusB" to="." method="_on_OnibusB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/Metroimg/MetroB" to="." method="_on_MetroB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/Bikeimg/BikeB" to="." method="_on_BikeB_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/FaculdadeTP" to="." method="_on_FaculdadeTP_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/MapaI/BancoTPad" to="." method="_on_BancoTPad_pressed"]
+[connection signal="pressed" from="Camera2D/Config/iPad/apps/MapaB/CloseMAPButton" to="Camera2D/Config" method="_on_CloseMAPButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/GuiFalasButton" to="Camera2D/Falas" method="_on_GuiFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/SairCvsaGui" to="." method="_on_SairCvsaGui_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/SairCvsaGui" to="Camera2D/Falas" method="_on_SairCvsaGui_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/PagarBoleto" to="." method="_on_PagarBoleto_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/PagarBoleto" to="Camera2D/Falas" method="_on_SairCvsaGui_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SecrFalasButton" to="." method="_on_SecrFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SecrFalasButton" to="Camera2D/Falas" method="_on_SecrFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SairCvsaSecr" to="Camera2D/Falas" method="_on_SairCvsaSecr_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/ProfFalasButton" to="Camera2D/Falas" method="_on_ProfFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/IniciarAula" to="." method="_on_IniciarAula_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/IniciarAula" to="Camera2D/Falas" method="_on_IniciarAula_pressed"]
