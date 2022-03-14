@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Faculdade.png" type="Texture" id=2]
+[ext_resource path="res://Faculdade.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Faculdade" type="Sprite" parent="."]
+position = Vector2( 896, 831 )
+scale = Vector2( 1.847, 1.86 )
+texture = ExtResource( 2 )
+
+[node name="Dinheiro dele" type="RichTextLabel" parent="."]
+modulate = Color( 1, 0.0117647, 0.0117647, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1079.52
+margin_top = -532.322
+margin_right = -994.528
+margin_bottom = -516.322
+rect_scale = Vector2( 6.73009, 7.83506 )
+rect_pivot_offset = Vector2( 274.368, 178.47 )
+text = "R$1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 904, 851 )
