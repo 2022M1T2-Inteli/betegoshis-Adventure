@@ -72,59 +72,59 @@ var irBaixoDireita = false
 #Apenas tocando nos botões
 func _on_Direita_mouse_entered(): #botão Direita apertado
 	irDireita = true # faz andar pra direita
-	$Camera2D/Controles/Direita.modulate.a = 12
+	$Camera2D/Controles/Direita.modulate.a = 0
 func _on_Direita_mouse_exited(): #botão Direita solto
 	irDireita = false # para o movimento pra direita
-	$Camera2D/Controles/Direita.modulate.a = 0.75
+	$Camera2D/Controles/Direita.modulate.a = 0
 #Botão pra baixo
 func _on_Baixo_mouse_entered(): #botão Baixo apertado
 	irBaixo = true #faz andar pra baixo
-	$Camera2D/Controles/Baixo.modulate.a = 12
+	$Camera2D/Controles/Baixo.modulate.a = 0
 func _on_Baixo_mouse_exited(): #botão Baixo solto
 	irBaixo = false # para o movimento pra baixo
-	$Camera2D/Controles/Baixo.modulate.a = 0.75
+	$Camera2D/Controles/Baixo.modulate.a = 0
 #Botão pra cima
 func _on_Cima_mouse_entered(): #botão Cima apertado
 	irCima = true #faz andar pra cima
-	$Camera2D/Controles/Cima.modulate.a = 12
+	$Camera2D/Controles/Cima.modulate.a = 0
 func _on_Cima_mouse_exited(): #botão Cima solto
 	irCima = false # para o movimento pra cima
-	$Camera2D/Controles/Cima.modulate.a = 0.75
+	$Camera2D/Controles/Cima.modulate.a = 0
 #Botão pra esquerda
 func _on_Esquerda_mouse_entered(): #botão Esquerda apertado
 	irEsquerda = true #faz andar pra esquerda
-	$Camera2D/Controles/Esquerda.modulate.a = 12
+	$Camera2D/Controles/Esquerda.modulate.a = 0
 func _on_Esquerda_mouse_exited(): #botão Esquerda solto
 	irEsquerda = false # para o movimento pra esquerda
-	$Camera2D/Controles/Esquerda.modulate.a = 0.75
+	$Camera2D/Controles/Esquerda.modulate.a = 0
 #Botão pra suldoeste
 func _on_BaixoEsquerda_mouse_entered(): #botão BaixoEsquerda apertado
 	irBaixoEsquerda = true #anda na diagonal suldoeste
-	$Camera2D/Controles/BaixoEsquerda.modulate.a = 12
+	$Camera2D/Controles/BaixoEsquerda.modulate.a = 0
 func _on_BaixoEsquerda_mouse_exited(): #botão BaixoEsquerda solto
 	irBaixoEsquerda = false # para o movimento diagonal
-	$Camera2D/Controles/BaixoEsquerda.modulate.a = 0.75
+	$Camera2D/Controles/BaixoEsquerda.modulate.a = 0
 #Botão para suldeste
 func _on_BaixoDireita_mouse_entered(): #botão BaixoDireita apertado
 	irBaixoDireita = true #anda na diagonal suldeste
-	$Camera2D/Controles/BaixoDireita.modulate.a = 12
+	$Camera2D/Controles/BaixoDireita.modulate.a = 0
 func _on_BaixoDireita_mouse_exited(): #botão BaixoEsquerda solto
 	irBaixoDireita = false # para o movimento diagonal
-	$Camera2D/Controles/BaixoDireita.modulate.a = 0.75
+	$Camera2D/Controles/BaixoDireita.modulate.a = 0
 #Botão pra noroeste
 func _on_CimaEsquerda_mouse_entered(): #botão CimaEsquerda apertado 
 	irCimaEsquerda = true #anda na diagonal noroeste 
-	$Camera2D/Controles/CimaEsquerda.modulate.a = 12
+	$Camera2D/Controles/CimaEsquerda.modulate.a = 0
 func _on_CimaEsquerda_mouse_exited(): #botão CimaEsquerda solto
 	irCimaEsquerda = false # para o movimento diagonla
-	$Camera2D/Controles/CimaEsquerda.modulate.a = 0.75
+	$Camera2D/Controles/CimaEsquerda.modulate.a = 0
 #Botão pra nordeste
 func _on_CimaDireita_mouse_entered(): #botão CimaDireita apertado
 	irCimaDireita = true #anda na diagonal nordeste
-	$Camera2D/Controles/CimaDireita.modulate.a = 12
+	$Camera2D/Controles/CimaDireita.modulate.a = 0
 func _on_CimaDireita_mouse_exited(): #botão Cima Direita solto
 	irCimaDireita = false # para o movimento diagonla
-	$Camera2D/Controles/CimaDireita.modulate.a = 0.75
+	$Camera2D/Controles/CimaDireita.modulate.a = 0
 
 #AbrirCelular
 var closeIPAD = false #ordena a sequência
