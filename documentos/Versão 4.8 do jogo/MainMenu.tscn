@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
+[ext_resource path="res://MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Image from iOS.png" type="Texture" id=3]
+[ext_resource path="res://morning-funny-beat-7741.mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://ChiKareGo2Font.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+font_data = SubResource( 1 )
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="FundoImgMenu" type="Sprite" parent="."]
+position = Vector2( 596, 329 )
+scale = Vector2( 1.73203, 1.69605 )
+texture = ExtResource( 3 )
+
+[node name="AlternarMusica" type="Button" parent="FundoImgMenu"]
+margin_left = -324.0
+margin_top = -178.0
+margin_right = -273.0
+margin_bottom = -140.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeGame" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 117.0
+margin_right = 1077.0
+margin_bottom = 147.0
+rect_scale = Vector2( 3.38489, 3.38489 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Betegoshi Adventure"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="LabelIniciar" type="Label" parent="."]
+margin_left = 334.0
+margin_top = 234.0
+margin_right = 1358.0
+margin_bottom = 249.0
+rect_min_size = Vector2( 59, 0 )
+rect_scale = Vector2( 6.27893, 6.27893 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Começar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarButton" type="Button" parent="LabelIniciar"]
+modulate = Color( 0.698039, 0.462745, 0.462745, 0 )
+margin_left = -9.0
+margin_top = -4.0
+margin_right = 518.0
+margin_bottom = 166.0
+rect_scale = Vector2( 0.14196, 0.14196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelOptions" type="Label" parent="."]
+margin_left = 431.0
+margin_top = 384.0
+margin_right = 1455.0
+margin_bottom = 399.0
+rect_min_size = Vector2( 59, 0 )
+rect_scale = Vector2( 2.78478, 2.78478 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Opções"
+
+[node name="ConfiguracoesButton" type="Button" parent="LabelOptions"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -4.0
+margin_right = 203.0
+margin_bottom = 59.0
+rect_scale = Vector2( 0.257218, 0.257218 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelSair" type="Label" parent="."]
+margin_left = 460.0
+margin_top = 426.0
+margin_right = 1484.0
+margin_bottom = 441.0
+rect_min_size = Vector2( 59, 0 )
+rect_scale = Vector2( 2.785, 2.785 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Sair"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairButton" type="Button" parent="LabelSair"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -3.94974
+margin_top = -0.052536
+margin_right = 21.0503
+margin_bottom = 19.9475
+rect_scale = Vector2( 1.29087, 1.29087 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="FundoImgMenu/AlternarMusica" to="." method="_on_AlternarMusica_pressed"]
+[connection signal="pressed" from="LabelIniciar/IniciarButton" to="." method="_on_IniciarButton_pressed"]
+[connection signal="pressed" from="LabelOptions/ConfiguracoesButton" to="." method="_on_ConfiguracoesButton_pressed"]
+[connection signal="pressed" from="LabelSair/SairButton" to="." method="_on_SairButton_pressed"]
