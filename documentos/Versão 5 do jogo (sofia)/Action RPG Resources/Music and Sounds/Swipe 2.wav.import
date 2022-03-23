@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Swipe 2.wav-1ba21a52c58437c77c4c8c982fa00977.sample"
+
+[deps]
+
+source_file="res://Action RPG Resources/Music and Sounds/Swipe 2.wav"
+dest_files=[ "res://.import/Swipe 2.wav-1ba21a52c58437c77c4c8c982fa00977.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

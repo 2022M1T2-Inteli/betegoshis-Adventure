@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Music 2.mp3-da060292c45e20abb1c70f62fc63767a.mp3str"
+
+[deps]
+
+source_file="res://Action RPG Resources/Music and Sounds/Music 2.mp3"
+dest_files=[ "res://.import/Music 2.mp3-da060292c45e20abb1c70f62fc63767a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
