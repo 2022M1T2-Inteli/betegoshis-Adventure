@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -32,6 +32,9 @@
 [ext_resource path="res://queijo.png" type="Texture" id=30]
 [ext_resource path="res://frango.png" type="Texture" id=31]
 [ext_resource path="res://setinha_voltar.png" type="Texture" id=32]
+[ext_resource path="res://RostoVó.png" type="Texture" id=33]
+[ext_resource path="res://ChiKareGo2Font.ttf" type="DynamicFontData" id=34]
+[ext_resource path="res://RostoTio.png" type="Texture" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.0172, 20.4397 )
@@ -104,6 +107,15 @@ font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=15]
 font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=39]
+font_data = ExtResource( 34 )
+
+[sub_resource type="DynamicFont" id=40]
+font_data = ExtResource( 34 )
+
+[sub_resource type="DynamicFont" id=41]
+font_data = ExtResource( 34 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -1642,6 +1654,155 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="VoFalas" type="Sprite" parent="Camera2D/Falas"]
+position = Vector2( 689, 384 )
+scale = Vector2( 0.779181, 0.779181 )
+
+[node name="proximafalavo" type="Button" parent="Camera2D/Falas/VoFalas"]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -1154.0
+margin_top = -187.0
+margin_right = 1015.0
+margin_bottom = 306.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Falas/VoFalas"]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -1000.0
+margin_top = -132.0
+margin_right = 975.0
+margin_bottom = 271.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/Falas/VoFalas"]
+margin_left = -1170.0
+margin_top = 184.0
+margin_right = -773.0
+margin_bottom = 274.0
+color = Color( 0.482353, 0.172549, 0.756863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/VoFalas"]
+position = Vector2( -1465, 185 )
+scale = Vector2( -2.27554, 2.29044 )
+texture = ExtResource( 33 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/VoFalas"]
+margin_left = -1132.0
+margin_top = 195.0
+margin_right = -1049.0
+margin_bottom = 218.0
+rect_scale = Vector2( 4.78002, 6.26334 )
+text = "Vó Creuza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Falas/VoFalas"]
+margin_left = -745.0
+margin_top = -99.0
+margin_right = -438.0
+margin_bottom = 16.0
+rect_scale = Vector2( 5.82549, 3.64048 )
+text = "Ah que orgulho! Parabéns por ter passado. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TioClovisFalas" type="Sprite" parent="Camera2D/Falas"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -1156.0
+margin_top = -423.0
+margin_right = 925.0
+margin_bottom = 58.0
+rect_scale = Vector2( 1.05413, 1.4189 )
+color = Color( 0.164706, 0.615686, 0.113725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/Falas/TioClovisFalas"]
+margin_left = -1158.0
+margin_top = 121.0
+margin_right = -786.0
+margin_bottom = 337.0
+color = Color( 0.113725, 0.541176, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/TioClovisFalas"]
+position = Vector2( -1537.96, 117.348 )
+scale = Vector2( -2.60661, 3.79854 )
+texture = ExtResource( 35 )
+
+[node name="nometio" type="Label" parent="Camera2D/Falas/TioClovisFalas"]
+margin_left = -1106.43
+margin_top = 163.577
+margin_right = -1023.43
+margin_bottom = 186.577
+rect_scale = Vector2( 4.78002, 6.26334 )
+custom_fonts/font = SubResource( 39 )
+text = "Tio Clóvis"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="falastio" type="RichTextLabel" parent="Camera2D/Falas/TioClovisFalas"]
+margin_left = -786.0
+margin_top = -398.0
+margin_right = -477.0
+margin_bottom = -283.0
+rect_scale = Vector2( 5.46138, 5.56317 )
+custom_fonts/normal_font = SubResource( 40 )
+text = "Olá"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nextfala" type="Button" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -1154.0
+margin_top = -516.0
+margin_right = 1015.0
+margin_bottom = 306.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sairFala" type="Button" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 0.0196078, 0.113725, 0.0235294, 0.596078 )
+margin_left = 640.136
+margin_top = 92.4563
+margin_right = 926.136
+margin_bottom = 224.456
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atemais2" type="Label" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 1, 0.941176, 0.941176, 1 )
+margin_left = 678.994
+margin_top = 117.348
+margin_right = 765.994
+margin_bottom = 132.348
+rect_scale = Vector2( 3.58478, 4.14656 )
+custom_fonts/font = SubResource( 41 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 "anims/correndinho pra baixo" = SubResource( 3 )
@@ -1712,3 +1873,6 @@ anims/paradinhozinho = SubResource( 7 )
 [connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/TextureButton" to="Camera2D/Falas" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/SofiaFalas/SofiaFalasButton" to="Camera2D/Falas" method="_on_SofiaFalasButton_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/SofiaFalas/SairCvsaSofiaButton" to="Camera2D/Falas" method="_on_SairCvsaSofiaButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/VoFalas/proximafalavo" to="Camera2D/Falas" method="_on_proximafalavo_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/TioClovisFalas/nextfala" to="Camera2D/Falas" method="_on_nextfala_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/TioClovisFalas/sairFala" to="Camera2D/Falas" method="_on_sairFala_pressed"]
