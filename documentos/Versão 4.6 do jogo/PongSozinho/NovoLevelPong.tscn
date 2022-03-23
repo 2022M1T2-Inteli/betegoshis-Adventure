@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://PongSozinho/bola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PongSozinho/BarraEsq.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PongSozinho/BarraEsq.gd" type="Script" id=4]
+[ext_resource path="res://PongSozinho/bola.gd" type="Script" id=5]
+[ext_resource path="res://PongSozinho/preto.png" type="Texture" id=6]
+[ext_resource path="res://PongSozinho/separator.png" type="Texture" id=7]
+[ext_resource path="res://PongSozinho/NovoLevelPong.gd" type="Script" id=9]
+[ext_resource path="res://PongSozinho/NPC.gd" type="Script" id=10]
+[ext_resource path="res://PongSozinho/NPC.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.5, 307.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 501, 10 )
+
+[node name="LevelPongNovo" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Preto" type="Sprite" parent="."]
+position = Vector2( 564, 333 )
+scale = Vector2( 1.34131, 1.30782 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Separator" type="Sprite" parent="."]
+position = Vector2( 512, 297 )
+scale = Vector2( 3.49999, 1.64391 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PontosD" type="Label" parent="."]
+margin_left = 836.0
+margin_top = 78.0
+margin_right = 876.0
+margin_bottom = 92.0
+rect_scale = Vector2( 0.998743, 2.6779 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PontosEsq" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 74.0
+margin_right = 180.0
+margin_bottom = 88.0
+rect_scale = Vector2( 1.00796, 2.76951 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bola" parent="." instance=ExtResource( 2 )]
+position = Vector2( 415, 225 )
+script = ExtResource( 5 )
+
+[node name="BarraEsq" parent="." instance=ExtResource( 3 )]
+position = Vector2( 53, 225 )
+script = ExtResource( 4 )
+
+[node name="NPC" parent="." instance=ExtResource( 11 )]
+position = Vector2( 928, 93 )
+script = ExtResource( 10 )
+
+[node name="LadoD" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadoD"]
+position = Vector2( -4.5, 295.5 )
+shape = SubResource( 2 )
+
+[node name="LadoEsq" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadoEsq"]
+position = Vector2( 1034, 296 )
+shape = SubResource( 2 )
+
+[node name="topo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topo"]
+position = Vector2( 512, 0 )
+shape = SubResource( 1 )
+
+[node name="base" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base"]
+position = Vector2( 512, 596 )
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="LadoD" to="." method="_on_LadoD_body_entered"]
+[connection signal="body_entered" from="LadoEsq" to="." method="_on_LadoEsq_body_entered"]

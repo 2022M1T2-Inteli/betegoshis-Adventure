@@ -53,3 +53,7 @@ func _on_InicioAula1_body_entered(_body):
 		yield(get_tree().create_timer(0.1), "timeout")
 		ProfIrCima = false
 		$AnimationPlayer.play("professoraParadaBaixo")
+
+
+func _on_TP_vo_body_entered(body):
+	pass # Replace with function body.

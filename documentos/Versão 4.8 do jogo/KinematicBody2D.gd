@@ -723,3 +723,35 @@ func _on_IniciarPongButton_pressed():
 
 
 
+
+
+func _on_iniciar_falavo_body_entered(body):
+	$Camera2D/Falas/Vofalas.visible = true
+	$Camera2D/Controles/Controlesorg.visible = false
+	$Camera2D/Celular/AbrirCelular.visible = false
+
+
+
+func _on_TP_vo_body_entered(body):
+	# Teleporta pra dentro lá
+	self.position.x = 4374 
+	self.position.y = 1093
+	# Limita a camera pra dentro da casa da vo
+	$Camera2D.limit_right = 4370
+	$Camera2D.limit_left = 3190
+	$Camera2D.limit_top = 144
+	$Camera2D.limit_bottom = 1017
+	
+	
+	
+
+
+func _on_TP_voltar_cidade_body_entered(body):
+	# Teleporta pra cidade
+	self.position.x = 2152
+	self.position.y = 806
+	#limitar a camera pra dentro do mapa
+	$Camera2D.limit_bottom = 2450
+	$Camera2D.limit_top = -1914
+	$Camera2D.limit_left = -86
+	$Camera2D.limit_right = 2400

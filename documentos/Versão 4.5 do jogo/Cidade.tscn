@@ -500,6 +500,7 @@ position = Vector2( 53, 1129 )
 polygon = PoolVector2Array( -1, -68, 40, -74, 55, -133, 236, -134, 249, -70, 288, -65, 286, 45, 238, 30, 140, 30, 60, 30, 4, 46 )
 
 [node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+visible = false
 position = Vector2( 394, 999 )
 polygon = PoolVector2Array( -4, -108, 24, -136, 451, -135, 463, -110, 510, -137, 561, -105, 578, -64, 540, -10, 458, -9, 456, 238, 395, 240, 393, 185, 307, 176, 272, 105, 202, 101, 191, 177, 86, 185, 80, 233, 25, 235 )
 

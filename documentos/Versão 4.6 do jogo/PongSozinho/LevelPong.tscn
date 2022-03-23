@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://PongSozinho/BarraD.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PongSozinho/BarraEsq.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PongSozinho/BarraEsq.gd" type="Script" id=3]
+[ext_resource path="res://PongSozinho/preto.png" type="Texture" id=4]
+[ext_resource path="res://PongSozinho/separator.png" type="Texture" id=5]
+[ext_resource path="res://PongSozinho/bola.tscn" type="PackedScene" id=6]
+[ext_resource path="res://PongSozinho/bola.gd" type="Script" id=7]
+
+[node name="LevelPong" type="Node2D"]
+
+[node name="Preto" type="Sprite" parent="."]
+position = Vector2( 564, 333 )
+scale = Vector2( 1.34131, 1.30782 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Separator" type="Sprite" parent="."]
+position = Vector2( 512, 297 )
+scale = Vector2( 3.49999, 1.64391 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PontosD" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PontosEsq" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bola" parent="." instance=ExtResource( 6 )]
+position = Vector2( 415, 225 )
+script = ExtResource( 7 )
+
+[node name="BarraD" parent="." instance=ExtResource( 1 )]
+position = Vector2( 775, 3 )
+
+[node name="BarraEsq" parent="." instance=ExtResource( 2 )]
+position = Vector2( 42, 222 )
+script = ExtResource( 3 )
+
+[node name="topo" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="topo"]
+polygon = PoolVector2Array( 1024, -7, 1025, -41, 8, -43, 8, -1, 364, -3 )
+
+[node name="base" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="base"]
+position = Vector2( 14, 634 )
+polygon = PoolVector2Array( 1015, -10, 1016, -39, -2, -41, 10, 6 )
+
+[node name="ladoD" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ladoD"]
+position = Vector2( 1038, 639 )
+scale = Vector2( 0.089199, 16.4659 )
+polygon = PoolVector2Array( 381.168, -1.88269, 269.06, -40.9938, -5, -42, -2, -1 )
+
+[node name="ladoEsq" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ladoEsq"]
+position = Vector2( -153, 913 )
+scale = Vector2( 0.148058, 24.1662 )
+polygon = PoolVector2Array( 1024, -7, 1025, -41, 668.656, -39.6422, 574.099, -8.02775 )

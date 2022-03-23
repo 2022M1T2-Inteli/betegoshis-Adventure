@@ -3,6 +3,9 @@ extends CanvasLayer
 func ready(): # no início do game, pra não esquecermos:
 	$GuilhermeFalas.visible = false # desaparece a falinha do guilherme ali embaixo
 	$SecretariaFalas.visible = false # idem
+	$Vofalas.visible = false
+	
+
 
 #"O que você deseja pagar hoje?"
 # Falas do Banqueiro Guilherme 
@@ -107,3 +110,24 @@ func _on_SairCvsaJapa_pressed():
 
 
 
+#fala vó
+var contadorproximafalavo = 0
+func _on_proximafalavo_pressed():
+	contadorproximafalavo += 1
+	$Vofalas/SairFalavo.visible = false
+	$Vofalas/Atemais.visible = false
+	if contadorproximafalavo == 1:
+		#muda texto
+		$Vofalas/falaVo.text = "Vamos, rápido! Você não pode perder essa oportunidade! Arrume suas malas para ir morar com seu tio em sua nova cidade."
+	if contadorproximafalavo == 2:
+		$Vofalas/falaVo.text = "Para te ajudar, de 30 em 30 dias irei depositar 1000 BT$ em sua conta. Mas atenção Gracinha da vó, gaste com responsabilidade!"
+	if contadorproximafalavo == 3:
+		$Vofalas/falaVo.text = "Não enviarei renda extra caso seus BT$ acabem! Bom sem enrolação, vá até a rodoviária pois o ônibus sairá já já!"
+	if contadorproximafalavo == 4:
+		$Vofalas/falaVo.text = "Só mais uma coisinha quando chegar não esqueça de avisar a vó e pegue um táxi direto para a casa do seu tio, tome muito cuidado, tesouro!"
+		$Vofalas/SairFalavo.visible = true
+		$Vofalas/Atemais.visible = true
+
+#sair fala vó
+func _on_SairFalavo_pressed():
+	$Vofalas. visible = false

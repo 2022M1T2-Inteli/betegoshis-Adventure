@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Professora.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sala de Aula Dentro.png" type="Texture" id=7]
 [ext_resource path="res://Banco.png" type="Texture" id=8]
 [ext_resource path="res://Action RPG Resources/Player/caradoBTG andando.png" type="Texture" id=9]
+[ext_resource path="res://Arcade3.png" type="Texture" id=10]
 [ext_resource path="res://1- MatematicaFinanceira.png" type="Texture" id=11]
 [ext_resource path="res://Cidade.gd" type="Script" id=12]
 [ext_resource path="res://3- Custo diario minimo.png" type="Texture" id=13]
@@ -121,6 +122,11 @@ __meta__ = {
 position = Vector2( -588, 1142 )
 scale = Vector2( 3.27029, 3.27029 )
 texture = ExtResource( 4 )
+
+[node name="Arcade3" type="Sprite" parent="Mapa"]
+position = Vector2( -1406, -814 )
+scale = Vector2( 2.88465, 2.61771 )
+texture = ExtResource( 10 )
 
 [node name="Paredes Sala de aula" type="Container" parent="Mapa"]
 margin_left = -6787.0
@@ -337,6 +343,27 @@ position = Vector2( 7316, -2959 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D4"]
 position = Vector2( 216, 0 )
 polygon = PoolVector2Array( -2, -2, 100, -3, 101, 48, -2, 49 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D5"]
+polygon = PoolVector2Array( 5276, -1381, 5276, -1486, 5212, -1490, 5207, -1377, 4944, -1381, 4946, -1467, 4795, -1469, 4765, -1528, 4753, -2107, 4780, -2123, 4863, -2119, 4871, -2158, 4988, -2162, 5003, -2121, 5763, -2121, 5780, -2160, 5886, -2164, 5897, -2117, 6020, -2121, 6035, -1503, 5814, -1481, 5824, -1392, 5560, -1390, 5556, -1479, 5509, -1498, 5475, -1479, 5482, -1384, 5473, -1316, 6145, -1322, 6139, -2425, 4633, -2408, 4652, -1301, 5274, -1315 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D6"]
+polygon = PoolVector2Array( 4918, -2075, 5018, -2068, 5014, -2028, 5078, -2013, 5082, -1955, 5148, -1960, 5159, -2005, 5193, -2004, 5203, -1943, 5282, -1949, 5286, -1998, 5337, -2002, 5335, -1939, 5429, -1939, 5426, -1996, 5471, -1996, 5488, -1938, 5565, -1941, 5571, -2000, 5618, -2004, 5620, -1956, 5639, -1953, 5682, -1953, 5680, -2000, 5752, -2009, 5752, -2073, 5852, -2075, 5894, -2055, 5896, -2004, 5845, -1998, 5845, -1883, 5777, -1883, 5773, -1817, 5001, -1811, 4991, -1871, 4914, -1879, 4918, -2011, 4869, -1994, 4878, -2068 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D7"]
+polygon = PoolVector2Array( 4869, -1745, 4927, -1747, 4933, -1624, 4865, -1620 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D8"]
+position = Vector2( 276, 13 )
+polygon = PoolVector2Array( 4869, -1745, 4927, -1747, 4933, -1624, 4865, -1620 )
 
 [node name="Paredes" type="Container" parent="Mapa"]
 margin_right = 40.0
@@ -957,6 +984,8 @@ position = Vector2( -277, 1534 )
 position = Vector2( 12, -4 )
 polygon = PoolVector2Array( -24, -20, 3, -19, 15, 20, -31, 17 )
 
+[node name="TPArcade" type="Area2D" parent="Teleportes"]
+
 [node name="InicioAula1" type="Area2D" parent="."]
 position = Vector2( 970, -3049.77 )
 
@@ -1080,6 +1109,11 @@ polygon = PoolVector2Array( -142, -128, -122, 25, 280, 27, 308, -113, 307, 48, -
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 634, 1525 )
+
+[node name="AbrirPong" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AbrirPong"]
+polygon = PoolVector2Array( -1227, -656, -1171, -656, -1165, -624, -1229, -629 )
 
 [connection signal="body_entered" from="Mapa/Deixarbixolento" to="KinematicBody2D2" method="_on_Deixarbixolento_body_entered"]
 [connection signal="body_exited" from="Mapa/Deixarbixolento" to="KinematicBody2D2" method="_on_Deixarbixolento_body_exited"]

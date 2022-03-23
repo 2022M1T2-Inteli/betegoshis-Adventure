@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://Action RPG Resources/Player/japinha.png" type="Texture" id=25]
 [ext_resource path="res://IniciarPong.png" type="Texture" id=26]
 [ext_resource path="res://Popup de Avisos.png" type="Texture" id=27]
+[ext_resource path="res://Vofalasoficial.tscn" type="PackedScene" id=28]
+[ext_resource path="res://TioCloFalas.tscn" type="PackedScene" id=29]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.0172, 20.4397 )
@@ -231,7 +233,7 @@ tracks/0/keys = {
 }
 
 [node name="KinematicBody2D2" type="KinematicBody2D"]
-position = Vector2( 1412, 700 )
+position = Vector2( 1038, 880 )
 scale = Vector2( 0.474283, 0.557933 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -1439,6 +1441,10 @@ text = "Até Mais"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Vofalas" parent="Camera2D/Falas" instance=ExtResource( 28 )]
+
+[node name="TioCloFalas" parent="Camera2D/Falas" instance=ExtResource( 29 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
