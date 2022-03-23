@@ -1,69 +1,203 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://start button.png" type="Texture" id=2]
+[ext_resource path="res://fundinho.png" type="Texture" id=3]
+[ext_resource path="res://email.png" type="Texture" id=4]
+[ext_resource path="res://Gastos diários.png" type="Texture" id=5]
+[ext_resource path="res://ipad.png" type="Texture" id=12]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "gif fundo"
+length = 0.62
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 2, 1, 0 ]
+}
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Botões" type="HBoxContainer" parent="."]
-anchor_left = 0.04
-anchor_top = 0.022
-anchor_right = 0.04
-anchor_bottom = 0.022
-margin_left = 363.04
-margin_top = 275.8
-margin_right = 575.04
-margin_bottom = 348.8
+[node name="Fundo" type="Sprite" parent="."]
+position = Vector2( 518.25, 302 )
+scale = Vector2( 2.07515, 1.01342 )
+texture = ExtResource( 3 )
+hframes = 4
 __meta__ = {
-"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fundo"]
+anims/RESET = SubResource( 1 )
+"anims/gif fundo" = SubResource( 2 )
+
+[node name="Iniciar" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 290.389
+margin_top = 391.0
+margin_right = 708.389
+margin_bottom = 520.0
+text = "Começar"
+__meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Configurações" type="Button" parent="Botões"]
-margin_right = 101.0
-margin_bottom = 73.0
-text = "Configurações"
+[node name="StartButton" type="Sprite" parent="."]
+modulate = Color( 0.211765, 1, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 499, 461 )
+scale = Vector2( 0.32963, 0.32963 )
+texture = ExtResource( 2 )
 
-[node name="Iniciar" type="Button" parent="Botões"]
-margin_left = 105.0
-margin_right = 173.0
-margin_bottom = 73.0
-text = "Começar"
-
-[node name="Sair" type="Button" parent="Botões"]
-margin_left = 177.0
-margin_right = 212.0
-margin_bottom = 73.0
-text = "Sair"
+[node name="Sair" type="Button" parent="."]
+margin_left = 947.0
+margin_top = 8.0
+margin_right = 967.0
+margin_bottom = 29.0
+rect_scale = Vector2( 3.31251, 3.31251 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
-margin_left = 426.0
-margin_top = 208.0
-margin_right = 592.0
-margin_bottom = 222.0
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 276.0
+margin_top = 220.0
+margin_right = 442.0
+margin_bottom = 252.0
+rect_scale = Vector2( 2.81951, 2.81951 )
 text = "Colocais vosso nome aqui"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 420.0
-margin_top = 189.0
-margin_right = 631.0
-margin_bottom = 241.0
-text = "Colocais vosso nome aqui"
+margin_left = 320.0
+margin_top = 272.0
+margin_right = 620.0
+margin_bottom = 327.0
+rect_scale = Vector2( 1.2319, 1.4964 )
 syntax_highlighting = true
 fold_gutter = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2" type="Sprite" parent="."]
 
-[connection signal="pressed" from="Botões/Iniciar" to="." method="_on_Iniciar_pressed"]
-[connection signal="pressed" from="Botões/Sair" to="." method="_on_Sair_pressed"]
+[node name="Config" type="Button" parent="."]
+anchor_left = 0.0185547
+anchor_top = 1.68167
+anchor_right = 0.0185547
+anchor_bottom = 1.68167
+margin_left = 848.0
+margin_top = -523.0
+margin_right = 1048.0
+margin_bottom = -389.0
+rect_scale = Vector2( 0.648824, 0.68262 )
+text = "iPAD"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Ipad" type="Sprite" parent="Config"]
+position = Vector2( 101.261, 65.9584 )
+scale = Vector2( 0.847473, 0.793231 )
+texture = ExtResource( 12 )
+
+[node name="iPad" type="Panel" parent="Config"]
+visible = false
+margin_left = -89.3925
+margin_top = -544.959
+margin_right = -49.3925
+margin_bottom = -504.959
+rect_scale = Vector2( 0.683818, 0.577921 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo" type="Sprite" parent="Config/iPad"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 0.141176, 0.141176, 1 )
+position = Vector2( -610.624, 476.4 )
+scale = Vector2( 0.637022, 0.594371 )
+texture = ExtResource( 5 )
+
+[node name="Ipad" type="Sprite" parent="Config/iPad"]
+position = Vector2( -647.414, 470.521 )
+scale = Vector2( 5.97263, 5.57275 )
+texture = ExtResource( 12 )
+
+[node name="CloseiPad" type="Button" parent="Config/iPad"]
+margin_left = -42.0
+margin_top = 19.0
+margin_right = -18.0
+margin_bottom = 43.0
+rect_scale = Vector2( 2.77434, 2.77434 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Email" type="Sprite" parent="Config/iPad"]
+position = Vector2( -682.928, 463.877 )
+
+[node name="Email" type="Label" parent="Config/iPad/Email"]
+margin_left = -624.0
+margin_top = -426.0
+margin_right = -351.0
+margin_bottom = -246.0
+rect_scale = Vector2( 4.78021, 4.78021 )
+text = "Destinatário:
+Remetente: INEDFIBA
+Assunto: Aprovação no processo seletivo
+
+Parabéns, você foi aprovado no processo seletivo Instituto de Educação Financeira Básica (INEDFIBA).
+
+att. Direção de Vestibular INEDFIBA"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Emailimg" type="Sprite" parent="Config"]
+visible = false
+position = Vector2( 3.08252, -2.92969 )
+scale = Vector2( 0.215462, 0.213878 )
+texture = ExtResource( 4 )
+
+[connection signal="pressed" from="Iniciar" to="." method="_on_Iniciar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_Sair_pressed"]
+[connection signal="pressed" from="Config" to="." method="_on_Config_pressed"]
+[connection signal="pressed" from="Config/iPad/CloseiPad" to="." method="_on_CloseiPad_pressed"]

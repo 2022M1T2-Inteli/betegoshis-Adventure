@@ -1,0 +1,1156 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Professora.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cidade.png" type="Texture" id=3]
+[ext_resource path="res://Mercadin.png" type="Texture" id=4]
+[ext_resource path="res://Plantas.png" type="Texture" id=5]
+[ext_resource path="res://POSTE.png" type="Texture" id=6]
+[ext_resource path="res://Sala de Aula Dentro.png" type="Texture" id=7]
+[ext_resource path="res://Banco.png" type="Texture" id=8]
+[ext_resource path="res://Action RPG Resources/Player/caradoBTG andando.png" type="Texture" id=9]
+[ext_resource path="res://Arcade3.png" type="Texture" id=10]
+[ext_resource path="res://Aula 1.4.png" type="Texture" id=11]
+[ext_resource path="res://Cidade.gd" type="Script" id=12]
+[ext_resource path="res://Aula 1.1.png" type="Texture" id=13]
+[ext_resource path="res://Aula 1.3.png" type="Texture" id=14]
+[ext_resource path="res://Aula 1.2.png" type="Texture" id=15]
+[ext_resource path="res://Action RPG Resources/Player/secretaria andando.png" type="Texture" id=16]
+[ext_resource path="res://pong sprite.png" type="Texture" id=17]
+[ext_resource path="res://Casa.png" type="Texture" id=19]
+[ext_resource path="res://Arvore Pequena.png" type="Texture" id=20]
+[ext_resource path="res://Arvore grande.png" type="Texture" id=21]
+[ext_resource path="res://Action RPG Resources/Player/japinha andando.png" type="Texture" id=22]
+[ext_resource path="res://Aula 1.5.png" type="Texture" id=23]
+
+[sub_resource type="Animation" id=2]
+resource_name = "pop up"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -255, -214 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -4332.0 ],
+"_edit_vertical_guides_": [ 51359.0, 50634.0, 49303.0 ]
+}
+
+[node name="Mapa" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arcade" type="Sprite" parent="Mapa"]
+position = Vector2( -597, 2307 )
+scale = Vector2( 3.324, 3.324 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Banco" type="Sprite" parent="Mapa"]
+position = Vector2( 4021.84, 2016.29 )
+scale = Vector2( 1.33428, 1.33428 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Casa" type="Sprite" parent="Mapa"]
+position = Vector2( -2494, 2273 )
+scale = Vector2( 2.60563, 2.60563 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cidade" type="Sprite" parent="Mapa"]
+position = Vector2( 1409, 462 )
+scale = Vector2( 2.57438, 2.5925 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SalaDeAula" type="Sprite" parent="Mapa"]
+position = Vector2( 1333, -2912.77 )
+scale = Vector2( 2.25042, 2.25042 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mercadin" type="Sprite" parent="Mapa"]
+position = Vector2( -588, 1142 )
+scale = Vector2( 3.27029, 3.27029 )
+texture = ExtResource( 4 )
+
+[node name="Paredes Sala de aula" type="Container" parent="Mapa"]
+margin_left = -6787.0
+margin_top = 995.0
+margin_right = -6747.0
+margin_bottom = 1035.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 6736, -4319.77 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D"]
+position = Vector2( 1169, 525 )
+scale = Vector2( 0.886172, 0.886172 )
+polygon = PoolVector2Array( -59.8079, -154.853, 58.6793, -153.725, 62.0647, 508.675, -185.066, 513.189, -186.511, 578.224, -134.285, 582.024, -132.029, 638.447, -183.937, 639.575, -191.836, 817.87, -427.682, 829.154, -436.71, 884.448, -476.206, 875.421, -477.334, 840.439, -551.812, 832.54, -557.454, 879.935, -595.821, 879.935, -599.207, 842.696, -681.583, 839.311, -687.226, 876.549, -716.565, 878.806, -718.822, 839.311, -810.227, 831.411, -839.566, 831.408, -837.309, 890.087, -809.098, 891.215, -806.841, 917.173, -789.914, 1060.49, -130.9, 1063.87, -133.157, 1122.55, -835.052, 1118.04, -847.465, 695.997, -306.938, 695.997, -305.81, 514.317, -431.068, 515.446, -440.095, 561.712, -490.875, 572.996, -862.135, 580.896, -857.157, 697.759, -839, 1124, -99.3035, 1122.55, -60.9365, 1126.19, 57.5509, 1127.06, 88.019, 1242.16, -975, 1248, -973, -1466, 46, -1473, 58.6793, -1230.27, 56.4225, -1018.12, -58.6794, -1023.76, -63.1932, -1133.22, -243.745, -1130.97, -248.259, -1149.02, -309.195, -1151.28, -320.48, -1132.09, -469.435, -1133.22, -471.692, -1174.97, -499.903, -1174.97, -505.492, -1130.84, -653.372, -1129.84, -656.757, -1190.77, -728.978, -1193.03, -732.364, -1067.77, -842.952, -1068.9, -850.851, -704.408, -63.1932, -707.793, -53.0371, -882.703, 57.5509, -882.703, 58.6793, -290.267, -62.0648, -291.396, -64.3217, -337.662, -232.461, -337.662, -242.617, -406.498, -732.364, -397.47, -728.978, -284.625, -845.208, -275.597, -855.365, 278.471, -60.9363, 271.7 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 6736, -4319.77 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D2"]
+position = Vector2( 1546, 559 )
+scale = Vector2( 0.872317, 0.872317 )
+polygon = PoolVector2Array( 4.58545, -18.342, 8, 596, 62, 598, 64.1968, 653.432, 804.753, 663.486, 804.753, 1109.42, 4.58545, 1100.52, -4.58557, 1227.5, 1053.52, 1226.35, 1029, -1520, 10, -1515, -382.888, -1529.52, -372.571, -1380.5, 7, -1342, 10.3174, -1008.81, 127.247, -1016.83, 129.54, -1257.57, 312.959, -1257.57, 312.959, -1303.42, 805.899, -1308.01, 805.899, -1207.13, 915.951, -1184.2, 915.951, -646.554, 120.369, -638.529, 115.783, -878.121, 2.29248, -870.096, -3.43945, -145.589, 125, -135, 126.101, -272.837, 307.228, -268.251, 315.252, -318.691, 787.558, -330.155, 810.485, -214.372, 918.244, -191.444, 929.708, 354.229, 126.101, 351.936, 139.857, -8.02466 )
+
+[node name="Mesa7" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8821, -4608.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa7"]
+position = Vector2( -225, -114 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa8" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8821, -4608.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa8"]
+position = Vector2( -117, 105 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa9" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8821, -4608.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa9"]
+position = Vector2( 99, 106 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa10" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8821, -4608.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa10"]
+position = Vector2( -333, 102 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa11" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8821, -4608.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa11"]
+position = Vector2( -7, -112 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa12" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8831, -3751.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa12"]
+position = Vector2( -225, -114 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa13" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8831, -3751.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa13"]
+position = Vector2( -117, 105 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa14" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8831, -3751.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa14"]
+position = Vector2( 99, 106 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa15" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8831, -3751.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa15"]
+position = Vector2( -333, 102 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa16" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 8831, -3751.77 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa16"]
+position = Vector2( -7, -112 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa17" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa17"]
+position = Vector2( -225, -114 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa18" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa18"]
+position = Vector2( -117, 105 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa22" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa22"]
+position = Vector2( 769, 750 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -15.8032, 82.1775, 559.439, 80.0703, 555.225, -32.6602 )
+
+[node name="Mesa23" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa23"]
+position = Vector2( 773, 907 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -15.8032, 82.1775, 552.064, 79.0166, 549.957, -29.4998 )
+
+[node name="Mesa19" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa19"]
+position = Vector2( 99, 106 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa20" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa20"]
+position = Vector2( -333, 102 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="Mesa21" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7580, -3842 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/Mesa21"]
+position = Vector2( -7, -112 )
+scale = Vector2( 0.949165, 0.949165 )
+polygon = PoolVector2Array( -16, -30, -21, -1, -42, 4, -44, 99, -20, 100, -16, 123, 1, 123, 4, 140, 81, 141, 82, 124, 102, 122, 102, 102, 128, 95, 126, 6, 103, -1, 99, -28 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7316, -2959 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D3"]
+polygon = PoolVector2Array( -2, -2, 100, -3, 101, 48, -2, 49 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
+position = Vector2( 7316, -2959 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D4"]
+position = Vector2( 216, 0 )
+polygon = PoolVector2Array( -2, -2, 100, -3, 101, 48, -2, 49 )
+
+[node name="Paredes" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Escola" type="StaticBody2D" parent="Mapa/Paredes"]
+position = Vector2( -2963, 1609 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Escola"]
+position = Vector2( 4086, -1006 )
+scale = Vector2( 1.38776, 1.36167 )
+polygon = PoolVector2Array( 110.97, 34.5164, 109.529, -97.674, 70.6177, -138.8, 98, -145.409, 98, -191.676, -272.381, -193.145, -244.999, -125.581, -278.867, -113.831, -468.381, -116.034, -475.586, -189.473, -499.366, -188.739, -508.013, -112.362, -641.321, -105.752, -647.807, -1567.92, -611, -1568, -604, -1119, -553, -1102, -504, -1100, -506, -1066, -473, -1067, -468, -1100, -331, -1102, -330, -1070, -296, -1070, -296, -1102, -214, -1099, -211, -1014, 24, -1016, 22, -1062, 67, -1060, 82.1468, -1022.27, 97.2791, -1022.27, 108, -1059, 146, -1066, 144, -1131, 204, -1129, 204, -1065, 237, -1061, 249.323, -1018.6, 280.308, -1020.07, 285, -1051, 331, -1052, 328, -1019, 551, -1012, 553, -1106, 643, -1106, 646, -1069, 680, -1073, 682, -1103, 813, -1098, 821, -1067, 861, -1067, 863, -1101, 950, -1103, 951, -1600, 1040, -1602, 1049.89, -837.205, 954.777, -839.409, 916.586, -785.064, 941.806, -743.203, 918.747, -686.655, 977.836, -624.966, 1039.81, -591.185, 1041.97, -195.348, 990.086, -195.348, 920.909, -137.331, 901.453, -102.08, 600.969, -104.284, 598.807, -188.738, 260.853, -192.41, 254.367, -152.753, 286.793, -126.315, 242.838, -105.752, 245, 38.9227, 286.793, 44.0634, 301.926, 71.9703, 1086.64, 73.439, 1106.82, -1683.23, -683.115, -1683.23, -685.998, 71.9703, 59.0884, 78.5798, 65.5735, 44.0634 )
+
+[node name="Fodase2" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase2"]
+position = Vector2( 550.5, -708.7 )
+polygon = PoolVector2Array( -102, -73, -79, -61, -24, -66, 12, -77, 81, -62, 90, -7, 93, 44, -132, 40, -124, -57 )
+
+[node name="Fodase14" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase14"]
+position = Vector2( 1396.5, -78.7 )
+scale = Vector2( 1.44234, 1.44234 )
+polygon = PoolVector2Array( -89, -70, -89, -116, 57, -115, 56, -71, 103, -70, 102, 31, 56, 30, 57, 76, -87, 74, -88, 32, -135, 33, -134, -71 )
+
+[node name="Fodase5" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase5"]
+position = Vector2( 2110.5, -746.7 )
+polygon = PoolVector2Array( -12, -36, 152, -29, 160, 81, -21, 81 )
+
+[node name="Fodase9" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase9"]
+position = Vector2( 1651.5, -62.7 )
+polygon = PoolVector2Array( 247, 72, 186, 80, 70, 76, 59, -35, 249, -30 )
+
+[node name="Fodase10" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase10"]
+position = Vector2( 800.5, -59.7 )
+polygon = PoolVector2Array( 237, -35, 235, 85, 62, 83, 49, -34 )
+
+[node name="Fodase12" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase12"]
+position = Vector2( 860.5, -186.7 )
+polygon = PoolVector2Array( 172, 18, 51, 23, 57, -35, 172, -31 )
+
+[node name="Fodase13" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase13"]
+position = Vector2( 1668.5, -182.7 )
+polygon = PoolVector2Array( 173, 14, 45, 17, 47, -36, 167, -34 )
+
+[node name="Fodase11" type="StaticBody2D" parent="Mapa/Paredes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase11"]
+position = Vector2( 427.5, -314.7 )
+polygon = PoolVector2Array( 237, 83, 58, 80, 50, -32, 237, -36 )
+
+[node name="Fodase19" type="StaticBody2D" parent="Mapa/Paredes"]
+position = Vector2( -857, 3399 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Fodase19"]
+position = Vector2( 1141, -494 )
+polygon = PoolVector2Array( 311, 4, 327, 5, 334, 13, 331, 26, 328, 32, 327, 49, 314, 48, 313, 32, 306, 25, 306, 10 )
+
+[node name="Paredes Casa" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/Paredes Casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Casa/StaticBody2D"]
+position = Vector2( -3174, 2427 )
+polygon = PoolVector2Array( 306, -57, 311, 305, -249, 315, -249, -616, 1591, -625, 1613, 305, 1366, 199, 1366, -15, 1300, -9, 1278, 2, 1248, -10, 1221, 40, 1201, 40, 1188, -8, 1058, -13, 1059, -185, 1372, -185, 1369, -389, 1304, -389, 1306, -313, 427, -314, 424, -386, 307, -388, 305, -317, 57, -317, 55, -384, -10, -385, -16, 13, 51, 2, 55, -119, 119, -123, 120, -61 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapa/Paredes Casa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Casa/StaticBody2D2"]
+polygon = PoolVector2Array( -2867, 2434, -2865, 2243, -2752, 2241, -2747, 2302, -2369, 2306, -2367, 2245, -2182, 2246, -2182, 2417, -2208, 2431, -2203, 2552, -2183, 2560, -2188, 2622, -1810, 2624, -1558, 2738, -2858, 2742 )
+
+[node name="Deixarbixolento" type="Area2D" parent="Mapa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Deixarbixolento"]
+position = Vector2( 841.5, -684.7 )
+polygon = PoolVector2Array( 4, -35, 1060, -31, 1059, 14, 7, 9 )
+
+[node name="ParedesBanco" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/ParedesBanco"]
+position = Vector2( 3372.84, 1653.29 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesBanco/StaticBody2D"]
+polygon = PoolVector2Array( 93, 210, 275, 213, 265, 279, 147, 282, 149, 331, 278, 336, 278, 281, 376, 274, 400, 333, 438, 334, 502, 332, 503, 277, 795, 277, 798, 319, 798, 394, 500, 390, 503, 334, 445, 335, 443, 462, 855, 458, 857, 320, 903, 310, 919, 268, 1264, 272, 1269, 390, 1146, 388, 1150, 561, 1261, 558, 1259, 632, 1145, 629, 1150, 684, 734, 681, 738, 765, 1363, 767, 1362, -39, -67, -50, -61, 768, 559, 774, 555, 690, 29, 684, 41, 328, 91, 326 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapa/ParedesBanco"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesBanco/StaticBody2D2"]
+position = Vector2( 4361.84, 2175.29 )
+polygon = PoolVector2Array( -15, -13, 40, -15, 45, 4, 85, -9, 92, 33, 91, 95, 47, 110, -16, 116, -62, 97, -68, 45, -45, 64, -20, 66 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mapa/ParedesBanco"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesBanco/StaticBody2D3"]
+position = Vector2( 3535.84, 2179.29 )
+polygon = PoolVector2Array( -10, -70, 46, -70, 55, -55, 85, -73, 94, 87, 44, 113, -15, 114, -16, 43, -55, 38, -54, -18, -32, 2, -14, -7 )
+
+[node name="ParedesCidade" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="MercadinhoParedes" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 435, 1031 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/MercadinhoParedes"]
+polygon = PoolVector2Array( 42, -14, 413, -15, 461, -2, 472, 344, 421, 362, 398, 421, 356, 414, 323, 421, 295, 408, 288, 362, 249, 358, 236, 288, 164, 288, 155, 352, -17, 355, -19, 419, 110, 418, 109, 475, -57, 486, -66, 112, -151, 118, -144, 417, -214, 422, -208, 480, -264, 484, -272, -18, -61, -15, -78, -73, -206, -69, -204, -120, -91, -116, -21, -107, 39, -120, 162, -113, 166, -75, 49, -73 )
+
+[node name="MercadinhoParedes2" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 2176, 1023 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/MercadinhoParedes2"]
+polygon = PoolVector2Array( 215, -16, 413, -15, 407, 61, 466, 65, 467, 368, 401, 368, 288, 362, 249, 358, 236, 288, 164, 288, 155, 352, 33, 370, 35, 431, -31, 431, -40, 376, -86, 328, -64, 238, -33, 231, -28, -2, 123, -12, 90, -64, -29, -69, -31, -106, 94, -102, 134, -79, 168, -78, 218, -105, 342, -106, 345, -68, 224, -64 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 669, 900 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D"]
+polygon = PoolVector2Array( -10, -1, 174, -4, 437, -1, 546, 2, 523, 54, -6, 51 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 1546, 900 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+polygon = PoolVector2Array( -18, 1, 174, -4, 437, -1, 537, 0, 533, 52, 25, 50 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 420, 563 )
+polygon = PoolVector2Array( -12, -2, 115, -4, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 603, 630 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 357, 1314 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -19, 1248 )
+polygon = PoolVector2Array( -4, 0, 119, -3, 121, 46, 4, 46 )
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 53, 1129 )
+polygon = PoolVector2Array( -1, -68, 40, -74, 55, -133, 236, -134, 249, -70, 288, -65, 286, 45, 238, 30, 140, 30, 60, 30, 4, 46 )
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 394, 999 )
+polygon = PoolVector2Array( -4, -108, 24, -136, 451, -135, 463, -110, 510, -137, 561, -105, 578, -64, 540, -10, 458, -9, 456, 238, 395, 240, 393, 185, 307, 176, 272, 105, 202, 101, 191, 177, 86, 185, 80, 233, 25, 235 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 481, 1317 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 792, 1311 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 970, 1248 )
+polygon = PoolVector2Array( 4, -45, 51, -72, 94, -55, 125, -50, 125, 46, 1, 45 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -1066, 1435 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -1313, 1494 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 1061, -17, 1052, 265, 1, 282 )
+
+[node name="CollisionPolygon2D41" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -78, 1486 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 1108, 6, 1139, 303, -10, 286 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -1315, 1316 )
+polygon = PoolVector2Array( -4, 0, 62, -10, 119, 1, 120, 49, -1, 42 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 240, 754 )
+polygon = PoolVector2Array( -7, 8, 55, -10, 114, 4, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -819, 627 )
+polygon = PoolVector2Array( -7, 8, 55, -10, 114, 4, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -631, 572 )
+polygon = PoolVector2Array( -5, -16, 117, -18, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -573, 384 )
+polygon = PoolVector2Array( -2, -215, 49, -263, 133, -269, 186, -219, 187, 47, 132, 42, 120, -27, 57, -30, 52, 46, -1, 42 )
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -1122, 756 )
+polygon = PoolVector2Array( -7, 8, 55, -10, 114, 4, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D42" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -1122, 756 )
+polygon = PoolVector2Array( -7, 8, 55, -10, 114, 4, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -875, 1315 )
+polygon = PoolVector2Array( -6, -32, 111, -36, 115, 41, -1, 42 )
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -570, 1089 )
+polygon = PoolVector2Array( -6, -32, 75, -76, 123, -16, 117, 12, -2, 14 )
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -497, 1256 )
+polygon = PoolVector2Array( -117, -77, 210, -75, 207, 36, -1, 42, -12, -12, -112, -19 )
+
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -624, 1256 )
+polygon = PoolVector2Array( -113, -391, -125, -416, -106, -430, -82, -419, -78, -390, 216, -389, 219, -205, 334, -201, 336, -146, 200, -144, 196, -267, -88, -267, -97, -24, -112, -19 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 839, 613 )
+polygon = PoolVector2Array( 18, -2, 123, -10, 120, 56, 14, 60 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 963, 561 )
+polygon = PoolVector2Array( 18, -2, 58, 1, 51, 46, 25, 48 )
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -85, 67 )
+polygon = PoolVector2Array( 18, -2, 58, 1, 51, 46, 25, 48 )
+
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -581, 810 )
+polygon = PoolVector2Array( 18, -2, 58, 1, 51, 46, 25, 48 )
+
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -89, 1059 )
+polygon = PoolVector2Array( 18, -2, 58, 1, 51, 46, 25, 48 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 1035, 574 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 1035, 829 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 110, 825 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -74, 1014 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -76, 1263 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -327, 1009 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -511, 825 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -509, 583 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -327, 385 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -78, 389 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( 106, 580 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -80, 19 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
+position = Vector2( -325, 15 )
+polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 1546, 900 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D3"]
+position = Vector2( 145, 185 )
+polygon = PoolVector2Array( -13, -3, 27, -7, 51, -62, 85, -9, 331, -3, 333, 304, 236.848, 303.69, 196, 228, 158, 228, 128.363, 303.34, 23, 303, 13, 180, -32, 167, -28, 125, -41, 75 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Mapa/ParedesCidade"]
+position = Vector2( 461, 2118 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D4"]
+polygon = PoolVector2Array( 4, 16, 14, -52, 83, -59, 87, 8, 263, 11, 264, -353, -130, -355, -104, -411, -116, -434, -217, -434, -234, -412, -174, -344, -172, -80, -201, -102, -223, -73, -234, -28, -286, -35, -291, 82, -180, 75, -164, 21 )
+
+[node name="ParedesMercadinho" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/ParedesMercadinho"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesMercadinho/StaticBody2D"]
+position = Vector2( -761, 1162 )
+scale = Vector2( 1.35582, 1.35582 )
+polygon = PoolVector2Array( -16.2264, 21.3893, 269.947, 22.1268, 269, -100, 494, -100, 496, 26, 453, 18, 455, 61, 496, 71, 499, 199, 445, 203, 447, 245, 388, 245, 387, 314, 556, 306, 550, -321, -295, -321, -309, 284, 320, 311, 323, 248, -131, 245, -132, 132, -237, 133, -241, 72, -129, 72, -134, -38, -245, -37, -242, -102, -16, -100 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Mapa/ParedesMercadinho/StaticBody2D"]
+position = Vector2( -667, 1252 )
+polygon = PoolVector2Array( -117, 11, 271, 17, 274, 162, -116, 165 )
+
+[node name="ParedesArcade" type="Container" parent="Mapa"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa/ParedesArcade"]
+position = Vector2( -565, 2570 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesArcade/StaticBody2D"]
+polygon = PoolVector2Array( -153, 177, -543, 179, -539, -370, -227, -384, -234, -532, -163, -532, -147, -471, -77, -473, -65, -530, 10, -535, 17, -473, 90, -470, 94, -537, 161, -539, 161, -457, 254, -452, 273, -379, 384, -386, 398, -455, 487, -462, 494, 177, 92, 177, 95, 279, 661, 276, 648, -832, -711, -826, -707, 279, -143, 329 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Mapa/ParedesArcade/StaticBody2D"]
+polygon = PoolVector2Array( -109, -146, -62, -146, -59, -80, -9, -76, 1, -120, 0, -146, 48, -146, 49, -252, 31, -259, 13, -263, 6, -267, -11, -276, -17, -282, -26, -289, -36, -299, -45, -300, -56, -304, -73, -304, -83, -304, -93, -304, -102, -299, -108, -289, -110, -280, -113, -269, -112, -254 )
+
+[node name="Imagenzinhapong" type="Sprite" parent="Mapa/ParedesArcade"]
+position = Vector2( -1002, 2355 )
+scale = Vector2( 0.0791574, 0.14675 )
+texture = ExtResource( 17 )
+
+[node name="Professora" parent="." instance=ExtResource( 2 )]
+position = Vector2( 565, -3092 )
+scale = Vector2( 1.66068, 1.66068 )
+
+[node name="Professora(botao)" type="Button" parent="Professora"]
+visible = false
+show_behind_parent = true
+margin_left = -12.0
+margin_top = -16.0
+margin_right = 8.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D_sora" type="Area2D" parent="Professora"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Professora/Area2D_sora"]
+polygon = PoolVector2Array( 24.0865, 22.8822, 22.8822, -24.0865, 49.9795, -32.5168, 49.9795, 46.9688, -40.3449, 46.3666, -39.7428, -33.7211, 43.9579, -33.7211, 19.8714, -22.8822, -24.0865, -22.28, -24.0865, 27.6995, 23.4844, 27.0973, 23.4844, -22.8822 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2620, 2201 )
+scale = Vector2( 0.434376, 0.517166 )
+
+[node name="Postes" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Poste" type="Sprite" parent="Postes"]
+position = Vector2( 1284, 1882 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste2" type="Sprite" parent="Postes"]
+position = Vector2( 1529, 1884 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste3" type="Sprite" parent="Postes"]
+position = Vector2( 1714, 1696 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste4" type="Sprite" parent="Postes"]
+position = Vector2( 1097, 1697 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste7" type="Sprite" parent="Postes"]
+position = Vector2( 1097, 1446 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste8" type="Sprite" parent="Postes"]
+position = Vector2( 1281, 1260 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste9" type="Sprite" parent="Postes"]
+position = Vector2( 1529, 1260 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste10" type="Sprite" parent="Postes"]
+position = Vector2( 1713, 1447 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste11" type="Sprite" parent="Postes"]
+position = Vector2( 1528, 887 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste12" type="Sprite" parent="Postes"]
+position = Vector2( 1284, 887 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste6" type="Sprite" parent="Postes"]
+position = Vector2( 232, 1695 )
+scale = Vector2( 1.29099, 1.29099 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste5" type="Sprite" parent="Postes"]
+position = Vector2( 1528, 2130 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Plantas" type="Sprite" parent="Postes"]
+position = Vector2( 977, -1853 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas6" type="Sprite" parent="Postes"]
+position = Vector2( 384, -2017 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas7" type="Sprite" parent="Postes"]
+position = Vector2( 384, -1850 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas8" type="Sprite" parent="Postes"]
+position = Vector2( 938, -2122 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas9" type="Sprite" parent="Postes"]
+position = Vector2( 938, -2122 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas2" type="Sprite" parent="Postes"]
+position = Vector2( 822, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas3" type="Sprite" parent="Postes"]
+position = Vector2( 768, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas4" type="Sprite" parent="Postes"]
+position = Vector2( 606, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas10" type="Sprite" parent="Postes"]
+position = Vector2( -185, 1362 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas5" type="Sprite" parent="Postes"]
+position = Vector2( 552, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="ArvorePequena" type="Sprite" parent="Postes"]
+position = Vector2( 817, 1704 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena3" type="Sprite" parent="Postes"]
+position = Vector2( 879, 882 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena4" type="Sprite" parent="Postes"]
+position = Vector2( 1867, 883 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena5" type="Sprite" parent="Postes"]
+position = Vector2( 2610, 1080 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena2" type="Sprite" parent="Postes"]
+position = Vector2( 2608, 2078 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena6" type="Sprite" parent="Postes"]
+position = Vector2( 1867, 1942 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena7" type="Sprite" parent="Postes"]
+position = Vector2( 1619, 1941 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvoreGrande" type="Sprite" parent="Postes"]
+position = Vector2( 294, 1696 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande2" type="Sprite" parent="Postes"]
+position = Vector2( 1159, 891 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande5" type="Sprite" parent="Postes"]
+position = Vector2( 418, 954 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande3" type="Sprite" parent="Postes"]
+position = Vector2( 1589, 888 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande4" type="Sprite" parent="Postes"]
+position = Vector2( 2331, 950 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="Teleportes" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Faculdade TP" type="Area2D" parent="Teleportes"]
+scale = Vector2( 1, 1.00341 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/Faculdade TP"]
+position = Vector2( 1391, -905 )
+polygon = PoolVector2Array( -3, 24, -17, 22, -38, 43, 5, 43 )
+
+[node name="TP Sair Sala de Aula" type="Area2D" parent="Teleportes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Sala de Aula"]
+position = Vector2( 1327, -1778.77 )
+polygon = PoolVector2Array( -6, 7, -112, 28, 140, 35 )
+
+[node name="TP Sair Banco" type="Area2D" parent="Teleportes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Banco"]
+position = Vector2( 4019.84, 2393.29 )
+polygon = PoolVector2Array( -66, -41, 67, -40, 3, 10 )
+
+[node name="Banco TP" type="Area2D" parent="Teleportes"]
+position = Vector2( 2181, 2044 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/Banco TP"]
+polygon = PoolVector2Array( -18, -12, 3, -13, 19, 19, -31, 19 )
+
+[node name="Mercadinho TP" type="Area2D" parent="Teleportes"]
+position = Vector2( 641, 1365 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/Mercadinho TP"]
+polygon = PoolVector2Array( -24, -20, 3, -19, 15, 20, -31, 17 )
+
+[node name="TP Sair Mercadinho" type="Area2D" parent="Teleportes"]
+position = Vector2( -277, 1534 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Mercadinho"]
+position = Vector2( 12, -4 )
+polygon = PoolVector2Array( -24, -20, 3, -19, 15, 20, -31, 17 )
+
+[node name="Arcade TP" type="Area2D" parent="Teleportes"]
+position = Vector2( 552, 2260 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/Arcade TP"]
+polygon = PoolVector2Array( -64, -171, -26, -168, -18, -130, -69, -130 )
+
+[node name="TP Sair Arcade" type="Area2D" parent="Teleportes"]
+position = Vector2( -597, 2689 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Arcade"]
+position = Vector2( 7, -2 )
+polygon = PoolVector2Array( -87, 87, 79, 90, 1, 60 )
+
+[node name="InicioAula1" type="Area2D" parent="."]
+position = Vector2( 970, -3049.77 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="InicioAula1"]
+position = Vector2( 83, 67.7732 )
+scale = Vector2( 0.8125, 1 )
+polygon = PoolVector2Array( 13.5385, 39, 13.5386, 1, 13.5385, -60, 18.4615, -16 )
+
+[node name="Aula 1 Gastos diarios" type="Panel" parent="."]
+visible = false
+margin_left = 594.0
+margin_top = -2978.0
+margin_right = 875.0
+margin_bottom = -2779.0
+rect_pivot_offset = Vector2( 140, 99 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parte 1 Gastos Diarios" type="Sprite" parent="Aula 1 Gastos diarios"]
+visible = false
+position = Vector2( 135, 117 )
+scale = Vector2( 0.646338, 0.622229 )
+texture = ExtResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Aula 1 Gastos diarios/Parte 1 Gastos Diarios"]
+"anims/pop up" = SubResource( 2 )
+
+[node name="Parte 2 CDMaximo" type="Sprite" parent="Aula 1 Gastos diarios"]
+visible = false
+position = Vector2( 135, 117 )
+scale = Vector2( 0.621847, 0.621847 )
+texture = ExtResource( 15 )
+
+[node name="Parte 3 Exemplo CDMax" type="Sprite" parent="Aula 1 Gastos diarios"]
+visible = false
+position = Vector2( 135, 117 )
+scale = Vector2( 0.621847, 0.621847 )
+texture = ExtResource( 14 )
+
+[node name="Parte 4 CDMinimo" type="Sprite" parent="Aula 1 Gastos diarios"]
+visible = false
+position = Vector2( 135, 117 )
+scale = Vector2( 0.621847, 0.621847 )
+texture = ExtResource( 11 )
+
+[node name="Parte 5 Exemplo CDMin" type="Sprite" parent="Aula 1 Gastos diarios"]
+visible = false
+position = Vector2( 135, 117 )
+scale = Vector2( 0.621847, 0.621847 )
+texture = ExtResource( 23 )
+
+[node name="NextButton" type="Button" parent="Aula 1 Gastos diarios"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 327.0
+margin_top = 172.0
+margin_right = 425.0
+margin_bottom = 268.0
+text = "======>"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Areas2D_e_NPC" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Abrir_pc" type="Area2D" parent="Areas2D_e_NPC"]
+position = Vector2( -2543, 2125 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Abrir_pc"]
+polygon = PoolVector2Array( -72, -7, 56, -8, 38, 29, -53, 28 )
+
+[node name="GuilhermeBanquista" type="KinematicBody2D" parent="Areas2D_e_NPC"]
+
+[node name="GuilhermeBanquista" type="Sprite" parent="Areas2D_e_NPC/GuilhermeBanquista"]
+position = Vector2( 4022.84, 2001.29 )
+scale = Vector2( 1.30733, 1.30733 )
+texture = ExtResource( 9 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="SecretariaAndando" type="KinematicBody2D" parent="Areas2D_e_NPC"]
+position = Vector2( 806, -2223 )
+
+[node name="Sprite" type="Sprite" parent="Areas2D_e_NPC/SecretariaAndando"]
+position = Vector2( -13, 0 )
+scale = Vector2( 1.37863, 1.37863 )
+texture = ExtResource( 16 )
+hframes = 3
+vframes = 4
+
+[node name="JapinhaAndando" type="KinematicBody2D" parent="Areas2D_e_NPC"]
+position = Vector2( -556, 1104 )
+scale = Vector2( 1.01794, 1.01794 )
+
+[node name="Sprite" type="Sprite" parent="Areas2D_e_NPC/JapinhaAndando"]
+position = Vector2( -22, -45 )
+scale = Vector2( 1.7689, 1.7689 )
+texture = ExtResource( 22 )
+hframes = 3
+vframes = 4
+
+[node name="Iniciar_Guilherme_Falas" type="Area2D" parent="Areas2D_e_NPC"]
+position = Vector2( 4034.84, 2141.29 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Iniciar_Guilherme_Falas"]
+position = Vector2( 1, -3 )
+polygon = PoolVector2Array( -47, -16, 34, -15, -7, 9 )
+
+[node name="Iniciar_Secretária_Falas" type="Area2D" parent="Areas2D_e_NPC"]
+position = Vector2( 986, -2034 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Iniciar_Secretária_Falas"]
+polygon = PoolVector2Array( -26, -190, -29, -32, -226, -19, -20, -18 )
+
+[node name="Iniciar_Japinha_Falas" type="Area2D" parent="Areas2D_e_NPC"]
+position = Vector2( -668, 1172 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Iniciar_Japinha_Falas"]
+polygon = PoolVector2Array( -142, -128, -122, 25, 280, 27, 308, -113, 307, 48, -136, 44 )
+
+[node name="Iniciar_Pong" type="Area2D" parent="Areas2D_e_NPC"]
+position = Vector2( -1034, 2424 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Iniciar_Pong"]
+polygon = PoolVector2Array( -42, 9, 109, 9, 110, -148, -44, -149 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -857, 2355 )
+
+[node name="Coisas_sobre_orientação_ao_jogador" type="Container" parent="."]
+margin_left = -461.0
+margin_top = 313.0
+margin_right = -421.0
+margin_bottom = 353.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aviso_Quarto" type="Area2D" parent="Coisas_sobre_orientação_ao_jogador"]
+position = Vector2( -1365, 1870 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coisas_sobre_orientação_ao_jogador/Aviso_Quarto"]
+polygon = PoolVector2Array( 11, -66, 11, 40, -16, 11, -17, -29 )
+
+[node name="Tempo" type="CanvasLayer" parent="."]
+
+[node name="Horas" type="Label" parent="Tempo"]
+margin_left = 411.0
+margin_top = 7.0
+margin_right = 451.0
+margin_bottom = 21.0
+rect_scale = Vector2( 3.62064, 3.2063 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dias" type="Label" parent="Tempo"]
+margin_left = 387.0
+margin_top = 82.0
+margin_right = 434.0
+margin_bottom = 112.0
+rect_scale = Vector2( 3.81735, 3.81735 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Mapa/Deixarbixolento" to="KinematicBody2D2" method="_on_Deixarbixolento_body_entered"]
+[connection signal="body_exited" from="Mapa/Deixarbixolento" to="KinematicBody2D2" method="_on_Deixarbixolento_body_exited"]
+[connection signal="pressed" from="Professora/Professora(botao)" to="KinematicBody2D2" method="_on_Professorabotao_pressed"]
+[connection signal="body_entered" from="Professora/Area2D_sora" to="KinematicBody2D2" method="_on_Area2D_sora_body_entered"]
+[connection signal="body_entered" from="Teleportes/Faculdade TP" to="KinematicBody2D2" method="_on_Faculdade_TP_body_entered"]
+[connection signal="body_entered" from="Teleportes/TP Sair Sala de Aula" to="KinematicBody2D2" method="_on_TP_Sala_de_Aula_body_entered"]
+[connection signal="body_entered" from="Teleportes/TP Sair Banco" to="KinematicBody2D2" method="_on_TP_Sair_Banco_body_entered"]
+[connection signal="body_entered" from="Teleportes/Banco TP" to="KinematicBody2D2" method="_on_Banco_TP_body_entered"]
+[connection signal="body_entered" from="Teleportes/Mercadinho TP" to="KinematicBody2D2" method="_on_Mercadinho_TP_body_entered"]
+[connection signal="body_entered" from="Teleportes/TP Sair Mercadinho" to="KinematicBody2D2" method="_on_TP_Sair_Mercadinho_body_entered"]
+[connection signal="body_entered" from="Teleportes/Arcade TP" to="KinematicBody2D2" method="_on_Arcade_TP_body_entered"]
+[connection signal="body_entered" from="Teleportes/TP Sair Arcade" to="KinematicBody2D2" method="_on_TP_Sair_Arcade_body_entered"]
+[connection signal="body_entered" from="InicioAula1" to="Professora" method="_on_InicioAula1_body_entered"]
+[connection signal="body_entered" from="InicioAula1" to="KinematicBody2D2" method="_on_InicioAula1_body_entered"]
+[connection signal="pressed" from="Aula 1 Gastos diarios/NextButton" to="." method="_on_NextButton_pressed"]
+[connection signal="body_entered" from="Areas2D_e_NPC/Abrir_pc" to="KinematicBody2D2" method="_on_Abrir_pc_body_entered"]
+[connection signal="body_exited" from="Areas2D_e_NPC/Abrir_pc" to="KinematicBody2D2" method="_on_Abrir_pc_body_exited"]
+[connection signal="body_entered" from="Areas2D_e_NPC/Iniciar_Guilherme_Falas" to="KinematicBody2D2" method="_on_Iniciar_Guilherme_Falas_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/Iniciar_Secretária_Falas" to="KinematicBody2D2" method="_on_Iniciar_Secretria_Falas_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/Iniciar_Japinha_Falas" to="KinematicBody2D2" method="_on_Iniciar_Japinha_Falas_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/Iniciar_Pong" to="KinematicBody2D2" method="_on_Iniciar_Pong_body_entered"]
+[connection signal="body_exited" from="Areas2D_e_NPC/Iniciar_Pong" to="KinematicBody2D2" method="_on_Iniciar_Pong_body_exited"]
+[connection signal="body_entered" from="Coisas_sobre_orientação_ao_jogador/Aviso_Quarto" to="." method="_on_Aviso_Quarto_body_entered"]

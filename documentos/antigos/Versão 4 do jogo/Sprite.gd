@@ -28,3 +28,9 @@ func _process(delta):
 #func _process(delta):
 #	$Sprite.move_local_x(velocidadeX)
 #	$Sprite.move_local_y(velocidadeY)
+
+
+func _on_Button_pressed():
+	self.position.x = -5392
+	self.position.y = 1707
+
