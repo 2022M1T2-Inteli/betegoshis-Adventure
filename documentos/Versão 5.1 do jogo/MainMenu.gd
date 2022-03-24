@@ -1,0 +1,48 @@
+extends CanvasLayer
+
+
+func _on_IniciarButton_pressed():
+	get_tree().change_scene("res://Cidade.tscn")
+
+
+func _on_ConfiguracoesButton_pressed():
+	$Configuracoes.visible = true
+func _on_SaveButton_pressed():
+	$Configuracoes.visible = false
+
+func _on_SairButton_pressed():
+	get_tree().quit()
+
+
+var soundoff_buttons = preload("res://images/buttons/audioOff.png")
+var soundon_buttons = preload("res://images/buttons/audioOn.png")
+var musicon_buttons = preload("res://images/buttons/musicOn.png")
+var musicoff_buttons = preload("res://images/buttons/musicOff.png")
+var sound = true
+var music = true
+
+func _on_SoundButton_pressed():
+	if sound:
+		sound = false
+		$Configuracoes/SoundButton.texture_normal = soundoff_buttons
+	else:
+		sound = true
+		$Configuracoes/SoundButton.texture_normal = soundon_buttons
+
+var contadorAlternarMusica = 0
+func _on_MusicButton_pressed():
+	contadorAlternarMusica += 1
+	if contadorAlternarMusica % 2 == 1:
+		$AudioStreamPlayer.stream_paused = true
+	if contadorAlternarMusica % 2 == 0:
+		$AudioStreamPlayer.stream_paused = false
+	
+	if music:
+		music = false
+		$Configuracoes/MusicButton.texture_normal = musicoff_buttons
+	else:
+		music = true
+		$Configuracoes/MusicButton.texture_normal = musicon_buttons
+
+
+
