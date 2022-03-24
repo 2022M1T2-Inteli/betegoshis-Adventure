@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Versão 4 do jogo"
-run/main_scene="res://Cidade.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 
 [importer_defaults]
