@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular 2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://RostoVó.png" type="Texture" id=2]
+[ext_resource path="res://Image_from_iOS__5_-removebg-preview-3 2.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=42]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=43]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=44]
+font_data = ExtResource( 1 )
+
+[node name="VoFalas" type="Sprite"]
+position = Vector2( 559, 465 )
+scale = Vector2( 0.477031, 0.477031 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -1000.0
+margin_top = -132.0
+margin_right = 975.0
+margin_bottom = 271.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -1167.64
+margin_top = 192.859
+margin_right = -770.638
+margin_bottom = 282.859
+rect_scale = Vector2( 0.896753, 0.896753 )
+color = Color( 0.482353, 0.172549, 0.756863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_left = 18.7012
+margin_top = 4.67529
+margin_right = 118.701
+margin_bottom = 27.6753
+rect_scale = Vector2( 3.57986, 3.92083 )
+custom_fonts/font = SubResource( 42 )
+text = "Vó Creuza"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1503.05, 194.956 )
+scale = Vector2( -2.34447, 2.35982 )
+texture = ExtResource( 2 )
+
+[node name="falaVo" type="RichTextLabel" parent="."]
+margin_left = -767.245
+margin_top = -117.393
+margin_right = -298.245
+margin_bottom = -2.3927
+rect_scale = Vector2( 3.54136, 3.20396 )
+custom_fonts/normal_font = SubResource( 43 )
+text = "Ah que orgulho! Parabéns por ter passado na faculdade."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="proximafalavo" type="Button" parent="."]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -824.0
+margin_top = -130.0
+margin_right = 964.0
+margin_bottom = 262.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tchau_vo" type="TextureButton" parent="."]
+visible = false
+margin_left = 651.949
+margin_top = 125.778
+margin_right = 971.949
+margin_bottom = 258.778
+rect_scale = Vector2( 0.956798, 0.956798 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="tchau_vo"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 25.1555
+margin_top = 31.4446
+margin_right = 117.156
+margin_bottom = 53.4446
+rect_scale = Vector2( 2.86796, 2.86796 )
+custom_fonts/font = SubResource( 44 )
+text = "Tchau vó!"
