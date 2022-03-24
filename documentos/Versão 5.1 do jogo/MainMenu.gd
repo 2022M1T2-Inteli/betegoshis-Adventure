@@ -2,7 +2,8 @@ extends CanvasLayer
 
 
 func _on_IniciarButton_pressed():
-	get_tree().change_scene("res://Cidade.tscn")
+	$Menuiniciar.visible = false
+	$ColocarNome.visible = true
 
 
 func _on_ConfiguracoesButton_pressed():
@@ -13,6 +14,9 @@ func _on_SaveButton_pressed():
 func _on_SairButton_pressed():
 	get_tree().quit()
 
+func _on_BotaoSeta_pressed():
+	get_tree().change_scene("res://Cidade.tscn")
+	Global.player_name = str($ColocarNome/BalaoNome/LineEdit.text)
 
 var soundoff_buttons = preload("res://images/buttons/audioOff.png")
 var soundon_buttons = preload("res://images/buttons/audioOn.png")

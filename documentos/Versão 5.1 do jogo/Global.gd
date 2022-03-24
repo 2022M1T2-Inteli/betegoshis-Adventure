@@ -1,7 +1,7 @@
 extends Node
 
 var money = 700.00
-
+var player_name
 
 # Aulas/Professora
 var comecarAula = false

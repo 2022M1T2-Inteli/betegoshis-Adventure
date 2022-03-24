@@ -694,10 +694,10 @@ func _on_BotaoComprarComida_pressed():
 		$Camera2D/Falas/JapinhaFalas/Comidinhas.visible = true
 		$Camera2D/Falas/JapinhaFalas/Falaorg.visible = false
 
-func _on_Iniciar_TioClovis_Falas_body_entered(body):
+func _on_Iniciar_TioClovis_Falas_body_entered(_body):
 	$Camera2D/Falas/TioClovisFalas.visible = true
 
-func _on_iniciar_falavo_body_entered(body):
+func _on_iniciar_falavo_body_entered(_body):
 	$Camera2D/Falas/VoFalas.visible = true
 	$Camera2D/Controles/Controlesorg.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = false

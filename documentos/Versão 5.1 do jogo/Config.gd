@@ -9,6 +9,13 @@ func _on_CloseMAPButton_pressed(): #quando aperta no "x"
 	$CelularPanel/apps/MapaB/MapaI.visible = false #o mapa desaparece
 	$CelularPanel/apps/MapaB/CloseMAPButton.visible = false #o botao de fechar também desaparece
 
+# App Ajustes
+func _on_AjustesB_pressed():
+	$CelularPanel/apps/AjustesI.visible = true
+func _on_SaveButton_pressed():
+	$CelularPanel/apps/AjustesI.visible = false
+
+
 
 func _process(_delta):
 	# Coisas para os objetivos
@@ -37,4 +44,8 @@ func _process(_delta):
 		$CelularPanel/Tasks/Objetivo6.visible = true
 		$CelularPanel/Tasks/Objetivo5.modulate.r = 0
 		$CelularPanel/Tasks/Objetivo5.modulate.b = 0
+
+
+
+
 

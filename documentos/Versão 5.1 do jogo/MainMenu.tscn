@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://images/buttons/audioOn.png" type="Texture" id=5]
 [ext_resource path="res://images/buttons/musicOn.png" type="Texture" id=6]
 [ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Image_from_iOS__5_-removebg-preview-3.png" type="Texture" id=8]
+[ext_resource path="res://setinha_voltar.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://ChiKareGo2Font.ttf"
@@ -20,6 +22,14 @@ font_data = ExtResource( 7 )
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 7 )
 
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="Theme" id=6]
+LineEdit/styles/normal = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 7 )
+
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource( 2 )
 
@@ -28,7 +38,13 @@ position = Vector2( 596, 329 )
 scale = Vector2( 1.73203, 1.69605 )
 texture = ExtResource( 3 )
 
-[node name="NomeGame" type="Label" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Menuiniciar" type="Sprite" parent="."]
+
+[node name="NomeGame" type="Label" parent="Menuiniciar"]
 margin_left = 53.0
 margin_top = 117.0
 margin_right = 1077.0
@@ -41,11 +57,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-autoplay = true
-
-[node name="LabelIniciar" type="Label" parent="."]
+[node name="LabelIniciar" type="Label" parent="Menuiniciar"]
 margin_left = 354.0
 margin_top = 247.0
 margin_right = 1378.0
@@ -59,7 +71,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="IniciarButton" type="Button" parent="LabelIniciar"]
+[node name="IniciarButton" type="Button" parent="Menuiniciar/LabelIniciar"]
 modulate = Color( 0.698039, 0.462745, 0.462745, 0 )
 margin_left = -9.0
 margin_top = -4.0
@@ -70,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LabelOptions" type="Label" parent="."]
+[node name="LabelOptions" type="Label" parent="Menuiniciar"]
 margin_left = 431.0
 margin_top = 384.0
 margin_right = 1455.0
@@ -81,7 +93,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Opções"
 
-[node name="ConfiguracoesButton" type="Button" parent="LabelOptions"]
+[node name="ConfiguracoesButton" type="Button" parent="Menuiniciar/LabelOptions"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -4.0
 margin_right = 203.0
@@ -91,7 +103,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LabelSair" type="Label" parent="."]
+[node name="LabelSair" type="Label" parent="Menuiniciar"]
 margin_left = 460.0
 margin_top = 426.0
 margin_right = 1484.0
@@ -105,7 +117,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SairButton" type="Button" parent="LabelSair"]
+[node name="SairButton" type="Button" parent="Menuiniciar/LabelSair"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -3.94974
 margin_top = -0.052536
@@ -211,9 +223,53 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="LabelIniciar/IniciarButton" to="." method="_on_IniciarButton_pressed"]
-[connection signal="pressed" from="LabelOptions/ConfiguracoesButton" to="." method="_on_ConfiguracoesButton_pressed"]
-[connection signal="pressed" from="LabelSair/SairButton" to="." method="_on_SairButton_pressed"]
+[node name="ColocarNome" type="Sprite" parent="."]
+visible = false
+
+[node name="BalaoNome" type="Sprite" parent="ColocarNome"]
+position = Vector2( 512, 345 )
+scale = Vector2( 1.10857, 0.914789 )
+texture = ExtResource( 8 )
+
+[node name="LineEdit" type="LineEdit" parent="ColocarNome/BalaoNome"]
+margin_left = -106.351
+margin_top = -47.9549
+margin_right = 96.6494
+margin_bottom = 34.0451
+theme = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Insiranome" type="Label" parent="ColocarNome"]
+margin_left = 225.0
+margin_top = 219.0
+margin_right = 468.0
+margin_bottom = 242.0
+rect_scale = Vector2( 2.47737, 2.47737 )
+custom_fonts/font = SubResource( 7 )
+text = "INSIRA SEU NOME ABAIXO"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoSeta" type="TextureButton" parent="ColocarNome"]
+margin_left = 663.0
+margin_top = 497.0
+margin_right = 808.0
+margin_bottom = 594.0
+rect_rotation = -180.311
+rect_scale = Vector2( 0.897358, 0.897358 )
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Menuiniciar/LabelIniciar/IniciarButton" to="." method="_on_IniciarButton_pressed"]
+[connection signal="pressed" from="Menuiniciar/LabelOptions/ConfiguracoesButton" to="." method="_on_ConfiguracoesButton_pressed"]
+[connection signal="pressed" from="Menuiniciar/LabelSair/SairButton" to="." method="_on_SairButton_pressed"]
 [connection signal="pressed" from="Configuracoes/SoundButton" to="." method="_on_SoundButton_pressed"]
 [connection signal="pressed" from="Configuracoes/MusicButton" to="." method="_on_MusicButton_pressed"]
 [connection signal="pressed" from="Configuracoes/SaveButton" to="." method="_on_SaveButton_pressed"]
+[connection signal="pressed" from="ColocarNome/BotaoSeta" to="." method="_on_BotaoSeta_pressed"]

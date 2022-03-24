@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -37,6 +37,8 @@
 [ext_resource path="res://RostoTio.png" type="Texture" id=35]
 [ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular 2.ttf" type="DynamicFontData" id=36]
 [ext_resource path="res://Image_from_iOS__5_-removebg-preview-3 2.png" type="Texture" id=37]
+[ext_resource path="res://images/buttons/audioOn.png" type="Texture" id=38]
+[ext_resource path="res://images/buttons/musicOn.png" type="Texture" id=39]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 46.0172, 20.4397 )
@@ -67,6 +69,12 @@ font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=27]
 font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=46]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=47]
+font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=13]
 font_data = ExtResource( 21 )
@@ -517,7 +525,6 @@ scale = Vector2( 0.711932, 0.634258 )
 texture = ExtResource( 6 )
 
 [node name="CelularPanel" type="Panel" parent="Camera2D/Celular/AbrirCelular"]
-visible = false
 margin_left = 108.04
 margin_top = 75.8257
 margin_right = 148.04
@@ -934,6 +941,100 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AjustesI" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+position = Vector2( -1734.26, -800.937 )
+scale = Vector2( 2.04003, 2.04003 )
+
+[node name="Fundo" type="ColorRect" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+margin_left = 203.0
+margin_top = 31.0
+margin_right = 661.0
+margin_bottom = 387.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfigLabel" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 338.0
+margin_top = 58.0
+margin_right = 542.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 46 )
+text = "CONFIGURAÇÕES"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SoundButton" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 293.0
+margin_top = 121.0
+margin_right = 401.0
+margin_bottom = 221.0
+texture_normal = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 484.0
+margin_top = 125.0
+margin_right = 595.0
+margin_bottom = 230.0
+texture_normal = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveButton" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 381.0
+margin_top = 240.0
+margin_right = 482.0
+margin_bottom = 264.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveAndQuitButton" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 363.0
+margin_top = 284.0
+margin_right = 508.0
+margin_bottom = 311.0
+
+[node name="SaveLabel" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 0.156863, 0.203922, 0.356863, 1 )
+anchor_right = 0.128
+margin_left = 399.0
+margin_top = 241.0
+margin_right = 464.872
+margin_bottom = 271.0
+custom_fonts/font = SubResource( 47 )
+text = "Salvar"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SaveAndQuitLabel" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI"]
+modulate = Color( 0.156863, 0.203922, 0.356863, 1 )
+anchor_right = 0.128
+margin_left = 372.0
+margin_top = 284.0
+margin_right = 497.872
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 47 )
+text = "Salvar e sair"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Notificacao" type="Sprite" parent="Camera2D/Celular/AbrirCelular"]
 visible = false
 position = Vector2( 24.15, 123.946 )
@@ -1155,6 +1256,7 @@ __meta__ = {
 }
 
 [node name="ProfessoraFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
 position = Vector2( 515, 340 )
 scale = Vector2( 0.479781, 0.488193 )
 offset = Vector2( 1853.32, -526.945 )
@@ -1659,6 +1761,7 @@ __meta__ = {
 }
 
 [node name="VoFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
 position = Vector2( 560, 468 )
 scale = Vector2( 0.477, 0.477 )
 
@@ -1870,6 +1973,7 @@ anims/paradinhozinho = SubResource( 7 )
 [connection signal="mouse_exited" from="Camera2D/Controles/Controlesorg/CimaEsquerda" to="." method="_on_CimaEsquerda_mouse_exited"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular" to="." method="_on_Config_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/CloseiPad" to="." method="_on_CloseiPad_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesB" to="Camera2D/Celular/AbrirCelular" method="_on_AjustesB_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB" to="Camera2D/Celular/AbrirCelular" method="_on_MapaB_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Taxiimg/TaxiB" to="." method="_on_TaxiB_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB" to="." method="_on_OnibusB_pressed"]
@@ -1880,6 +1984,7 @@ anims/paradinhozinho = SubResource( 7 )
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/MercadinhoTPad" to="." method="_on_MercadinhoTPad_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/ArcadeTPad" to="." method="_on_ArcadeTPad_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/CloseMAPButton" to="Camera2D/Celular/AbrirCelular" method="_on_CloseMAPButton_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI/SaveButton" to="Camera2D/Celular/AbrirCelular" method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/GuiFalasButton" to="Camera2D/Falas" method="_on_GuiFalasButton_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/SairCvsaGui" to="." method="_on_SairCvsaGui_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/SairCvsaGui" to="Camera2D/Falas" method="_on_SairCvsaGui_pressed"]
