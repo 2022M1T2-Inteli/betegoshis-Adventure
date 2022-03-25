@@ -1,0 +1,255 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
+[ext_resource path="res://corretora.gd" type="Script" id=2]
+[ext_resource path="res://cogumelo.png" type="Texture" id=3]
+[ext_resource path="res://INVESTIMENTOS.gd" type="Script" id=4]
+[ext_resource path="res://Label.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.160784, 0.137255, 0.137255, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="Theme" id=4]
+TabContainer/styles/panel = SubResource( 1 )
+TabContainer/styles/tab_bg = SubResource( 2 )
+TabContainer/styles/tab_disabled = null
+TabContainer/styles/tab_fg = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.341176, 0.247059, 0.247059, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dinheiro" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 17.0
+margin_right = 215.0
+margin_bottom = 101.0
+text = "DINHEIRO
+"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1019.0
+margin_bottom = 597.0
+color = Color( 0.156863, 0.152941, 0.152941, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -223.0
+margin_top = 2.0
+margin_right = -19.0
+margin_bottom = 32.0
+rect_scale = Vector2( 2.54375, 2.54375 )
+custom_fonts/font = ExtResource( 1 )
+text = "CORRETORA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 152.0
+margin_bottom = -6.0
+theme = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="INVESTIMENTOS" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 34.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/INVESTIMENTOS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = -47.0
+margin_right = -12.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="control" type="Node2D" parent="TabContainer/INVESTIMENTOS/RichTextLabel"]
+
+[node name="Panel" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+margin_left = 11.0
+margin_top = 55.0
+margin_right = 221.0
+margin_bottom = 402.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+script = ExtResource( 5 )
+price = 100
+
+[node name="Panel2" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+margin_left = 374.0
+margin_top = 49.0
+margin_right = 584.0
+margin_bottom = 396.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 99, 131 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+script = ExtResource( 5 )
+price = 200
+
+[node name="Panel3" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+margin_left = 728.0
+margin_top = 59.0
+margin_right = 938.0
+margin_bottom = 406.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 108, 141 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+script = ExtResource( 5 )
+price = 300
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/INVESTIMENTOS"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -54.0
+margin_bottom = 6.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/INVESTIMENTOS"]
+visible = false
+margin_left = 276.0
+margin_top = -38.0
+margin_right = 1047.0
+margin_bottom = 286.0
+rect_scale = Vector2( 0.621419, 0.73059 )
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.5
+margin_top = 2.0
+margin_right = -47.5
+margin_bottom = 16.0
+rect_scale = Vector2( 4.51549, 4.51549 )
+text = "Olá"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.5
+margin_top = -76.0
+margin_right = 146.5
+margin_bottom = -23.0
+
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/ColorRect/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button3_pressed"]
