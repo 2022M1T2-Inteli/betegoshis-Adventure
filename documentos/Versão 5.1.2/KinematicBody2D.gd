@@ -764,10 +764,18 @@ func _on_IniciarPongButton_pressed():
 
 
 
-
+var Contador_NinYang_Area2D = 0
 func _on_Iniciar_yang_Falas_body_entered(body):
-	$Camera2D/Falas/Nin_YangFalas.visible = true
-
+	Contador_NinYang_Area2D += 1
+	if Contador_NinYang_Area2D == 1:
+		$Camera2D/Falas/Nin_YangFalas.visible = true
+	if Contador_NinYang_Area2D >= 2:
+		$Camera2D/Falas/Nin_YangFalas.visible = true
+		$Camera2D/Falas/Nin_YangFalas/Falas_Do_NinYang.text = "Olá " + str(Global.player_name) + ", você deseja comprar alguma coisa hoje?"
+		$Camera2D/Falas/Nin_YangFalas/ComprarButton_NinYang2.visible = true
+		$Camera2D/Falas/Nin_YangFalas/SairCvrs_NinYang.visible = true
+		$Camera2D/Falas/Nin_YangFalas/Sair_NinYang.visible = false
+		
 
 func _on_Comprar_Bicicleta_pressed():
 	$Camera2D/Falas/Nin_YangFalas/Comprar_Bicicleta.visible = false
@@ -775,7 +783,7 @@ func _on_Comprar_Bicicleta_pressed():
 	Global.money -= 500
 	$Camera2D/Dinheiro/DinheiroLabel.text = "BT$" + str(Global.money)
 	$Camera2D/Falas/Nin_YangFalas/Falas_Do_NinYang.text = "Prontinho, você desbloqueou a bicicleta, pode checar seu mapa, você já poderá utilizá-la para ir aos lugares."
-	$Camera2D/Falas/Nin_YangFalas/SairCvrs_NinYang.visible = true
+	$Camera2D/Falas/Nin_YangFalas/Sair_NinYang.visible = true
 
 
 	
