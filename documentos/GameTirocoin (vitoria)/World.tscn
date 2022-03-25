@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Untitled design (2).png" type="Texture" id=1]
+[ext_resource path="res://characters/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/Enemy/EnemySpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/background-3883199_960_720.jpg" type="Texture" id=4]
+[ext_resource path="res://World.gd" type="Script" id=5]
+[ext_resource path="res://assets/Minercraftory.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 47, 46 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21, 318 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 409, 371 )
+scale = Vector2( 0.542188, 0.57963 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 4 )
+centered = false
+offset = Vector2( -754.351, -646.964 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 468, 323 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/StaticBody2D"]
+position = Vector2( 37, 29 )
+shape = SubResource( 2 )
+
+[node name="Score" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 47.0
+margin_top = 44.0
+margin_right = 126.0
+margin_bottom = 88.0
+rect_scale = Vector2( 1.90101, 1.97669 )
+custom_fonts/font = SubResource( 1 )
+text = "SCORE:  0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( -11, 308 )
+shape = SubResource( 3 )
+
+[connection signal="add_score" from="EnemySpawner" to="." method="score"]
+[connection signal="area_entered" from="Player" to="Player" method="_on_Player_area_entered"]
+[connection signal="spawn_laser" from="Player" to="." method="_on_Player_spawn_laser"]
