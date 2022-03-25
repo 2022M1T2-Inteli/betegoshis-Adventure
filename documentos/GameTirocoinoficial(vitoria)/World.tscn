@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/Untitled design (2).png" type="Texture" id=1]
+[ext_resource path="res://assets/pixelated-purple-background-of-the-outer-space-vector.jpg" type="Texture" id=1]
 [ext_resource path="res://characters/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/Enemy/EnemySpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background-3883199_960_720.jpg" type="Texture" id=4]
@@ -20,8 +20,8 @@ font_data = ExtResource( 6 )
 script = ExtResource( 5 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 409, 371 )
-scale = Vector2( 0.542188, 0.57963 )
+position = Vector2( 560.375, 430.39 )
+scale = Vector2( 0.742857, 0.671428 )
 texture = ExtResource( 1 )
 normal_map = ExtResource( 4 )
 centered = false
@@ -43,7 +43,6 @@ position = Vector2( 37, 36 )
 shape = SubResource( 5 )
 
 [node name="Score" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 1 )
 margin_left = 47.0
 margin_top = 44.0
 margin_right = 126.0
