@@ -160,7 +160,6 @@ func _on_nextfala_tio_pressed():
 		$TioClovisFalas/falastio.text = "Bom dia, " + str(Global.player_name) + "Hoje não há matrícula para pagar, pode ir até a faculdade para assistir à aula."
 
 
-
 func _on_ComprarButton_NinYang2_pressed():
 	$Nin_YangFalas/Falas_Do_NinYang.text = "O que você deseja comprar?"
 	$Nin_YangFalas/ComprarButton_NinYang2.visible = false
@@ -174,9 +173,12 @@ func _on_SairCvrs_NinYang_pressed():
 
 
 func _on_Comprar_avatares_pressed():
-	$Nin_YangFalas/Sair_Avatares.visible = true
-	$Nin_YangFalas/Falas_Do_NinYang.text = "Ainda não temos avatares disponíveis"
+	$Nin_YangFalas/Sair_NinYang.visible = true
+	$Nin_YangFalas/Comprar_Bicicleta.visible = false
+	$Nin_YangFalas/Comprar_avatares.visible = false
+	$Nin_YangFalas/Falas_Do_NinYang.text = "Ainda não temos avatares disponíveis."
 
 
 func _on_Sair_NinYang_pressed():
 	$Nin_YangFalas.visible = false
+#	if $Nin_YangFalas/Falas_Do_NinYang.text == 

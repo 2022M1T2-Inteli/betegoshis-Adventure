@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -70,6 +70,9 @@ font_data = ExtResource( 21 )
 [sub_resource type="DynamicFont" id=47]
 font_data = ExtResource( 21 )
 
+[sub_resource type="DynamicFont" id=51]
+font_data = ExtResource( 21 )
+
 [sub_resource type="DynamicFont" id=13]
 font_data = ExtResource( 21 )
 
@@ -77,6 +80,9 @@ font_data = ExtResource( 21 )
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=32]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=52]
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=21]
@@ -97,6 +103,9 @@ font_data = ExtResource( 21 )
 [sub_resource type="DynamicFont" id=34]
 font_data = ExtResource( 21 )
 
+[sub_resource type="DynamicFont" id=53]
+font_data = ExtResource( 21 )
+
 [sub_resource type="DynamicFont" id=35]
 font_data = ExtResource( 21 )
 
@@ -107,6 +116,9 @@ font_data = ExtResource( 21 )
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=38]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=54]
 font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=45]
@@ -1062,12 +1074,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Camera2D/Falas/GuilhermeFalas"]
-margin_left = -61.8273
-margin_top = 77.5188
-margin_right = 6.17273
-margin_bottom = 91.5189
-rect_scale = Vector2( 1.91066, 1.91066 )
+[node name="Label" type="Label" parent="Camera2D/Falas/GuilhermeFalas/FundoNome"]
+margin_left = 13.5592
+margin_top = 3.26471
+margin_right = 107.559
+margin_bottom = 25.2647
+rect_scale = Vector2( 1.2018, 1.2018 )
+custom_fonts/font = SubResource( 51 )
 text = "Guilherme"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1173,22 +1186,23 @@ __meta__ = {
 }
 
 [node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/SecretariaFalas"]
-margin_left = -75.7613
-margin_top = 69.6064
-margin_right = 67.2387
-margin_bottom = 103.606
+margin_left = -76.0
+margin_top = 70.0
+margin_right = 62.0
+margin_bottom = 104.0
 color = Color( 0.737255, 0.380392, 0.380392, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NomeSecretaria" type="Label" parent="Camera2D/Falas/SecretariaFalas"]
-margin_left = -73.2593
-margin_top = 74.0996
-margin_right = -10.2593
-margin_bottom = 88.0997
-rect_scale = Vector2( 2.17185, 2.06876 )
-text = "Secretária"
+[node name="NomeSecretaria" type="Label" parent="Camera2D/Falas/SecretariaFalas/FundoNome"]
+margin_left = 33.5221
+margin_top = 4.33627
+margin_right = 99.5221
+margin_bottom = 26.3363
+rect_scale = Vector2( 1.20028, 1.1433 )
+custom_fonts/font = SubResource( 52 )
+text = "Amélia"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1411,6 +1425,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NomeJapinha" type="Label" parent="Camera2D/Falas/JapinhaFalas/Falaorg/FundoNome"]
+margin_left = 46.5586
+margin_top = 3.84021
+margin_right = 122.559
+margin_bottom = 25.8402
+rect_scale = Vector2( 3.12005, 3.06315 )
+custom_fonts/font = SubResource( 53 )
+text = "Lyorrei"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="FalaJapinha" type="RichTextLabel" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
 anchor_right = 36.0
 anchor_bottom = 7.0
@@ -1421,17 +1447,6 @@ margin_bottom = 133.0
 rect_scale = Vector2( 3.61834, 3.61834 )
 custom_fonts/normal_font = SubResource( 35 )
 text = "Olá, eu sou o Lyorrei, dono do mercadinho MilGrau."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NomeJapinha" type="Label" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
-margin_left = -780.125
-margin_top = 354.881
-margin_right = -736.125
-margin_bottom = 368.881
-rect_scale = Vector2( 5.89944, 5.89944 )
-text = "Lyorrei"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1447,7 +1462,7 @@ __meta__ = {
 }
 
 [node name="FotoJapinha" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
-position = Vector2( -665.371, 182.83 )
+position = Vector2( -659.265, 187.765 )
 scale = Vector2( 2.35953, 2.35953 )
 texture = ExtResource( 25 )
 
@@ -1692,10 +1707,10 @@ __meta__ = {
 }
 
 [node name="ColorRect2" type="ColorRect" parent="Camera2D/Falas/VoFalas"]
-margin_left = -1167.64
-margin_top = 192.859
-margin_right = -770.638
-margin_bottom = 282.859
+margin_left = -1168.0
+margin_top = 193.0
+margin_right = -827.0
+margin_bottom = 283.0
 rect_scale = Vector2( 0.896753, 0.896753 )
 color = Color( 0.482353, 0.172549, 0.756863, 1 )
 __meta__ = {
@@ -1703,9 +1718,12 @@ __meta__ = {
 }
 
 [node name="NomeVo" type="Label" parent="Camera2D/Falas/VoFalas/ColorRect2"]
-margin_right = 40.0
-margin_bottom = 14.0
-rect_scale = Vector2( 5.99776, 5.99776 )
+margin_left = 16.6826
+margin_top = 13.8843
+margin_right = 116.683
+margin_bottom = 35.8843
+rect_scale = Vector2( 3.0704, 3.0704 )
+custom_fonts/font = SubResource( 54 )
 text = "Vó Creuza"
 
 [node name="Sprite" type="Sprite" parent="Camera2D/Falas/VoFalas"]
