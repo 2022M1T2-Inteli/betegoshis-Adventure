@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular 2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ChiKareGo2Font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://RostoTio.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=39]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=40]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=41]
+font_data = ExtResource( 2 )
+
+[node name="TioClovisFalas" type="Sprite"]
+position = Vector2( 496, 518 )
+scale = Vector2( 0.426446, 0.329293 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -950.0
+margin_top = -361.0
+margin_right = 1121.0
+margin_bottom = 65.0
+rect_scale = Vector2( 1.05413, 1.4189 )
+color = Color( 0.164706, 0.615686, 0.113725, 0.611765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -1151.38
+margin_top = 124.509
+margin_right = -779.377
+margin_bottom = 340.509
+rect_scale = Vector2( 0.989165, 0.564825 )
+color = Color( 0.113725, 0.541176, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nometio" type="Label" parent="ColorRect2"]
+margin_left = 16.1777
+margin_top = 33.0952
+margin_right = 106.178
+margin_bottom = 56.0952
+rect_scale = Vector2( 3.80796, 7.24206 )
+custom_fonts/font = SubResource( 39 )
+text = "Tio Clóvis"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1496.09, 121.472 )
+scale = Vector2( -2.40072, 3.51342 )
+texture = ExtResource( 4 )
+
+[node name="falastio" type="RichTextLabel" parent="."]
+margin_left = -706.0
+margin_top = -322.0
+margin_right = -292.0
+margin_bottom = -204.0
+rect_scale = Vector2( 4.26103, 4.34044 )
+custom_fonts/normal_font = SubResource( 40 )
+text = "Oii, que felicidade em te ver, quanto tempo, estou muito feliz que você veio morar comigo, que bom que chegou bem!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nextfala_tio" type="Button" parent="."]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -1020.0
+margin_top = -355.0
+margin_right = 1222.0
+margin_bottom = 234.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sairFala" type="Button" parent="."]
+visible = false
+modulate = Color( 0.0196078, 0.113725, 0.0235294, 0.596078 )
+margin_left = 640.136
+margin_top = 92.4563
+margin_right = 926.136
+margin_bottom = 224.456
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atemais2" type="Label" parent="sairFala"]
+modulate = Color( 1, 0.941176, 0.941176, 1 )
+margin_left = 38.8579
+margin_top = 24.8916
+margin_right = 125.858
+margin_bottom = 39.8916
+rect_scale = Vector2( 3.58478, 4.14656 )
+custom_fonts/font = SubResource( 41 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
