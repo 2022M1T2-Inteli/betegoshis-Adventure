@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TioAndando.png" type="Texture" id=1]
+[ext_resource path="res://VóAndando.png" type="Texture" id=2]
+[ext_resource path="res://Map010.png" type="Texture" id=3]
+
+[node name="casaVo" type="Sprite"]
+position = Vector2( 3994.94, 600.926 )
+scale = Vector2( 2.92418, 2.13253 )
+texture = ExtResource( 3 )
+
+[node name="paredescasavo" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody" type="StaticBody2D" parent="paredescasavo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="paredescasavo/StaticBody"]
+polygon = PoolVector2Array( 3675.39, 626.167, 3678.41, 668.882, 3680.43, 776.641, 3541.31, 775.67, 3538.29, 964.976, 3545.35, 1030.02, 3596.76, 1030.02, 3598.77, 1073.71, 4098.77, 1085.36, 4101.8, 1025.17, 3961.68, 1031.96, 3959.66, 974.684, 3820.55, 979.538, 3824.58, 1025.17, 3750.99, 1027.11, 3693.53, 1029.05, 3683.45, 829.064, 4168.33, 832.947, 4180.42, 878.575, 4235.87, 881.487, 4235.87, 966.918, 4239.9, 1033.9, 4176.39, 1036.82, 4180.42, 1130.98, 4309.46, 1136.81, 4309.46, 1244.57, 4253, 1233.89, 3469.74, 1192.14, 3472.77, 813.531, 3470.75, 320.364, 4663.29, 318.423, 4654.21, 1190.2, 4497.96, 1221.27, 4428.41, 1233.89, 4425.38, 1134.87, 4604.82, 1136.81, 4585.66, 984.392, 4522.16, 982.45, 4528.21, 836.83, 4590.71, 830.035, 4585.66, 772.757, 4445.54, 778.582, 4451.59, 826.151, 4318.53, 831.976, 4318.53, 781.495, 4255.02, 774.699, 4245.95, 631.021, 4590.71, 627.137, 4587.68, 535.882, 4033.25, 524.232, 4035.26, 787.319, 3817.52, 781.495, 3821.56, 631.021, 3966.72, 627.137, 3968.73, 519.378, 3894.14, 517.437, 3894.14, 476.663, 3541.31, 467.926, 3543.33, 511.612, 3680.43, 531.999, 3680.43, 565.006, 3541.31, 572.772, 3539.3, 624.225 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="paredescasavo/StaticBody"]
+polygon = PoolVector2Array( 4314.5, 877.604, 4450.58, 876.633, 4451.59, 942.648, 4314.5, 952.356 )
+
+[node name="TP voltar cidade" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TP voltar cidade"]
+position = Vector2( -2.01611, 81.5473 )
+polygon = PoolVector2Array( 4326.59, 1084.38, 4415.3, 1084.38, 4368.93, 1136.81 )
+
+[node name="vo" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="vo"]
+position = Vector2( 4160.26, 616.459 )
+scale = Vector2( 2.08761, 2.12868 )
+texture = ExtResource( 2 )
+hframes = 12
+vframes = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vo"]
+polygon = PoolVector2Array( 4134.05, 634.904, 4179.42, 637.816, 4178.41, 659.174, 4139.09, 661.115 )
+
+[node name="ClovisTio" type="KinematicBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ClovisTio"]
+position = Vector2( -3014.1, 2199.83 )
+scale = Vector2( 2.04969, 1.88491 )
+texture = ExtResource( 1 )
+hframes = 12
+vframes = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ClovisTio"]
+polygon = PoolVector2Array( -3041.32, 2224.1, -2988.9, 2226.05, -2990.91, 2243.52, -3044.34, 2240.61 )
+
+[node name="iniciar_falavo" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="iniciar_falavo"]
+polygon = PoolVector2Array( 4099.78, 675.677, 4220.75, 669.853, 4204.62, 730.042, 4115.91, 725.188 )
