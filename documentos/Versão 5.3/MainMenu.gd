@@ -15,7 +15,8 @@ func _on_SairButton_pressed():
 	get_tree().quit()
 
 func _on_BotaoSeta_pressed():
-	get_tree().change_scene("res://Cidade.tscn")
+	$ColocarNome.visible = false
+	$SelecionarPersonagem.visible = true
 	Global.player_name = str($ColocarNome/BalaoNome/LineEdit.text)
 
 var soundoff_buttons = preload("res://images/buttons/audioOff.png")
@@ -50,3 +51,17 @@ func _on_MusicButton_pressed():
 
 
 
+
+
+func _on_Avatar_1_pressed():
+	Global.select = 1
+
+func _on_Avatar_2_pressed():
+	Global.select = 2
+
+func _on_Avatar_3_pressed():
+	Global.select = 3
+
+
+func _on_ComecarOGame_pressed():
+	get_tree().change_scene("res://Cidade.tscn")

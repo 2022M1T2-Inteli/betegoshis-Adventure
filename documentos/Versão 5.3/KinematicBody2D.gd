@@ -1,11 +1,9 @@
 extends KinematicBody2D
 
 # Dinheiro
-var money = Global.money
 var pegarBoletoFaculdade = false 
 
 func _ready(): # Acontece quando se inicia a cena
-	money = Global.money
 	$Camera2D/Dinheiro/DinheiroLabel.text = "BT$  " + str(Global.money)
 	
 	if Global.inicio_1 == false:
@@ -134,17 +132,29 @@ func _process(_delta):
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/CasaTPad.modulate.a = 0 # desaparece o botao da casa
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/MercadinhoTPad.modulate.a = 0 # desaparece o botao do mercadinho
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/ArcadeTPad.modulate.a = 0 # desaparece o botao do arcade
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/LojinhaTPad.modulate.a = 0 # desaparece o botao da lojinha
 		
 		irTaxi = false
 		irOnibus = false
 		irBike = false
-		irFaculdade = false
 		# Atualização dos contadores de cada função de ordenação de botões
 		contadorBikeButton = 0 # 
 		contadorTaxiButton = 0 # 
 		contadorOnibusButton = 0 # 
 		yield(get_tree().create_timer(0.1), "timeout")
 		deixarTudoInvisivelagain = false
+	
+	# Seleção da sprite do player
+	if Global.select == 1:
+		$Avatar.texture = Avatar_1
+	if Global.select == 2:
+		$Avatar.texture = Avatar_2
+	if Global.select == 3:
+		$Avatar.texture = Avatar_3
+	
+var Avatar_1 = preload("res://Action RPG Resources/Player/Fox sheet.png")
+var Avatar_2 = preload("res://Action RPG Resources/Player/Sapinho sheet.png")
+var Avatar_3 = preload("res://Action RPG Resources/Player/Leaozinho sheet.png")
 
 # Apenas tocando nos botões da tela
 func _on_Direita_mouse_entered(): #botão Direita apertado
@@ -292,11 +302,9 @@ func _on_TP_Sair_Arcade_body_entered(_body):
 
 # Entrar na faculdade
 func _on_Faculdade_TP_body_entered(_body): # vai pra faculdade
-	Global.money = money
 	# Animação de entrar no lugar
 	$Camera2D/Controles/Controlesorg.visible = false 
-	speed = 30 # diminui a velocidade
-	# Aqui precisa iniciar um comando pra desaparecer com o personagem
+	speed = 30 # diminui a velocidadew
 	yield(get_tree().create_timer(0.6), "timeout") 
 	irCima = false # para de andar
 	yield(get_tree().create_timer(0.01), "timeout") 
@@ -315,6 +323,7 @@ func _on_Faculdade_TP_body_entered(_body): # vai pra faculdade
 	irCima = false # para de andar
 	speed = 300 # volta à velocidade normal
 	$Camera2D/Controles/Controlesorg.visible = true # reaparecem os controles
+	
 # Sair da Faculdade
 func _on_TP_Sala_de_Aula_body_entered(_body): #sai da faculdade
 	# Limita a Câmera2D ao mapa geral:
@@ -386,12 +395,11 @@ var goToCasa = false
 var irCasa = false #botao pra ir pra facul ta desativado
 var contadorCasaTPButton = 0 #ordena as clicadas
 func _on_CasaTPad_pressed():
-	Global.money = money
 	contadorCasaTPButton += 1 #conta as vezes que é apertado
-	if contadorCasaTPButton % 2 == 0: #quando for par
+	if contadorCasaTPButton % 2 == 1: #quando for ímpar
 		irCasa = true #ir pra casa está ativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/CasaTPad.modulate.a = 12 #deixa as letras tampadas
-	if contadorCasaTPButton % 2 == 1: #quando for impar
+	if contadorCasaTPButton % 2 == 0: #quando for par
 		irCasa = false #ir pra casa está desativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/CasaTPad.modulate.a = 0 #mostra as letras
 	# Para ir de Taxi à Casa
@@ -422,6 +430,9 @@ func _on_CasaTPad_pressed():
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/CloseMAPButton.visible = false #desaparece o botao 
 		$Camera2D/Controles/Controlesorg.visible = true #aparecem os controles
 		$Camera2D/Celular/AbrirCelular/CelularPanel.visible = false #desaparece o celular
+		if Global.F1_objetivo6 == true:
+			$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
+			Global.F1_objetivo7 = true
 		yield(get_tree().create_timer(0.01), "timeout") #espera 0.01 sec
 		irCasa = false
 		contadorCasaTPButton = 0
@@ -434,12 +445,11 @@ var goToBanco = false
 var irBanco = false #botao pra ir pra facul ta desativado
 var contadorBancoTPButton = 0 #ordena as clicadas
 func _on_BancoTPad_pressed():
-	Global.money = money
 	contadorBancoTPButton += 1 #conta as vezes que é apertado
-	if contadorBancoTPButton % 2 == 0: #quando for par
+	if contadorBancoTPButton % 2 == 1: #quando for ímpar
 		irBanco = true #ir pra banco está ativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/BancoTPad.modulate.a = 12 #deixa as letras tampadas
-	if contadorBancoTPButton % 2 == 1: #quando for impar
+	if contadorBancoTPButton % 2 == 0: #quando for par
 		irBanco = false #ir pra banco está desativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/BancoTPad.modulate.a = 0 #mostra as letras
 	# Ir de Taxi ao Banco
@@ -482,12 +492,11 @@ var goToArcade = false
 var irArcade = false #botao pra ir pra facul ta desativado
 var contadorArcadeTPButton = 0 #ordena as clicadas
 func _on_ArcadeTPad_pressed(): #botão para teleportar para a Arcade dentro do celular
-	Global.money = money
 	contadorArcadeTPButton += 1 #conta as vezes que é apertado
-	if contadorArcadeTPButton % 2 == 0: #quando for par
+	if contadorArcadeTPButton % 2 == 1: #quando for ímpar
 		irArcade = true #ir pra faculdade está ativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/ArcadeTPad.modulate.a = 12 #deixa as letras tampadas
-	if contadorArcadeTPButton % 2 == 1: #quando for impar
+	if contadorArcadeTPButton % 2 == 0: #quando for par
 		irArcade = false #ir pra Arcade está desativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/ArcadeTPad.modulate.a = 0 #mostra as letras
 	# Ir de Taxi ao Arcade
@@ -531,12 +540,11 @@ var goToMercadinho = false
 var irMercadinho = false #botao pra ir pra facul ta desativado
 var contadorMercadinhoTPButton = 0 #ordena as clicadas
 func _on_MercadinhoTPad_pressed():
-	Global.money = money
 	contadorMercadinhoTPButton += 1 #conta as vezes que é apertado
-	if contadorMercadinhoTPButton % 2 == 0: #quando for par
+	if contadorMercadinhoTPButton % 2 == 1: #quando for ímpar
 		irMercadinho = true #ir pra mercadinho está ativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/MercadinhoTPad.modulate.a = 12 #deixa as letras tampadas
-	if contadorMercadinhoTPButton % 2 == 1: #quando for impar
+	if contadorMercadinhoTPButton % 2 == 0: #quando for par
 		irMercadinho = false #ir pra mercadinho está desativado
 		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/MercadinhoTPad.modulate.a = 0 #mostra as letras
 	# Ir de Taxi ao Mercadinho
@@ -574,6 +582,52 @@ func _on_MercadinhoTPad_pressed():
 		goToMercadinho = false
 #### Coisa Grande aqui em cima ####
 
+# Teleporte para a lojinha
+var goToLojinha = false
+var irLojinha = false #botao pra ir pra lojinha ta desativado
+var contadorLojinhaTPButton = 0 #ordena as clicadas
+func _on_LojinhaTPad_pressed(): #botão para teleportar para a Lojinhadentro do celular
+	contadorLojinhaTPButton += 1 #conta as vezes que é apertado
+	if contadorLojinhaTPButton % 2 == 1: #quando for ímpar
+		irLojinha = true #ir pra Lojinha está ativado
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/LojinhaTPad.modulate.a = 12 #deixa as letras tampadas
+	if contadorLojinhaTPButton % 2 == 0: #quando for par
+		irLojinha = false #ir pra Lojinha está desativado
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/LojinhaTPad.modulate.a = 0 #mostra as letras
+	# Para ir de taxi à Lojinha
+	if irLojinha == true and irTaxi == true: #se ativar a Lojinha e o taxi
+		Global.money -= precoTaxi #paga
+		goToLojinha = true #valida a ida para a lojinha
+	# Para ir de Ônibus à Lojinha
+	if irLojinha == true and irOnibus == true: #se ativar a Lojinhae o onibus
+		Global.money -= precoOnibus #paga
+		goToLojinha = true #valida a ida para a lojinha
+	# Para ir de Bike à Lojinha
+	if irLojinha == true and irBike == true: #se ativa Lojinha e bicicleta
+		Global.money -= precoBike #paga
+		goToLojinha = true #valida a ida para a lojinha
+	# Ir à Lojinha significa:
+	if goToLojinha == true:
+		yield(get_tree().create_timer(0.3), "timeout") #espera 0.3 sec
+		self.position.x = 1390 #teleporta pra porta da facudlade
+		self.position.y = -830##
+		
+		# Limita a Câmera2D ao mapa geral:
+		$Camera2D.limit_bottom = 2450
+		$Camera2D.limit_top = -1914
+		$Camera2D.limit_left = -86
+		$Camera2D.limit_right = 2400
+		
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI.visible = false #desaparece o acesso ao mapa
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/CloseMAPButton.visible = false #desaparece o botao 
+		$Camera2D/Controles/Controlesorg.visible = true #aparecem os controles
+		$Camera2D/Celular/AbrirCelular/CelularPanel.visible = false #desaparece o celular
+		yield(get_tree().create_timer(0.01), "timeout") #espera 0.01 sec
+		irLojinha = false
+		contadorLojinhaTPButton = 0
+		deixarTudoInvisivelagain = true
+		goToLojinha = false
+#### Coisa Grande aqui em cima ####
 
 
 
@@ -594,21 +648,23 @@ func _on_TaxiB_pressed():
 var irOnibus = false
 var contadorOnibusButton = 0
 func _on_OnibusB_pressed():
-	contadorOnibusButton += 1
-	if contadorOnibusButton % 2 == 0:
-		irOnibus = false
-		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB.modulate.a = 0
-	if contadorOnibusButton % 2 == 1:
-		irOnibus = true
-		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB.modulate.a = 1
+	if Global.F1_objetivo2 == true: # Falou com o tio
+		contadorOnibusButton += 1
+		if contadorOnibusButton % 2 == 0:
+			irOnibus = false
+			$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB.modulate.a = 0
+		if contadorOnibusButton % 2 == 1:
+			irOnibus = true
+			$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB.modulate.a = 1
 
 # Pra ir de Bike
 var irBike = false 
 var contadorBikeButton = 0
 func _on_BikeB_pressed():
 	if Global.temBicicleta == false:
-		pass
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Bikeimg/Cadeado.visible = true
 	if Global.temBicicleta == true:
+		$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Bikeimg/Cadeado.visible = false
 		contadorBikeButton += 1
 		if contadorBikeButton % 2 == 0:
 			irBike = false
@@ -655,10 +711,13 @@ func _on_Iniciar_Secretria_Falas_body_entered(_body): # area2D na escola/secreta
 func _on_SairCvsaSecr_pressed(): # Botão de "Até mais"
 	$Camera2D/Controles/Controlesorg.visible = true
 	$Camera2D/Celular/AbrirCelular.visible = true
+	
+	Global.F1_objetivo3 = true
+	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 
 # Coisas relacionadas ao primeiro boleto da faculdade
 # Ação de pegar o boleto com a secretária 
-var boleto = false # criando o boleto como variável
+var boleto = false 
 var contadorSecrFalasButton = 0 # ordena o botão de "próximo" da secretária
 func _on_SecrFalasButton_pressed(): # botão de "próximo" da secretária
 	contadorSecrFalasButton += 1 # cada vez que vai apertando faz algo
@@ -667,18 +726,19 @@ func _on_SecrFalasButton_pressed(): # botão de "próximo" da secretária
 		$Camera2D/Celular/AbrirCelular.visible = true # volta o celular
 		boleto = true # com o boleto, ele pode pagar no banco
 		$Camera2D/Dinheiro/Boleto.visible = true
-		Global.objetivo1 = true
-	if contadorSecrFalasButton == 4:
-		pass
+	if contadorSecrFalasButton == 4 and Global.F1_objetivo4 == true:
+		$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
+
 # Ação de Pagar o boleto com o Guilherme
 func _on_PagarBoleto_pressed(): # botão de "Pagar Boleto" na conversa do Guilherme
 	if boleto == true: # se ele possui o boleto (falou com a secretária)
-		money -= 80 # paga 80 pau
+		Global.money -= 80 # paga 80 pau
 		$Camera2D/Falas/GuilhermeFalas/PagarBoleto.visible = false # desaparece esse botão
 		# Muda o texto para o que ele pagou a taxa de matrícula
 		$Camera2D/Falas/GuilhermeFalas/FalaGuilherme.text = "Prontinho, você pagou a taxa de matrícula. Sempre que precisar pagar algo pode falar comigo, até mais."
 		$Camera2D/Dinheiro/Boleto.visible = false
-		Global.objetivo2 = true # completa o objetivo de pagar o boleto
+		
+		Global.F1_objetivo4 = true # completa o objetivo de pagar o boleto
 		$Camera2D/Celular/AbrirCelular/Notificacao.visible = true # aparece uma notificação de missão completa
 	else:
 		pass
@@ -755,11 +815,17 @@ func _on_tchau_vo_pressed():
 	$Camera2D/Falas/VoFalas.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = true
 	$Camera2D/Controles/Controlesorg.visible = true
+	
+	Global.F1_objetivo1 = true
+	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 
 func _on_sairFala_pressed():
 	$Camera2D/Falas/TioClovisFalas.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = true
 	$Camera2D/Controles/Controlesorg.visible = true
+	
+	Global.F1_objetivo2 = true
+	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 
 func _on_ComprarComida1_pressed():
 	Global.money -= 5
@@ -797,13 +863,18 @@ func _on_Iniciar_yang_Falas_body_entered(body):
 	Contador_NinYang_Area2D += 1
 	if Contador_NinYang_Area2D == 1:
 		$Camera2D/Falas/Nin_YangFalas.visible = true
+		pararMovimento = true
+		$Camera2D/Controles/Controlesorg.visible = false
+		$Camera2D/Celular/AbrirCelular.visible = false
 	if Contador_NinYang_Area2D >= 2:
 		$Camera2D/Falas/Nin_YangFalas.visible = true
 		$Camera2D/Falas/Nin_YangFalas/Falas_Do_NinYang.text = "Olá " + str(Global.player_name) + ", você deseja comprar alguma coisa hoje?"
 		$Camera2D/Falas/Nin_YangFalas/ComprarButton_NinYang2.visible = true
 		$Camera2D/Falas/Nin_YangFalas/SairCvrs_NinYang.visible = true
 		$Camera2D/Falas/Nin_YangFalas/Sair_NinYang.visible = false
-		
+		pararMovimento = true
+		$Camera2D/Controles/Controlesorg.visible = false
+		$Camera2D/Celular/AbrirCelular.visible = false
 
 func _on_Comprar_Bicicleta_pressed():
 	$Camera2D/Falas/Nin_YangFalas/Comprar_Bicicleta.visible = false

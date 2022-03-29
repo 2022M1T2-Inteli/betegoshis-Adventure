@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
 [ext_resource path="res://MainMenu.gd" type="Script" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Image_from_iOS__5_-removebg-preview-3.png" type="Texture" id=8]
 [ext_resource path="res://setinha_voltar.png" type="Texture" id=9]
+[ext_resource path="res://Action RPG Resources/Player/Fox sheet.png" type="Texture" id=10]
+[ext_resource path="res://Action RPG Resources/Player/Sapinho sheet.png" type="Texture" id=11]
+[ext_resource path="res://Action RPG Resources/Player/Leaozinho sheet.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://ChiKareGo2Font.ttf"
@@ -33,6 +36,9 @@ font_data = ExtResource( 7 )
 [sub_resource type="DynamicFont" id=7]
 font_data = ExtResource( 7 )
 
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 7 )
+
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource( 2 )
 
@@ -48,10 +54,10 @@ autoplay = true
 [node name="Menuiniciar" type="Sprite" parent="."]
 
 [node name="NomeGame" type="Label" parent="Menuiniciar"]
-margin_left = 53.0
-margin_top = 117.0
-margin_right = 1077.0
-margin_bottom = 147.0
+margin_left = 15.0
+margin_top = 42.0
+margin_right = 1039.0
+margin_bottom = 72.0
 rect_scale = Vector2( 3.38489, 3.38489 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
@@ -61,12 +67,13 @@ __meta__ = {
 }
 
 [node name="LabelIniciar" type="Label" parent="Menuiniciar"]
-margin_left = 354.0
-margin_top = 247.0
-margin_right = 1378.0
-margin_bottom = 262.0
+modulate = Color( 0, 1, 0.976471, 1 )
+margin_left = 369.0
+margin_top = 215.0
+margin_right = 1393.0
+margin_bottom = 230.0
 rect_min_size = Vector2( 59, 0 )
-rect_scale = Vector2( 5.35953, 5.35953 )
+rect_scale = Vector2( 4.69576, 4.69576 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Começar"
@@ -95,6 +102,9 @@ rect_scale = Vector2( 2.78478, 2.78478 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Opções"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ConfiguracoesButton" type="Button" parent="Menuiniciar/LabelOptions"]
 modulate = Color( 1, 1, 1, 0 )
@@ -102,31 +112,6 @@ margin_left = -4.0
 margin_right = 203.0
 margin_bottom = 59.0
 rect_scale = Vector2( 0.257218, 0.257218 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LabelSair" type="Label" parent="Menuiniciar"]
-margin_left = 460.0
-margin_top = 426.0
-margin_right = 1484.0
-margin_bottom = 441.0
-rect_min_size = Vector2( 59, 0 )
-rect_scale = Vector2( 2.785, 2.785 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Sair"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SairButton" type="Button" parent="Menuiniciar/LabelSair"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -3.94974
-margin_top = -0.052536
-margin_right = 21.0503
-margin_bottom = 19.9475
-rect_scale = Vector2( 1.29087, 1.29087 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -271,10 +256,92 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SelecionarPersonagem" type="Sprite" parent="."]
+visible = false
+
+[node name="SpriteAvatar1" type="Sprite" parent="SelecionarPersonagem"]
+show_behind_parent = true
+position = Vector2( 214, 240 )
+scale = Vector2( 8.76373, 8.76373 )
+texture = ExtResource( 10 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="SpriteAvatar2" type="Sprite" parent="SelecionarPersonagem"]
+show_behind_parent = true
+position = Vector2( 516, 240 )
+scale = Vector2( 8.76373, 8.76373 )
+texture = ExtResource( 11 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="SpriteAvatar3" type="Sprite" parent="SelecionarPersonagem"]
+show_behind_parent = true
+position = Vector2( 806, 240 )
+scale = Vector2( 8.76373, 8.76373 )
+texture = ExtResource( 12 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="Avatar_1" type="Button" parent="SelecionarPersonagem"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 104.0
+margin_top = 72.0
+margin_right = 333.0
+margin_bottom = 425.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar_2" type="Button" parent="SelecionarPersonagem"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 406.0
+margin_top = 73.0
+margin_right = 634.0
+margin_bottom = 425.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar_3" type="Button" parent="SelecionarPersonagem"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 693.0
+margin_top = 73.0
+margin_right = 920.0
+margin_bottom = 427.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComecarOGameLabel" type="Label" parent="SelecionarPersonagem"]
+margin_left = 359.0
+margin_top = 451.0
+margin_right = 443.0
+margin_bottom = 473.0
+rect_scale = Vector2( 4.70552, 4.70552 )
+custom_fonts/font = SubResource( 9 )
+text = "Começar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComecarOGame" type="Button" parent="SelecionarPersonagem"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 345.0
+margin_top = 466.0
+margin_right = 761.0
+margin_bottom = 558.0
+
 [connection signal="pressed" from="Menuiniciar/LabelIniciar/IniciarButton" to="." method="_on_IniciarButton_pressed"]
 [connection signal="pressed" from="Menuiniciar/LabelOptions/ConfiguracoesButton" to="." method="_on_ConfiguracoesButton_pressed"]
-[connection signal="pressed" from="Menuiniciar/LabelSair/SairButton" to="." method="_on_SairButton_pressed"]
 [connection signal="pressed" from="Configuracoes/SoundButton" to="." method="_on_SoundButton_pressed"]
 [connection signal="pressed" from="Configuracoes/MusicButton" to="." method="_on_MusicButton_pressed"]
 [connection signal="pressed" from="Configuracoes/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="ColocarNome/BotaoSeta" to="." method="_on_BotaoSeta_pressed"]
+[connection signal="pressed" from="SelecionarPersonagem/Avatar_1" to="." method="_on_Avatar_1_pressed"]
+[connection signal="pressed" from="SelecionarPersonagem/Avatar_2" to="." method="_on_Avatar_2_pressed"]
+[connection signal="pressed" from="SelecionarPersonagem/Avatar_3" to="." method="_on_Avatar_3_pressed"]
+[connection signal="pressed" from="SelecionarPersonagem/ComecarOGame" to="." method="_on_ComecarOGame_pressed"]

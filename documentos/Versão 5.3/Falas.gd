@@ -36,14 +36,16 @@ func _on_SecrFalasButton_pressed(): # botão de próximo da secretária
 			$SecretariaFalas/FalaSecretaria.text = "Agora vá até o banco e pague o boleto, depois volte aqui para a primeira aula."
 			$SecretariaFalas/SairCvsaSecr.visible = true # aparece o botão de "até mais"
 			$SecretariaFalas/SecrFalasButton.visible = false
-		if contadorSecrFalasButton == 4:
-			$SecretariaFalas/FalaSecretaria.text = "Com isso, você já pode assistir à sua primeira aula, é só continuar reto e virar a primeira esquerda. Boa aula!"
+		if contadorSecrFalasButton == 4 and Global.F1_objetivo4 == true:
+			$SecretariaFalas/FalaSecretaria.text = "Com isso, você já pode assistir à sua primeira aula, é só continuar reto e virar à primeira esquerda. Boa aula!"
 			$SecretariaFalas/SairCvsaSecr.visible = true
-			Global.objetivo3 = true
-			get_node("").visible = true
+			Global.F1_objetivo5 = true
+			
 
 func _on_SairCvsaSecr_pressed(): # botão de "até mais" da secretária
 	$SecretariaFalas.visible = false # desaparecem as falas da prof
+	if Global.F1_objetivo4 == true:
+		Global.F1_objetivo5 = true
 
 # Sofia personagem
 var contadorSofiaFalasButton = 0 
@@ -62,19 +64,20 @@ func _on_ProfFalasButton_pressed(): # botão de próximo da conversa com a prof
 	contadorProfFalasButton += 1 # ordena as vezes que os botõess são apertados
 	if Global.dia == 1:
 		if contadorProfFalasButton == 1: 
-			# $ --- (muda o texto)
+			# muda o texto
 			$ProfessoraFalas/FalaProfessora.text = "Começaremos com uma mini-aula para você entender um pouco sobre matemática financeira."
-			
 		if contadorProfFalasButton == 2: 
 			$ProfessoraFalas/FalaProfessora.text = "Clique no botão para começá-la."
 			$ProfessoraFalas/IniciarAula.visible = true # Botao pra começar a aula
 			$ProfessoraFalas/ProfFalasButton.visible = false # evita bagunçar a ordem
 			
+		# Depois da aula
 		if contadorProfFalasButton == 3 and Global.ComecarFala_Da_ProfDepoisDaula == true: # terceira vez que se aperta
 			$ProfessoraFalas/FalaProfessora.text = "Sei que a parte matemática pode assustar, mas está tudo bem, eu te ajudarei quando houver matemática."
 			$ProfessoraFalas/SairCvsaProf.visible = true
 			$ProfessoraFalas/ProfFalasButton.visible = false
-		
+			Global.F1_objetivo6 = true
+			
 	if Global.dia == 2:
 		if contadorProfFalasButton == 4:
 			$ProfessoraFalas/FalaProfessora.text = "Sua próxima aula é sobre custos diários, clique no botão para começá-la."
@@ -99,7 +102,7 @@ func _process(_delta):
 	Global.Quest_1 = int($ProfessoraFalas/Quest_1.text)
 	CustoMax = Global.Quest_1 / 30
 	
-	if Global.dia == 1 and Global.objetivo2 == true: # ou seja, ele pagou o boleto (completando o segundo objetivo)
+	if Global.dia == 1 and Global.F1_objetivo4 == true: # ou seja, ele pagou o boleto (completando o segundo objetivo)
 		$SecretariaFalas/FalaSecretaria.text = "Olá novamente, já confirmamos que o seu boleto foi pago!"
 		$SecretariaFalas/SecrFalasButton.visible = true
 

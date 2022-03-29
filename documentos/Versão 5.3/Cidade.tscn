@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Professora.tscn" type="PackedScene" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://carinha_da_loja andando.png" type="Texture" id=32]
 [ext_resource path="res://Design sem nome (3).png" type="Texture" id=33]
 [ext_resource path="res://Dia_e_Noite.gd" type="Script" id=34]
+[ext_resource path="res://Fontes/golden_age/Golden Age.ttf" type="DynamicFontData" id=35]
 
 [sub_resource type="Animation" id=3]
 resource_name = "pop up"
@@ -66,6 +67,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
 }
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 35 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "CicloDiaNoite"
@@ -639,7 +643,7 @@ polygon = PoolVector2Array( -5, -16, 117, -18, 115, 41, -1, 42 )
 
 [node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
 position = Vector2( -573, 384 )
-polygon = PoolVector2Array( -2, -215, 49, -263, 133, -269, 186, -219, 187, 47, 132, 42, 120, -27, 57, -30, 52, 46, -1, 42 )
+polygon = PoolVector2Array( -2, -215, 51, -268, 132, -267, 187, -212, 187, 47, 132, 42, 120, -27, 57, -30, 52, 46, -1, 42 )
 
 [node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D2"]
 position = Vector2( -1122, 756 )
@@ -741,6 +745,7 @@ polygon = PoolVector2Array( 18, -2, 40, 1, 37, 37, 24, 34 )
 position = Vector2( 1546, 900 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D3"]
+visible = false
 position = Vector2( 145, 185 )
 polygon = PoolVector2Array( -13, -3, 27, -7, 51, -62, 85, -9, 331, -3, 333, 304, 236.848, 303.69, 197, 240, 160, 239, 128.363, 303.34, 23, 303, 13, 180, -32, 167, -28, 125, -41, 75 )
 
@@ -748,7 +753,7 @@ polygon = PoolVector2Array( -13, -3, 27, -7, 51, -62, 85, -9, 331, -3, 333, 304,
 position = Vector2( 461, 2118 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesCidade/StaticBody2D4"]
-polygon = PoolVector2Array( 4, 16, 14, -52, 83, -59, 87, 8, 263, 11, 264, -353, -130, -355, -104, -411, -116, -434, -217, -434, -234, -412, -174, -344, -172, -80, -201, -102, -223, -73, -234, -28, -286, -35, -291, 82, -180, 75, -164, 21 )
+polygon = PoolVector2Array( 4, 16, 14, -52, 83, -59, 87, 8, 263, 11, 264, -353, -125, -359, -104, -411, -116, -434, -217, -434, -234, -412, -183, -341, -172, -80, -201, -102, -223, -73, -234, -28, -286, -35, -291, 82, -180, 75, -164, 21 )
 
 [node name="ParedesMercadinho" type="Container" parent="Mapa"]
 margin_right = 40.0
@@ -1174,7 +1179,7 @@ position = Vector2( 552, 2260 )
 polygon = PoolVector2Array( -64, -171, -26, -168, -18, -130, -69, -130 )
 
 [node name="TP Sair Arcade" type="Area2D" parent="Teleportes"]
-position = Vector2( -597, 2689 )
+position = Vector2( -596, 2689 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Arcade"]
 position = Vector2( 7, -2 )
@@ -1189,14 +1194,6 @@ polygon = PoolVector2Array( 1853, 1355, 1882, 1354, 1895, 1384, 1847, 1384 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Teleportes/TP Sair Shop"]
 polygon = PoolVector2Array( 3976, 110, 4057, 108, 3989, 154, 3902, 109 )
-
-[node name="InicioAula" type="Area2D" parent="."]
-position = Vector2( 970, -3049.77 )
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="InicioAula"]
-position = Vector2( 83, 67.7732 )
-scale = Vector2( 0.8125, 1 )
-polygon = PoolVector2Array( 13.5385, 39, 13.5386, 1, 13.5385, -60, 18.4615, -16 )
 
 [node name="Aulas" type="Container" parent="."]
 margin_right = 40.0
@@ -1375,6 +1372,14 @@ polygon = PoolVector2Array( -3101, 2119, -3112, 2119, -3112, 2202, -3009, 2200, 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/FalasContainer/Iniciar_yang_Falas"]
 polygon = PoolVector2Array( 3943, -258, 3991, -254, 3997, -130, 4116, -128, 4116, -89, 3949, -87 )
 
+[node name="InicioAula" type="Area2D" parent="Areas2D_e_NPC/FalasContainer"]
+position = Vector2( 970, -3049.77 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/FalasContainer/InicioAula"]
+position = Vector2( 83, 67.7732 )
+scale = Vector2( 0.8125, 1 )
+polygon = PoolVector2Array( 13.5385, 39, 13.5386, 1, 13.5385, -60, 18.4615, -16 )
+
 [node name="BodysContaienr" type="Container" parent="Areas2D_e_NPC"]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -1424,6 +1429,12 @@ frame = 1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/BodysContaienr/YangLojista"]
 polygon = PoolVector2Array( -11.7654, 29.4115, 18.2998, 30.0651, 19.6069, -0.653564, 2.61377, -16.9933, -13.7261, 0 )
 
+[node name="Dormir" type="Area2D" parent="Areas2D_e_NPC"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/Dormir"]
+position = Vector2( 259, 6 )
+polygon = PoolVector2Array( -2734, 2263, -2651, 2264, -2651, 2295, -2733, 2295 )
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1870, 1443 )
 
@@ -1445,21 +1456,14 @@ polygon = PoolVector2Array( 11, -66, 11, 40, -16, 11, -17, -29 )
 [node name="Tempo" type="CanvasLayer" parent="."]
 
 [node name="Horas" type="Label" parent="Tempo"]
-margin_left = 411.0
-margin_top = 7.0
-margin_right = 451.0
-margin_bottom = 21.0
-rect_scale = Vector2( 3.62064, 3.2063 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Dias" type="Label" parent="Tempo"]
-margin_left = 387.0
-margin_top = 82.0
-margin_right = 434.0
-margin_bottom = 112.0
-rect_scale = Vector2( 3.81735, 3.81735 )
+modulate = Color( 0.137255, 0.133333, 0, 1 )
+margin_left = 4.00003
+margin_top = 96.0
+margin_right = 105.0
+margin_bottom = 111.0
+rect_scale = Vector2( 2.87333, 2.54451 )
+custom_fonts/font = SubResource( 6 )
+text = "fsxdfd"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1485,8 +1489,6 @@ anims/RESET = SubResource( 5 )
 [connection signal="body_entered" from="Teleportes/TP Sair Arcade" to="KinematicBody2D2" method="_on_TP_Sair_Arcade_body_entered"]
 [connection signal="body_entered" from="Teleportes/Shop TP" to="KinematicBody2D2" method="_on_Shop_TP_body_entered"]
 [connection signal="body_entered" from="Teleportes/TP Sair Shop" to="KinematicBody2D2" method="_on_TP_Sair_Shop_body_entered"]
-[connection signal="body_entered" from="InicioAula" to="Professora" method="_on_InicioAula_body_entered"]
-[connection signal="body_entered" from="InicioAula" to="KinematicBody2D2" method="_on_InicioAula_body_entered"]
 [connection signal="pressed" from="Aulas/NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="body_entered" from="Areas2D_e_NPC/Abrir_pc" to="KinematicBody2D2" method="_on_Abrir_pc_body_entered"]
 [connection signal="body_exited" from="Areas2D_e_NPC/Abrir_pc" to="KinematicBody2D2" method="_on_Abrir_pc_body_exited"]
@@ -1500,4 +1502,6 @@ anims/RESET = SubResource( 5 )
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/iniciar_falavo" to="KinematicBody2D2" method="_on_iniciar_falavo_body_entered"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_TioClovis_Falas" to="KinematicBody2D2" method="_on_Iniciar_TioClovis_Falas_body_entered"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_yang_Falas" to="KinematicBody2D2" method="_on_Iniciar_yang_Falas_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/InicioAula" to="Professora" method="_on_InicioAula_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/InicioAula" to="KinematicBody2D2" method="_on_InicioAula_body_entered"]
 [connection signal="body_entered" from="Coisas_sobre_orientação_ao_jogador/Aviso_Quarto" to="." method="_on_Aviso_Quarto_body_entered"]

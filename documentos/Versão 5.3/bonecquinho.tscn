@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Camera2D.gd" type="Script" id=2]
@@ -7,11 +7,11 @@
 [ext_resource path="res://Revisaoimg.png" type="Texture" id=5]
 [ext_resource path="res://ipad.png" type="Texture" id=6]
 [ext_resource path="res://Config.gd" type="Script" id=7]
-[ext_resource path="res://MAPA VERSAO 1.png" type="Texture" id=8]
+[ext_resource path="res://onibus img.png" type="Texture" id=8]
 [ext_resource path="res://icones/Bancoicon.png" type="Texture" id=9]
-[ext_resource path="res://icones/Bikeicon.png" type="Texture" id=10]
-[ext_resource path="res://icones/Onibusicon.png" type="Texture" id=11]
-[ext_resource path="res://icones/Taxiicon.png" type="Texture" id=12]
+[ext_resource path="res://MAPA VERSÃO 1.png" type="Texture" id=10]
+[ext_resource path="res://bike img.png" type="Texture" id=11]
+[ext_resource path="res://taxi img.png" type="Texture" id=12]
 [ext_resource path="res://control pad.png" type="Texture" id=13]
 [ext_resource path="res://Falas.gd" type="Script" id=14]
 [ext_resource path="res://Fontes/golden_age/Golden Age.ttf" type="DynamicFontData" id=15]
@@ -35,6 +35,7 @@
 [ext_resource path="res://RostoVó.png" type="Texture" id=33]
 [ext_resource path="res://Popup de Avisos.png" type="Texture" id=34]
 [ext_resource path="res://RostoTio.png" type="Texture" id=35]
+[ext_resource path="res://cadeado.png" type="Texture" id=36]
 [ext_resource path="res://Image_from_iOS__5_-removebg-preview-3 2.png" type="Texture" id=37]
 [ext_resource path="res://images/buttons/audioOn.png" type="Texture" id=38]
 [ext_resource path="res://images/buttons/musicOn.png" type="Texture" id=39]
@@ -151,7 +152,7 @@ font_data = ExtResource( 21 )
 length = 0.001
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -168,7 +169,7 @@ resource_name = "correndinho pra baixo"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -185,7 +186,7 @@ resource_name = "correndinho pra cima"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -202,7 +203,7 @@ resource_name = "correndinho pra direita"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -219,7 +220,7 @@ resource_name = "correndinho pra esquerda"
 length = 0.35
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -235,7 +236,7 @@ tracks/0/keys = {
 resource_name = "paradinhonzino pra esquerda"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -251,7 +252,7 @@ tracks/0/keys = {
 resource_name = "paradinhozinho"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -267,7 +268,7 @@ tracks/0/keys = {
 resource_name = "paradinhozinho pra cima"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -283,7 +284,7 @@ tracks/0/keys = {
 resource_name = "paradinhozinho pra direita"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Avatar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -304,7 +305,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 848.0 ]
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Avatar" type="Sprite" parent="."]
 position = Vector2( 0.000732422, 10.7537 )
 scale = Vector2( 4.76439, 3.61414 )
 texture = ExtResource( 3 )
@@ -356,6 +357,21 @@ visible = false
 modulate = Color( 0.992157, 1, 0.172549, 1 )
 self_modulate = Color( 0.992157, 1, 0, 1 )
 position = Vector2( 760, 52 )
+scale = Vector2( 0.205706, 0.178267 )
+texture = ExtResource( 23 )
+
+[node name="Boleto AGUA" type="Sprite" parent="Camera2D/Dinheiro"]
+visible = false
+modulate = Color( 0, 0.435294, 1, 1 )
+position = Vector2( 679, 51 )
+scale = Vector2( 0.205706, 0.178267 )
+texture = ExtResource( 23 )
+
+[node name="Boleto ENERGIA" type="Sprite" parent="Camera2D/Dinheiro"]
+visible = false
+modulate = Color( 0.964706, 0.290196, 0.290196, 1 )
+self_modulate = Color( 0.568627, 0.815686, 0.694118, 1 )
+position = Vector2( 598, 51 )
 scale = Vector2( 0.205706, 0.178267 )
 texture = ExtResource( 23 )
 
@@ -545,6 +561,7 @@ scale = Vector2( 0.711932, 0.634258 )
 texture = ExtResource( 6 )
 
 [node name="CelularPanel" type="Panel" parent="Camera2D/Celular/AbrirCelular"]
+visible = false
 margin_left = 108.04
 margin_top = 75.8257
 margin_right = 148.04
@@ -565,10 +582,10 @@ position = Vector2( -547.459, 34.1397 )
 
 [node name="ObjetivosTitulo" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/Tasks"]
 modulate = Color( 0.835294, 0.494118, 0.0117647, 1 )
-margin_left = -585.0
-margin_top = 143.0
-margin_right = -500.0
-margin_bottom = 166.0
+margin_left = -590.883
+margin_top = 146.6
+margin_right = -505.883
+margin_bottom = 169.6
 rect_scale = Vector2( 3.25066, 3.24359 )
 custom_fonts/normal_font = SubResource( 28 )
 text = "Objetivos"
@@ -577,10 +594,10 @@ __meta__ = {
 }
 
 [node name="Objetivo" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/Tasks"]
-margin_left = -681.0
-margin_top = 233.0
-margin_right = -382.0
-margin_bottom = 348.0
+margin_left = -675.0
+margin_top = 225.0
+margin_right = -417.0
+margin_bottom = 326.0
 rect_scale = Vector2( 1.61743, 1.57316 )
 custom_fonts/normal_font = SubResource( 29 )
 bbcode_enabled = true
@@ -605,10 +622,10 @@ __meta__ = {
 position = Vector2( 127.171, 1116.57 )
 
 [node name="AjustesB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
-margin_left = -1286.06
-margin_top = -411.344
-margin_right = -1177.06
-margin_bottom = -317.344
+margin_left = -1291.88
+margin_top = -473.939
+margin_right = -1182.88
+margin_bottom = -379.939
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -619,10 +636,10 @@ scale = Vector2( 0.265238, 0.265238 )
 texture = ExtResource( 19 )
 
 [node name="Ajustestxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesB"]
-margin_left = 1.55569
-margin_top = -54.2212
-margin_right = 116.556
-margin_bottom = -14.2212
+margin_left = -1.55079
+margin_top = 116.477
+margin_right = 113.45
+margin_bottom = 156.477
 rect_scale = Vector2( 1.45678, 1.45678 )
 custom_fonts/normal_font = SubResource( 22 )
 text = "Ajustes"
@@ -632,9 +649,9 @@ __meta__ = {
 
 [node name="BancoB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
 margin_left = -1124.76
-margin_top = -608.148
+margin_top = -670.744
 margin_right = -1015.76
-margin_bottom = -510.148
+margin_bottom = -572.744
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -646,9 +663,9 @@ texture = ExtResource( 9 )
 
 [node name="Bancotxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BancoB"]
 margin_left = 10.856
-margin_top = -48.1972
+margin_top = 114.468
 margin_right = 102.856
-margin_bottom = -20.1972
+margin_bottom = 142.468
 rect_scale = Vector2( 1.50325, 1.50325 )
 custom_fonts/normal_font = SubResource( 23 )
 text = "Banco"
@@ -658,9 +675,9 @@ __meta__ = {
 
 [node name="RevisaoB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
 margin_left = -1123.21
-margin_top = -415.36
+margin_top = -477.956
 margin_right = -1014.21
-margin_bottom = -315.36
+margin_bottom = -377.956
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -672,9 +689,9 @@ texture = ExtResource( 5 )
 
 [node name="Revisaotxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/RevisaoB"]
 margin_left = -38.7754
-margin_top = -66.271
+margin_top = 120.493
 margin_right = 115.224
-margin_bottom = 33.729
+margin_bottom = 220.493
 rect_scale = Vector2( 1.25253, 1.25253 )
 custom_fonts/normal_font = SubResource( 24 )
 bbcode_enabled = true
@@ -688,9 +705,9 @@ __meta__ = {
 
 [node name="MapaB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
 margin_left = -1289.16
-margin_top = -606.14
+margin_top = -668.736
 margin_right = -1237.16
-margin_bottom = -555.14
+margin_bottom = -617.736
 rect_scale = Vector2( 2.10295, 1.91315 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -703,9 +720,9 @@ texture = ExtResource( 20 )
 
 [node name="Mapatxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB"]
 margin_left = 5.16381
-margin_top = -30.4412
+margin_top = 58.7828
 margin_right = 103.164
-margin_bottom = -4.44123
+margin_bottom = 84.7827
 rect_scale = Vector2( 0.884187, 0.884187 )
 custom_fonts/normal_font = SubResource( 14 )
 text = "Mapa"
@@ -715,20 +732,20 @@ __meta__ = {
 
 [node name="MapaI" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB"]
 visible = false
-position = Vector2( 229.538, -10.6752 )
+position = Vector2( 228.8, 22.0436 )
 scale = Vector2( 0.273201, 0.341033 )
-texture = ExtResource( 8 )
+texture = ExtResource( 10 )
 
 [node name="Taxiimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
-position = Vector2( -79.9989, -333.776 )
-scale = Vector2( 0.764125, 0.713288 )
+position = Vector2( -774.724, 24.6239 )
+scale = Vector2( 0.371385, 0.346677 )
 texture = ExtResource( 12 )
 
 [node name="TaxiB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Taxiimg"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -205.0
+margin_left = -371.0
 margin_top = -164.0
-margin_right = 243.0
+margin_right = 378.0
 margin_bottom = 178.0
 text = "                                                                                    "
 __meta__ = {
@@ -737,11 +754,11 @@ __meta__ = {
 
 [node name="PrecoTaxi" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Taxiimg"]
 modulate = Color( 0.215686, 0.188235, 0.188235, 1 )
-margin_left = 137.774
-margin_top = -129.456
-margin_right = 284.774
-margin_bottom = -38.4556
-rect_scale = Vector2( 3.21065, 3.17122 )
+margin_left = 196.248
+margin_top = -310.748
+margin_right = 343.248
+margin_bottom = -219.747
+rect_scale = Vector2( 6.89602, 6.81133 )
 custom_fonts/normal_font = SubResource( 27 )
 bbcode_enabled = true
 bbcode_text = "[center]10 min[center]
@@ -755,17 +772,17 @@ __meta__ = {
 }
 
 [node name="Onibusimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
-position = Vector2( -752.147, -324.542 )
-scale = Vector2( 0.609786, 0.609786 )
-texture = ExtResource( 11 )
+position = Vector2( -785.521, -317.031 )
+scale = Vector2( 0.532297, 0.532297 )
+texture = ExtResource( 8 )
 
 [node name="OnibusB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg"]
 modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
-margin_left = -225.766
-margin_top = -171.62
-margin_right = 247.234
-margin_bottom = 164.38
+margin_left = -226.0
+margin_top = -172.0
+margin_right = 299.0
+margin_bottom = 162.0
 text = "                                                                                    "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -773,10 +790,10 @@ __meta__ = {
 
 [node name="PrecoOnibus" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg"]
 modulate = Color( 0.215686, 0.188235, 0.188235, 1 )
-margin_left = 92.9622
-margin_top = -186.762
-margin_right = 239.962
-margin_bottom = -95.7621
+margin_left = 248.49
+margin_top = -196.603
+margin_right = 395.49
+margin_bottom = -105.603
 rect_scale = Vector2( 4.29367, 4.24094 )
 custom_fonts/normal_font = SubResource( 27 )
 bbcode_enabled = true
@@ -791,17 +808,17 @@ __meta__ = {
 }
 
 [node name="Bikeimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
-position = Vector2( 508.468, -327.62 )
-scale = Vector2( 0.625658, 0.625658 )
-texture = ExtResource( 10 )
+position = Vector2( -774.724, 418.605 )
+scale = Vector2( 0.387406, 0.387406 )
+texture = ExtResource( 11 )
 
 [node name="BikeB" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Bikeimg"]
 modulate = Color( 1, 0, 0.937255, 0 )
 show_behind_parent = true
-margin_left = -233.0
+margin_left = -376.0
 margin_top = -285.0
-margin_right = 285.0
-margin_bottom = 173.0
+margin_right = 314.0
+margin_bottom = 175.0
 text = "                                                                                    "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -809,11 +826,11 @@ __meta__ = {
 
 [node name="PrecoBike" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Bikeimg"]
 modulate = Color( 0.215686, 0.188235, 0.188235, 1 )
-margin_left = 176.894
-margin_top = -152.507
-margin_right = 323.894
-margin_bottom = -61.5068
-rect_scale = Vector2( 3.54052, 3.49704 )
+margin_left = 181.164
+margin_top = -341.639
+margin_right = 328.164
+margin_bottom = -250.639
+rect_scale = Vector2( 6.17531, 6.09947 )
 custom_fonts/normal_font = SubResource( 27 )
 bbcode_enabled = true
 bbcode_text = "[center]30 min[center]
@@ -826,55 +843,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Cadeado" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Bikeimg"]
+position = Vector2( 571.363, -87.3969 )
+scale = Vector2( 1.01556, 1.01556 )
+texture = ExtResource( 36 )
+
 [node name="FaculdadeTP" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -429.0
-margin_top = -127.0
-margin_right = 66.0
-margin_bottom = 146.0
+margin_left = -121.472
+margin_top = -443.228
+margin_right = 373.528
+margin_bottom = -170.228
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BancoTPad" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 112.0
-margin_top = 279.0
-margin_right = 376.0
-margin_bottom = 512.0
+margin_left = 342.822
+margin_top = 230.848
+margin_right = 606.822
+margin_bottom = 463.848
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CasaTPad" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 658.0
-margin_top = 192.0
-margin_right = 795.0
-margin_bottom = 496.0
+margin_left = 780.123
+margin_top = 24.6238
+margin_right = 917.123
+margin_bottom = 328.624
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MercadinhoTPad" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -734.0
-margin_top = -12.0
-margin_right = -478.0
-margin_bottom = 202.0
+margin_left = -345.521
+margin_top = -86.1831
+margin_right = -89.5214
+margin_bottom = 127.817
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ArcadeTPad" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = -723.0
-margin_top = 279.0
-margin_right = -473.0
-margin_bottom = 502.0
+margin_left = -345.521
+margin_top = 237.004
+margin_right = -95.5214
+margin_bottom = 460.004
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="LojinhaTPad" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 351.0
+margin_top = -89.0
+margin_right = 594.0
+margin_bottom = 136.0
 
 [node name="AvisoSemBike" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI"]
 visible = false
@@ -898,9 +927,9 @@ __meta__ = {
 [node name="CloseMAPButton" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB"]
 visible = false
 margin_left = 463.317
-margin_top = -192.272
+margin_top = -159.553
 margin_right = 484.317
-margin_bottom = -172.272
+margin_bottom = -139.553
 rect_scale = Vector2( 1.28428, 1.28428 )
 text = "X"
 __meta__ = {
@@ -2074,6 +2103,7 @@ anims/paradinhozinho = SubResource( 7 )
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/CasaTPad" to="." method="_on_CasaTPad_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/MercadinhoTPad" to="." method="_on_MercadinhoTPad_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/ArcadeTPad" to="." method="_on_ArcadeTPad_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/LojinhaTPad" to="." method="_on_LojinhaTPad_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/CloseMAPButton" to="Camera2D/Celular/AbrirCelular" method="_on_CloseMAPButton_pressed"]
 [connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/AjustesI/SaveButton" to="Camera2D/Celular/AbrirCelular" method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/GuiFalasButton" to="Camera2D/Falas" method="_on_GuiFalasButton_pressed"]

@@ -20,12 +20,14 @@ var flapCoin_Game = false
 var tiroCoin_Game = false
 
 # Variáveis relacionadas aos objetivos do protagonista
-var objetivo1 = false
-var objetivo2 = false
-var objetivo3 = false
-var objetivo4 = false
-var objetivo5 = false
-var objetivo6 = false
+var F1_objetivo1 = false
+var F1_objetivo2 = false
+var F1_objetivo3 = false
+var F1_objetivo4 = false
+var F1_objetivo5 = false
+var F1_objetivo6 = false
+var F1_objetivo7 = false
+var F1_objetivo8 = false
 
 # Tempo
 var Tempo = true
@@ -36,5 +38,5 @@ var sent = 0
 
 # Contadores
 
-
+var select 
 

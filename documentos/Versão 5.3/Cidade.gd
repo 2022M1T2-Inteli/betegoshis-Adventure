@@ -23,8 +23,7 @@ func _process(_delta): #Botão da professora
 		$KinematicBody2D2/Camera2D/Celular/AbrirCelular.visible = false
 	
 	# Senhor do tempo
-	$Tempo/Horas.text = str(Global.hora) + "h " + str(Global.minuto) + "min"
-	$Tempo/Dias.text = str(Global.dia) + "d"
+	$Tempo/Horas.text = "Dia " + str(Global.dia) + "  " + str(Global.hora) + "h " + str(Global.minuto) + "min" 
 	if Global.Tempo == true: # se o tempo está rodando
 		Global.sent += _delta # soma um valor rapidamente 
 		if Global.sent >= 0.5: # depois de 1 segundo 
@@ -66,7 +65,7 @@ func _on_NextButton_pressed():
 			$KinematicBody2D2/Camera2D/Falas/ProfessoraFalas.visible = true
 			$KinematicBody2D2/Camera2D/Falas/ProfessoraFalas/FalaProfessora.text = "Além disso, depois de assistir às aulas, você terá que aplicar o que aprendeu, e eu vou te ajudar com isso."
 			$KinematicBody2D2/Camera2D/Falas/ProfessoraFalas/ProfFalasButton.visible = true
-			
+			$KinematicBody2D2/Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 		
 	if Global.dia == 2:
 		if contadorNextButton == 5:
@@ -109,6 +108,7 @@ func _on_NextButton_pressed():
 #	$KinematicBody2D2/Camera2D/Dinheiro/Popups/Orientacoes/AvisoAoSairDoQuarto.visible = true
 #	yield(get_tree().create_timer(1.7), "timeout")
 #	$KinematicBody2D2/Camera2D/Dinheiro/Popups/Orientacoes/AvisoAoSairDoQuarto.visible = false
+
 
 
 
