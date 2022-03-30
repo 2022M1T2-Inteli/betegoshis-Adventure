@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://TiroCoin/Untitled design (2).png" type="Texture" id=1]
+[ext_resource path="res://TiroCoin/characters/Player/NavePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TiroCoin/characters/Enemy/EnemySpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TiroCoin/background-3907905_960_720.webp" type="Texture" id=4]
+[ext_resource path="res://World.gd" type="Script" id=5]
+[ext_resource path="res://TiroCoin/Minercraftory.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 49.5, 44.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 47, 46 )
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 409, 371 )
+scale = Vector2( 0.542188, 0.57963 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 4 )
+centered = false
+offset = Vector2( -754.351, -646.964 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 468, 323 )
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( 33.5, 34.5 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 37, 36 )
+shape = SubResource( 5 )
+
+[node name="Score" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 47.0
+margin_top = 44.0
+margin_right = 126.0
+margin_bottom = 88.0
+rect_scale = Vector2( 1.90101, 1.97669 )
+custom_fonts/font = SubResource( 1 )
+text = "SCORE:  0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 14, 310 )
+polygon = PoolVector2Array( 0, -310, 5, 323, -57, 301, -57, -317 )
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 1058, 326 )
+polygon = PoolVector2Array( 0, -310, 6, 25, 5, 323, -43, 271, -53, 29, -57, -317 )
+
+[node name="CollisionShape2D3" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 972, 658.817 )
+scale = Vector2( 15.8972, 0.107152 )
+polygon = PoolVector2Array( 2.20165, -492.915, 5, 323, -59.13, 253.689, -58.0606, -464.917 )
+
+[node name="CollisionShape2D4" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2( 765, 302 )
+scale = Vector2( 1, 0.96875 )
+polygon = PoolVector2Array( -751, -399.484, 266, -395.452, 258, -316.903, -742, -300.484, -742, -403.71 )
+
+[connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_Player_area_entered"]
