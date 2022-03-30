@@ -530,7 +530,7 @@ func _on_MercadinhoTPad_pressed():
 	if irMercadinho == true and irTaxi == true: #se ativar o mercadinho e o taxi
 		money -= precoTaxi #paga
 		goToMercadinho = true #valida a ida para a mercadinho
-		Global.vezesTaxi += 1
+		
 	if irMercadinho == true and irOnibus == true: #se ativar a mercadinho e o onibus
 		money -= precoOnibus #paga
 		goToMercadinho = true #valida a ida para a mercadinho
@@ -742,16 +742,16 @@ func _on_sairFala_pressed():
 
 func _on_ComprarComida1_pressed():
 	Global.money -= 5
+	Global.Gastos_negativos.append(5.00)
+
 
 func _on_ComprarComida2_pressed():
-	Global.money = money
-	money -= 9
-
+	Global.money -= 9
+	Global.Gastos_negativos.append(9.00)
 
 func _on_ComprarComida3_pressed():
-	Global.money = money
-	money -= 13
-##
+	Global.money -= 13
+	Global.Gastos_negativos.append(13.00)
 
 
 func _on_Iniciar_Pong_body_entered(_body):
@@ -781,6 +781,7 @@ func _on_Comprar_Bicicleta_pressed():
 	$Camera2D/Falas/Nin_YangFalas/Comprar_Bicicleta.visible = false
 	$Camera2D/Falas/Nin_YangFalas/Comprar_avatares.visible = false
 	Global.money -= 500
+	Global.Gastos_negativos.append(500)
 	$Camera2D/Dinheiro/DinheiroLabel.text = "BT$" + str(Global.money)
 	$Camera2D/Falas/Nin_YangFalas/Falas_Do_NinYang.text = "Prontinho, você desbloqueou a bicicleta, pode checar seu mapa, você já poderá utilizá-la para ir aos lugares."
 	$Camera2D/Falas/Nin_YangFalas/Sair_NinYang.visible = true
