@@ -51,6 +51,8 @@ func _on_BancoB_pressed():
 	$CelularPanel/apps/AjustesB.visible = false
 	$CelularPanel/apps/RevisaoB.visible = false
 	$CelularPanel/apps/MapaB.visible = false
+	$CelularPanel/apps/BancoB/PaginaB/Nome_banco.text = "Olá, " + str(Global.player_name)
+	$CelularPanel/apps/BancoB/PaginaB/Saldo_banco.text = "Seu saldo: BT$ " + str(Global.money)
 
 # sair Pagina banco
 func _on_Button_pressed():
@@ -61,12 +63,24 @@ func _on_Button_pressed():
 
 #abrir extr
 func _on_Bextr_pressed():
-	$CelularPanel/apps/BancoB/PaginaB/Bextr/Extrato.visible = true
-
+	$CelularPanel/apps/BancoB/PaginaB/Binvest.visible = false
+	$CelularPanel/apps/BancoB/PaginaB/Bextrato.visible = false
+	$CelularPanel/apps/BancoB/PaginaB/sprite_bbc.visible = true
+	$CelularPanel/apps/BancoB/PaginaB/Nome_banco.visible = false
+	$CelularPanel/apps/BancoB/PaginaB/Saldo_banco.visible = false
+	if Global.Gastos_negativos.size() > 0:
+		for i in Global.Gastos_negativos: 
+			$CelularPanel/apps/BancoB/PaginaB/sprite_bbc/ItemList.add_item("Mercado BT$ " + str(i))
+			$CelularPanel/apps/BancoB/PaginaB/sprite_bbc/ItemList.set_item_custom_fg_color($CelularPanel/apps/BancoB/PaginaB/sprite_bbc/ItemList.get_item_count() - 1, Color.red)
+			
+	if Global.Gastos_negativos.size() > 0:
+		for i in Global.Gastos_negativos: 
+			if i > 0:
+				$CelularPanel/apps/BancoB/PaginaB/sprite_bbc/ItemList.add_item("Arcade BT$ " + str(i))
+			if i > 0:
+				$CelularPanel/apps/BancoB/PaginaB/sprite_bbc/ItemList.add_item("Loja de Itens BT$ " + str(i))
 
 #sair extr
 func _on_SairExt_pressed():
-	$CelularPanel/apps/BancoB/PaginaB/Bextr/Extrato.visible = false
-	$CelularPanel/apps/BancoB/PaginaB/Bextr/SairExt.visible = false
+	$CelularPanel/apps/BancoB/PaginaB/sprite_bbc.visible = false
 	
-

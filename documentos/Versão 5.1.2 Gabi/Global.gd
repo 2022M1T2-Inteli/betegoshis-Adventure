@@ -33,3 +33,9 @@ var sent = 0
 
 
 
+
+
+# extrato
+var Gastos_negativos : Array = [] 
+
+
