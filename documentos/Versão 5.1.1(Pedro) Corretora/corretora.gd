@@ -5,7 +5,7 @@ extends Control
 func _ready():
 	
 	var tab_container = get_node("TabContainer")
-	tab_container.set_current_tab(1)
+#	tab_container.set_current_tab(1)
 	
 	
 
@@ -24,5 +24,5 @@ func _on_tab_changed(tab):
 	
 
 
-func _on_INVESTIMENTOS_tab_changed(tab):
-	pass # Replace with function body.
+
+

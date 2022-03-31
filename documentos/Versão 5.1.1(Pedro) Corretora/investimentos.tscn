@@ -131,20 +131,10 @@ margin_right = -10.0
 margin_bottom = -10.0
 script = ExtResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/INVESTIMENTOS"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = -47.0
-margin_right = -17.0
-margin_bottom = -20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="control" type="Node2D" parent="TabContainer/INVESTIMENTOS"]
+position = Vector2( 4, -3 )
 
-[node name="control" type="Node2D" parent="TabContainer/INVESTIMENTOS/RichTextLabel"]
-
-[node name="Panel1" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+[node name="Panel1" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
 margin_left = 10.0
 margin_top = 60.0
 margin_right = 238.0
@@ -154,11 +144,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel1"]
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel1"]
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -171,7 +161,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel1"]
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -184,7 +174,7 @@ __meta__ = {
 }
 price = 100
 
-[node name="Panel2" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+[node name="Panel2" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
 margin_left = 350.0
 margin_top = 60.0
 margin_right = 580.0
@@ -194,12 +184,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 112, 136 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -209,7 +199,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2"]
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -219,7 +209,7 @@ align = 1
 script = ExtResource( 5 )
 price = 200
 
-[node name="Panel3" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+[node name="Panel3" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
 margin_left = 690.0
 margin_top = 60.0
 margin_right = 920.0
@@ -229,12 +219,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 108, 141 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -244,7 +234,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3"]
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -257,7 +247,7 @@ __meta__ = {
 }
 price = 300
 
-[node name="Panel4" type="Panel" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control"]
+[node name="Panel4" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
 margin_left = 1030.0
 margin_top = 60.0
 margin_right = 1260.0
@@ -267,11 +257,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel4"]
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel4"]
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -284,7 +274,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel4"]
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -109.0
@@ -364,34 +354,24 @@ margin_right = -10.0
 margin_bottom = -10.0
 script = ExtResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/RENDA FIXA"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 25.0
-margin_top = -47.0
-margin_right = -12.0
-margin_bottom = -20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="control" type="Node2D" parent="TabContainer/RENDA FIXA"]
+position = Vector2( 6, -4 )
 
-[node name="control" type="Node2D" parent="TabContainer/RENDA FIXA/RichTextLabel"]
-
-[node name="Panel1" type="Panel" parent="TabContainer/RENDA FIXA/RichTextLabel/control"]
-margin_left = 10.0
-margin_top = 50.0
-margin_right = 240.0
-margin_bottom = 400.0
+[node name="Panel1" type="Panel" parent="TabContainer/RENDA FIXA/control"]
+margin_left = 6.0
+margin_top = 54.0
+margin_right = 236.0
+margin_bottom = 404.0
 custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel1"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel1"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel1"]
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel1"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -404,7 +384,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel1"]
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel1"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -412,9 +392,9 @@ margin_right = 106.5
 margin_bottom = 60.0
 align = 1
 script = ExtResource( 5 )
-price = 100
+price = 99
 
-[node name="Panel2" type="Panel" parent="TabContainer/RENDA FIXA/RichTextLabel/control"]
+[node name="Panel2" type="Panel" parent="TabContainer/RENDA FIXA/control"]
 margin_left = 350.0
 margin_top = 50.0
 margin_right = 580.0
@@ -424,12 +404,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel2"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel2"]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 112, 136 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel2"]
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -439,7 +419,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel2"]
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -449,7 +429,7 @@ align = 1
 script = ExtResource( 5 )
 price = 200
 
-[node name="Panel3" type="Panel" parent="TabContainer/RENDA FIXA/RichTextLabel/control"]
+[node name="Panel3" type="Panel" parent="TabContainer/RENDA FIXA/control"]
 margin_left = 690.0
 margin_top = 50.0
 margin_right = 920.0
@@ -459,12 +439,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel3"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel3"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 108, 141 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel3"]
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel3"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -474,7 +454,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel3"]
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel3"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -484,7 +464,7 @@ align = 1
 script = ExtResource( 5 )
 price = 300
 
-[node name="Panel4" type="Panel" parent="TabContainer/RENDA FIXA/RichTextLabel/control"]
+[node name="Panel4" type="Panel" parent="TabContainer/RENDA FIXA/control"]
 margin_left = 1030.0
 margin_top = 50.0
 margin_right = 1260.0
@@ -494,11 +474,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel4"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel4"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel4"]
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel4"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -511,7 +491,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/RichTextLabel/control/Panel4"]
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel4"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -109.0
@@ -524,7 +504,7 @@ __meta__ = {
 }
 price = 400
 
-[node name="ColorRect" type="ColorRect" parent="TabContainer/RENDA FIXA/RichTextLabel/control"]
+[node name="ColorRect" type="ColorRect" parent="TabContainer/RENDA FIXA/control"]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -540,7 +520,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/RichTextLabel/control/ColorRect"]
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -13.5
@@ -554,7 +534,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/RichTextLabel/control/ColorRect"]
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/ColorRect"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -586,20 +566,10 @@ margin_right = -10.0
 margin_bottom = -10.0
 script = ExtResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/RENDA VARIAVEL"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 25.0
-margin_top = -47.0
-margin_right = -12.0
-margin_bottom = -20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="control" type="Node2D" parent="TabContainer/RENDA VARIAVEL"]
+position = Vector2( 15, -7 )
 
-[node name="control" type="Node2D" parent="TabContainer/RENDA VARIAVEL/RichTextLabel"]
-
-[node name="Panel1" type="Panel" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control"]
+[node name="Panel1" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
 margin_left = 10.0
 margin_top = 50.0
 margin_right = 240.0
@@ -609,11 +579,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel1"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel1"]
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -626,7 +596,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel1"]
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -636,7 +606,7 @@ align = 1
 script = ExtResource( 5 )
 price = 100
 
-[node name="Panel2" type="Panel" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control"]
+[node name="Panel2" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
 margin_left = 350.0
 margin_top = 50.0
 margin_right = 580.0
@@ -646,12 +616,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel2"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 112, 136 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel2"]
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -661,7 +631,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel2"]
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -671,7 +641,7 @@ align = 1
 script = ExtResource( 5 )
 price = 200
 
-[node name="Panel3" type="Panel" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control"]
+[node name="Panel3" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
 margin_left = 690.0
 margin_top = 50.0
 margin_right = 920.0
@@ -681,12 +651,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel3"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 108, 141 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel3"]
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -696,7 +666,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel3"]
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -706,7 +676,7 @@ align = 1
 script = ExtResource( 5 )
 price = 300
 
-[node name="Panel4" type="Panel" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control"]
+[node name="Panel4" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
 margin_left = 1030.0
 margin_top = 50.0
 margin_right = 1260.0
@@ -716,11 +686,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel4"]
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel4"]
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -733,7 +703,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel4"]
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -109.0
@@ -804,20 +774,10 @@ margin_right = -10.0
 margin_bottom = -10.0
 script = ExtResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/CRIPTOS"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 25.0
-margin_top = -47.0
-margin_right = -12.0
-margin_bottom = -20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="control" type="Node2D" parent="TabContainer/CRIPTOS"]
+position = Vector2( 25, -47 )
 
-[node name="control" type="Node2D" parent="TabContainer/CRIPTOS/RichTextLabel"]
-
-[node name="Panel1" type="Panel" parent="TabContainer/CRIPTOS/RichTextLabel/control"]
+[node name="Panel1" type="Panel" parent="TabContainer/CRIPTOS/control"]
 margin_left = 10.0
 margin_top = 50.0
 margin_right = 240.0
@@ -827,11 +787,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel1"]
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel1"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel1"]
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel1"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -844,7 +804,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel1"]
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel1"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -854,7 +814,7 @@ align = 1
 script = ExtResource( 5 )
 price = 100
 
-[node name="Panel2" type="Panel" parent="TabContainer/CRIPTOS/RichTextLabel/control"]
+[node name="Panel2" type="Panel" parent="TabContainer/CRIPTOS/control"]
 margin_left = 350.0
 margin_top = 50.0
 margin_right = 580.0
@@ -864,12 +824,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel2"]
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel2"]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( 112, 136 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel2"]
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel2"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -879,7 +839,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel2"]
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel2"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -889,7 +849,7 @@ align = 1
 script = ExtResource( 5 )
 price = 200
 
-[node name="Panel3" type="Panel" parent="TabContainer/CRIPTOS/RichTextLabel/control"]
+[node name="Panel3" type="Panel" parent="TabContainer/CRIPTOS/control"]
 margin_left = 690.0
 margin_top = 50.0
 margin_right = 920.0
@@ -899,12 +859,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel3"]
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel3"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 108, 141 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel3"]
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel3"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -914,7 +874,7 @@ margin_top = -59.0
 margin_right = 98.0
 text = "COMPRA"
 
-[node name="Label" type="Label" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel3"]
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel3"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -106.5
@@ -924,7 +884,7 @@ align = 1
 script = ExtResource( 5 )
 price = 300
 
-[node name="Panel4" type="Panel" parent="TabContainer/CRIPTOS/RichTextLabel/control"]
+[node name="Panel4" type="Panel" parent="TabContainer/CRIPTOS/control"]
 margin_left = 1030.0
 margin_top = 50.0
 margin_right = 1260.0
@@ -934,11 +894,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel4"]
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel4"]
 position = Vector2( 99, 146 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel4"]
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel4"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -951,7 +911,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TabContainer/CRIPTOS/RichTextLabel/control/Panel4"]
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel4"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -109.0
@@ -1014,23 +974,24 @@ margin_right = 146.5
 margin_bottom = -23.0
 
 [connection signal="tab_changed" from="TabContainer" to="." method="_on_tab_changed"]
-[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel1/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button_pressed"]
-[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel2/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button2_pressed"]
-[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel3/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button3_pressed"]
-[connection signal="pressed" from="TabContainer/INVESTIMENTOS/RichTextLabel/control/Panel4/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button4_pressed"]
+[connection signal="tab_clicked" from="TabContainer/INVESTIMENTOS" to="." method="_on_INVESTIMENTOS_tab_clicked"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel1/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel2/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel3/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel4/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button4_pressed"]
 [connection signal="pressed" from="TabContainer/INVESTIMENTOS/ColorRect/Button" to="TabContainer/INVESTIMENTOS" method="_on_ButtonExit_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA FIXA/RichTextLabel/control/Panel1/Button" to="TabContainer/RENDA FIXA" method="_on_Button_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA FIXA/RichTextLabel/control/Panel2/Button" to="TabContainer/RENDA FIXA" method="_on_Button2_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA FIXA/RichTextLabel/control/Panel3/Button" to="TabContainer/RENDA FIXA" method="_on_Button3_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA FIXA/RichTextLabel/control/Panel4/Button" to="TabContainer/RENDA FIXA" method="_on_Button4_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA FIXA/RichTextLabel/control/ColorRect/Button" to="TabContainer/RENDA FIXA" method="_on_ButtonExit_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel1/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel2/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button2_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel3/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button3_pressed"]
-[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/RichTextLabel/control/Panel4/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel1/Button" to="TabContainer/RENDA FIXA" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel2/Button" to="TabContainer/RENDA FIXA" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel3/Button" to="TabContainer/RENDA FIXA" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel4/Button" to="TabContainer/RENDA FIXA" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/ColorRect/Button" to="TabContainer/RENDA FIXA" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel1/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel2/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel3/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel4/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button4_pressed"]
 [connection signal="pressed" from="TabContainer/RENDA VARIAVEL/ColorRect/Button" to="TabContainer/RENDA VARIAVEL" method="_on_ButtonExit_pressed"]
-[connection signal="pressed" from="TabContainer/CRIPTOS/RichTextLabel/control/Panel1/Button" to="TabContainer/CRIPTOS" method="_on_Button_pressed"]
-[connection signal="pressed" from="TabContainer/CRIPTOS/RichTextLabel/control/Panel2/Button" to="TabContainer/CRIPTOS" method="_on_Button2_pressed"]
-[connection signal="pressed" from="TabContainer/CRIPTOS/RichTextLabel/control/Panel3/Button" to="TabContainer/CRIPTOS" method="_on_Button3_pressed"]
-[connection signal="pressed" from="TabContainer/CRIPTOS/RichTextLabel/control/Panel4/Button" to="TabContainer/CRIPTOS" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel1/Button" to="TabContainer/CRIPTOS" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel2/Button" to="TabContainer/CRIPTOS" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel3/Button" to="TabContainer/CRIPTOS" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel4/Button" to="TabContainer/CRIPTOS" method="_on_Button4_pressed"]
 [connection signal="pressed" from="TabContainer/CRIPTOS/ColorRect/Button" to="TabContainer/CRIPTOS" method="_on_ButtonExit_pressed"]

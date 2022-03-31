@@ -1,13 +1,13 @@
 extends Tabs
 
-onready var price1 = str2var($RichTextLabel/control/Panel1/Label.text)
-onready var price2 = str2var($RichTextLabel/control/Panel2/Label.text)
-onready var price3 = str2var($RichTextLabel/control/Panel3/Label.text)
-onready var price4 = str2var($RichTextLabel/control/Panel4/Label.text)
-onready var panels = $RichTextLabel/control
+onready var price1 = str2var($control/Panel1/Label.text)
+onready var price2 = str2var($control/Panel2/Label.text)
+onready var price3 = str2var($control/Panel3/Label.text)
+onready var price4 = str2var($control/Panel4/Label.text)
+onready var panels = $control
 
 func _process(_delta):
-	$RichTextLabel/control.position.x = -$HScrollBar.value
+	$control.position.x = -$HScrollBar.value
 	
 func _ready():
 #	Global.load_corretora()
