@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/purple.png" type="Texture" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://meteors.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Roboto-Medium.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://game.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 12 )
+
+[node name="game" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1031.0
+margin_bottom = 607.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 501.845
+margin_top = 1.41422
+margin_right = 541.845
+margin_bottom = 61.4142
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 490.732, 161.22 )
+
+[node name="meteors" parent="." instance=ExtResource( 3 )]
+position = Vector2( 237.708, 244.868 )
+
+[node name="meteors2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 651.549, 244.868 )
+
+[node name="meteors3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 501.192, 408.113 )
+
+[node name="meteors4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 925.056, 178.997 )
+
+[node name="meteors5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 740.331, 496.895 )
+
+[node name="meteors6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 230.548, 473.984 )
+
+[node name="meteors7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 333.65, 124.582 )
