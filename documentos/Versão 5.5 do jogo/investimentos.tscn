@@ -1,0 +1,1015 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
+[ext_resource path="res://corretora.gd" type="Script" id=2]
+[ext_resource path="res://cogumelo.png" type="Texture" id=3]
+[ext_resource path="res://investimentos.gd" type="Script" id=4]
+[ext_resource path="res://Label.gd" type="Script" id=5]
+[ext_resource path="res://Sprites Corretora/Taxi.png" type="Texture" id=6]
+[ext_resource path="res://Sprites Corretora/Bank.png" type="Texture" id=7]
+[ext_resource path="res://Sprites Corretora/BUS.png" type="Texture" id=8]
+[ext_resource path="res://Sprites Corretora/Market.png" type="Texture" id=9]
+[ext_resource path="res://setinha_voltar.png" type="Texture" id=10]
+
+[sub_resource type="Theme" id=8]
+
+[sub_resource type="Theme" id=6]
+default_font = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.192157, 0.180392, 0.180392, 1 )
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.164706, 0.141176, 0.141176, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 15
+border_width_right = 15
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 15
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.152941, 0.137255, 0.137255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.564706, 0.564706, 0.564706, 1 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="Theme" id=4]
+TabContainer/fonts/font = ExtResource( 1 )
+TabContainer/styles/panel = SubResource( 9 )
+TabContainer/styles/tab_bg = SubResource( 10 )
+TabContainer/styles/tab_disabled = SubResource( 11 )
+TabContainer/styles/tab_fg = SubResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.341176, 0.247059, 0.247059, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = 5.0
+margin_right = -4.0
+margin_bottom = 5.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 1024.0
+margin_bottom = 599.0
+theme = SubResource( 8 )
+color = Color( 0.156863, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dinheiro" type="Label" parent="."]
+margin_right = 193.0
+margin_bottom = 84.0
+theme = SubResource( 6 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 7 )
+text = "DINHEIRO
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -304.0
+margin_top = 14.0
+margin_right = -160.0
+margin_bottom = 44.0
+rect_scale = Vector2( 4.50551, 2.84618 )
+custom_fonts/font = ExtResource( 1 )
+text = "CORRETORA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sair" type="TextureButton" parent="."]
+margin_left = 873.0
+margin_top = 7.0
+margin_right = 1018.0
+margin_bottom = 104.0
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 127.0
+margin_bottom = -6.0
+theme = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="INVESTIMENTOS" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 40.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 4 )
+
+[node name="control" type="Node2D" parent="TabContainer/INVESTIMENTOS"]
+position = Vector2( 4, -3 )
+
+[node name="Panel1" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
+margin_left = 10.0
+margin_top = 60.0
+margin_right = 238.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
+position = Vector2( 114.25, 164 )
+scale = Vector2( 0.389167, 0.435417 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 100
+
+[node name="Panel2" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
+margin_left = 350.0
+margin_top = 60.0
+margin_right = 580.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 111, 156 )
+scale = Vector2( 0.840764, 1.08687 )
+texture = ExtResource( 8 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 200
+
+[node name="Panel3" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
+margin_left = 690.0
+margin_top = 60.0
+margin_right = 920.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
+position = Vector2( 115, 143 )
+texture = ExtResource( 9 )
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 300
+
+[node name="Panel4" type="Panel" parent="TabContainer/INVESTIMENTOS/control"]
+margin_left = 1030.0
+margin_top = 60.0
+margin_right = 1260.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -109.0
+margin_top = 7.0
+margin_right = 104.0
+margin_bottom = 67.0
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 400
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
+position = Vector2( 118, 142 )
+scale = Vector2( 0.510689, 0.581902 )
+texture = ExtResource( 7 )
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/INVESTIMENTOS"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = -39.0
+margin_right = 1.0
+margin_bottom = 3.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/INVESTIMENTOS"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -385.5
+margin_top = -191.5
+margin_right = 759.5
+margin_bottom = 226.5
+rect_scale = Vector2( 0.621419, 0.73059 )
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/INVESTIMENTOS/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.644
+anchor_bottom = 0.151
+margin_left = -567.5
+margin_right = -514.38
+margin_bottom = 27.882
+rect_scale = Vector2( 5.22214, 4.51549 )
+text = "Olá. "
+align = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.5
+margin_top = -76.0
+margin_right = 146.5
+margin_bottom = -23.0
+
+[node name="RENDA FIXA" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 40.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 4 )
+
+[node name="control" type="Node2D" parent="TabContainer/RENDA FIXA"]
+position = Vector2( 6, -4 )
+
+[node name="Panel1" type="Panel" parent="TabContainer/RENDA FIXA/control"]
+margin_left = 6.0
+margin_top = 54.0
+margin_right = 236.0
+margin_bottom = 404.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel1"]
+position = Vector2( 118, 142 )
+scale = Vector2( 0.510689, 0.581902 )
+texture = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 99
+
+[node name="Panel2" type="Panel" parent="TabContainer/RENDA FIXA/control"]
+margin_left = 350.0
+margin_top = 50.0
+margin_right = 580.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel2"]
+position = Vector2( 109, 159 )
+texture = ExtResource( 8 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 200
+
+[node name="Panel3" type="Panel" parent="TabContainer/RENDA FIXA/control"]
+margin_left = 690.0
+margin_top = 50.0
+margin_right = 920.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel3"]
+position = Vector2( 114.25, 164 )
+scale = Vector2( 0.389167, 0.435417 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 300
+
+[node name="Panel4" type="Panel" parent="TabContainer/RENDA FIXA/control"]
+margin_left = 1030.0
+margin_top = 50.0
+margin_right = 1260.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel4"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/Panel4"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -109.0
+margin_top = 7.0
+margin_right = 104.0
+margin_bottom = 67.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 400
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/RENDA FIXA/control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -37.0
+margin_top = 19.0
+margin_right = 1607.0
+margin_bottom = 618.0
+rect_scale = Vector2( 0.621419, 0.73059 )
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA FIXA/control/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -13.5
+margin_right = 13.5
+margin_bottom = 14.0
+rect_scale = Vector2( 4.51549, 4.51549 )
+text = "Olá. "
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.5
+margin_top = -76.0
+margin_right = 146.5
+margin_bottom = -23.0
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/RENDA FIXA"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -39.0
+margin_bottom = 6.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RENDA VARIAVEL" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 40.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 4 )
+
+[node name="control" type="Node2D" parent="TabContainer/RENDA VARIAVEL"]
+position = Vector2( 15, -7 )
+
+[node name="Panel1" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 240.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 100
+
+[node name="Panel2" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
+margin_left = 350.0
+margin_top = 50.0
+margin_right = 580.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 112, 136 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 200
+
+[node name="Panel3" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
+margin_left = 690.0
+margin_top = 50.0
+margin_right = 920.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 108, 141 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 300
+
+[node name="Panel4" type="Panel" parent="TabContainer/RENDA VARIAVEL/control"]
+margin_left = 1030.0
+margin_top = 50.0
+margin_right = 1260.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/control/Panel4"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -109.0
+margin_top = 7.0
+margin_right = 104.0
+margin_bottom = 67.0
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 400
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/RENDA VARIAVEL"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -39.0
+margin_bottom = 6.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/RENDA VARIAVEL"]
+visible = false
+margin_left = 276.0
+margin_top = -38.0
+margin_right = 1047.0
+margin_bottom = 286.0
+rect_scale = Vector2( 0.621419, 0.73059 )
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/RENDA VARIAVEL/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.5
+margin_top = 2.0
+margin_right = -47.5
+margin_bottom = 16.0
+rect_scale = Vector2( 4.51549, 4.51549 )
+text = "Olá, quais investimentos você gostaria para hoje?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/RENDA VARIAVEL/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.5
+margin_top = -76.0
+margin_right = 146.5
+margin_bottom = -23.0
+
+[node name="CRIPTOS" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 40.0
+margin_right = -10.0
+margin_bottom = -10.0
+script = ExtResource( 4 )
+
+[node name="control" type="Node2D" parent="TabContainer/CRIPTOS"]
+position = Vector2( 25, -47 )
+
+[node name="Panel1" type="Panel" parent="TabContainer/CRIPTOS/control"]
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 240.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel1"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel1"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel1"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 100
+
+[node name="Panel2" type="Panel" parent="TabContainer/CRIPTOS/control"]
+margin_left = 350.0
+margin_top = 50.0
+margin_right = 580.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel2"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 112, 136 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 200
+
+[node name="Panel3" type="Panel" parent="TabContainer/CRIPTOS/control"]
+margin_left = 690.0
+margin_top = 50.0
+margin_right = 920.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel3"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 108, 141 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel3"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel3"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -106.5
+margin_right = 106.5
+margin_bottom = 60.0
+align = 1
+script = ExtResource( 5 )
+price = 300
+
+[node name="Panel4" type="Panel" parent="TabContainer/CRIPTOS/control"]
+margin_left = 1030.0
+margin_top = 50.0
+margin_right = 1260.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="TabContainer/CRIPTOS/control/Panel4"]
+position = Vector2( 99, 146 )
+texture = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/control/Panel4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -59.0
+margin_right = 98.0
+text = "COMPRA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/control/Panel4"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -109.0
+margin_top = 7.0
+margin_right = 104.0
+margin_bottom = 67.0
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+price = 400
+
+[node name="HScrollBar" type="HScrollBar" parent="TabContainer/CRIPTOS"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -39.0
+margin_bottom = 6.0
+max_value = 500.0
+page = 30.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/CRIPTOS"]
+visible = false
+margin_left = 276.0
+margin_top = -38.0
+margin_right = 1047.0
+margin_bottom = 286.0
+rect_scale = Vector2( 0.621419, 0.73059 )
+color = Color( 0, 0, 0, 0.662745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/CRIPTOS/ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -74.5
+margin_top = 2.0
+margin_right = -47.5
+margin_bottom = 16.0
+rect_scale = Vector2( 4.51549, 4.51549 )
+text = "Olá"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/CRIPTOS/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -145.5
+margin_top = -76.0
+margin_right = 146.5
+margin_bottom = -23.0
+
+[connection signal="pressed" from="Sair" to="." method="_on_Sair_pressed"]
+[connection signal="tab_changed" from="TabContainer" to="." method="_on_tab_changed"]
+[connection signal="tab_clicked" from="TabContainer/INVESTIMENTOS" to="." method="_on_INVESTIMENTOS_tab_clicked"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel1/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel2/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel3/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/control/Panel4/Button" to="TabContainer/INVESTIMENTOS" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/INVESTIMENTOS/ColorRect/Button" to="TabContainer/INVESTIMENTOS" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel1/Button" to="TabContainer/RENDA FIXA" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel2/Button" to="TabContainer/RENDA FIXA" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel3/Button" to="TabContainer/RENDA FIXA" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/Panel4/Button" to="TabContainer/RENDA FIXA" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA FIXA/control/ColorRect/Button" to="TabContainer/RENDA FIXA" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel1/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel2/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel3/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/control/Panel4/Button" to="TabContainer/RENDA VARIAVEL" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/RENDA VARIAVEL/ColorRect/Button" to="TabContainer/RENDA VARIAVEL" method="_on_ButtonExit_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel1/Button" to="TabContainer/CRIPTOS" method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel2/Button" to="TabContainer/CRIPTOS" method="_on_Button2_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel3/Button" to="TabContainer/CRIPTOS" method="_on_Button3_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/control/Panel4/Button" to="TabContainer/CRIPTOS" method="_on_Button4_pressed"]
+[connection signal="pressed" from="TabContainer/CRIPTOS/ColorRect/Button" to="TabContainer/CRIPTOS" method="_on_ButtonExit_pressed"]
