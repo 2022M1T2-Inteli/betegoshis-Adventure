@@ -1,10 +1,14 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Chicarego.tres" type="DynamicFont" id=1]
 [ext_resource path="res://corretora.gd" type="Script" id=2]
 [ext_resource path="res://cogumelo.png" type="Texture" id=3]
 [ext_resource path="res://investimentos.gd" type="Script" id=4]
 [ext_resource path="res://Label.gd" type="Script" id=5]
+[ext_resource path="res://Sprites Corretora/Taxi.png" type="Texture" id=6]
+[ext_resource path="res://Sprites Corretora/Bank.png" type="Texture" id=7]
+[ext_resource path="res://Sprites Corretora/BUS.png" type="Texture" id=8]
+[ext_resource path="res://Sprites Corretora/Market.png" type="Texture" id=9]
 
 [sub_resource type="Theme" id=8]
 
@@ -145,8 +149,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
-position = Vector2( 99, 146 )
-texture = ExtResource( 3 )
+position = Vector2( 114.25, 164 )
+scale = Vector2( 0.389167, 0.435417 )
+texture = ExtResource( 6 )
 
 [node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel1"]
 anchor_left = 0.5
@@ -186,8 +191,9 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
 modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 112, 136 )
-texture = ExtResource( 3 )
+position = Vector2( 111, 156 )
+scale = Vector2( 0.840764, 1.08687 )
+texture = ExtResource( 8 )
 
 [node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel2"]
 anchor_left = 0.5
@@ -220,9 +226,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 108, 141 )
-texture = ExtResource( 3 )
+position = Vector2( 115, 143 )
+texture = ExtResource( 9 )
 
 [node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel3"]
 anchor_left = 0.5
@@ -257,10 +262,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
-position = Vector2( 99, 146 )
-texture = ExtResource( 3 )
-
 [node name="Button" type="Button" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -287,6 +288,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 price = 400
+
+[node name="Sprite" type="Sprite" parent="TabContainer/INVESTIMENTOS/control/Panel4"]
+position = Vector2( 118, 142 )
+scale = Vector2( 0.510689, 0.581902 )
+texture = ExtResource( 7 )
 
 [node name="HScrollBar" type="HScrollBar" parent="TabContainer/INVESTIMENTOS"]
 anchor_top = 1.0
@@ -368,8 +374,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel1"]
-position = Vector2( 99, 146 )
-texture = ExtResource( 3 )
+position = Vector2( 118, 142 )
+scale = Vector2( 0.510689, 0.581902 )
+texture = ExtResource( 7 )
 
 [node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel1"]
 anchor_left = 0.5
@@ -404,11 +411,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel2"]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 112, 136 )
-texture = ExtResource( 3 )
-
 [node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel2"]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -440,9 +442,9 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="TabContainer/RENDA FIXA/control/Panel3"]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 108, 141 )
-texture = ExtResource( 3 )
+position = Vector2( 114.25, 164 )
+scale = Vector2( 0.389167, 0.435417 )
+texture = ExtResource( 6 )
 
 [node name="Button" type="Button" parent="TabContainer/RENDA FIXA/control/Panel3"]
 anchor_left = 0.5
@@ -972,6 +974,12 @@ margin_left = -145.5
 margin_top = -76.0
 margin_right = 146.5
 margin_bottom = -23.0
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 480, 379 )
+scale = Vector2( 0.840764, 1.08687 )
+texture = ExtResource( 8 )
 
 [connection signal="tab_changed" from="TabContainer" to="." method="_on_tab_changed"]
 [connection signal="tab_clicked" from="TabContainer/INVESTIMENTOS" to="." method="_on_INVESTIMENTOS_tab_clicked"]
