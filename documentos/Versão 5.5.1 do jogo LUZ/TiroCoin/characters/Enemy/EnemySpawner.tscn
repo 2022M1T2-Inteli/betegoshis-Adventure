@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TiroCoin/characters/Enemy/EnemySpawner.gd" type="Script" id=1]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="SpawnPositions" type="Node2D" parent="."]
+
+[node name="SpawnPosition_01" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 170, 0 )
+
+[node name="SpawnPosition_02" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 340, 0 )
+
+[node name="SpawnPosition_03" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 510, 0 )
+
+[node name="SpawnPosition_04" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 680, 0 )
+
+[node name="SpawnPosition_05" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 850, 0 )
+
+[node name="SpawnPosition_06" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 742, -3 )
+
+[node name="SpawnPosition_07" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 572, -1 )
+
+[node name="SpawnPosition_08" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 402, -3 )
+
+[node name="SpawnPosition_09" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 232, -1 )
+
+[node name="SpawnPosition_10" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 65, -1 )
+
+[node name="SpawnPosition_11" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 850, 0 )
+
+[node name="SpawnPosition_12" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 767, -2 )
+
+[node name="SpawnPosition_13" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 597, 0 )
+
+[node name="SpawnPosition_14" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 427, -2 )
+
+[node name="SpawnPosition_15" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 257, 0 )
+
+[node name="SpawnPosition_16" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 90, 0 )
+
+[node name="SpawnPosition_17" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 714, -3 )
+
+[node name="SpawnPosition_18" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 544, -1 )
+
+[node name="SpawnPosition_19" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 374, -3 )
+
+[node name="SpawnPosition_20" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 204, -1 )
+
+[node name="SpawnPosition_21" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 37, -1 )
+
+[node name="SpawnPosition_22" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 811, -2 )
+
+[node name="SpawnPosition_23" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 641, 0 )
+
+[node name="SpawnPosition_24" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 471, -2 )
+
+[node name="SpawnPosition_25" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 301, 0 )
+
+[node name="SpawnPosition_26" type="Position2D" parent="SpawnPositions"]
+position = Vector2( 134, 0 )
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 0.791
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
