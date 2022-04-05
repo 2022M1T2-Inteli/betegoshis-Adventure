@@ -1,7 +1,8 @@
 extends Node2D
 
 
-
+func _ready():
+	$ClovisTio/Exclamacao/AnimationPlayer.play("cimabaixo")
 
 func _process(_delta): #Botão da professora
 	if Global.dia == 1 and Global.comecarAula == true:
@@ -21,7 +22,7 @@ func _process(_delta): #Botão da professora
 		$Aulas/NextButton.visible = true
 		$KinematicBody2D2/Camera2D/Controles/Controlesorg.visible = false
 		$KinematicBody2D2/Camera2D/Celular/AbrirCelular.visible = false
-	print(_delta)
+	
 	# Senhor do tempo
 	$Tempo/Horas.text = "Dia " + str(Global.dia) + "  " + str(Global.hora) + "h " + str(Global.minuto) + "min" 
 	if Global.Tempo == true: # se o tempo está rodando
@@ -32,12 +33,33 @@ func _process(_delta): #Botão da professora
 		if Global.minuto >= 60: # depois de 60 minutos no jogo
 			Global.hora += 1 # soma uma hora no jogo
 			Global.minuto = 0
+		if Global.hora >= 24:
+			Global.hora = 0
+			Global.dia += 1
 		if Global.hora == 23: # quando a hora é exatamente 23h
 			Global.Tempo = false # para o tempo a fim de pedir para que ele chame um transporte para ir para casa
 	if Global.dia == 1:
 		if Global.F1_objetivo2 == false and Global.hora == 8 and Global.minuto == 30:
 			Global.Tempo = false
-			
+	
+	if Global.hora >= 18 or Global.hora < 6:
+		$Postes/Luzes.visible = true
+		$Postes/Poste.modulate.r8 = 92
+		$Postes/Poste.modulate.g8 = 92
+		$Postes/Poste.modulate.b8 = 92
+		$Postes/Plantas.modulate.r8 = 92
+		$Postes/Plantas.modulate.g8 = 92
+		$Postes/Plantas.modulate.b8 = 92
+	
+	if Global.hora >= 6 and Global.hora < 18:
+		$Postes/Luzes.visible = false
+		$Postes/Poste.modulate.r8 = 255
+		$Postes/Poste.modulate.g8 = 255
+		$Postes/Poste.modulate.b8 = 255
+		$Postes/Plantas.modulate.r8 = 255
+		$Postes/Plantas.modulate.g8 = 255
+		$Postes/Plantas.modulate.b8 = 255
+	
 	
 	# Programas para escurecer o mapa
 	## Ciclo dia e noite na Cidade
@@ -45,6 +67,25 @@ func _process(_delta): #Botão da professora
 	$Mapa/Cidade/AnimationPlayer.play("CicloDiaNoite")
 	$Mapa/Cidade/AnimationPlayer.seek(CurrentFrame)
 	
+	if Global.ExclamacaoSecr == true:
+		$"Areas2D_e_NPC/BodysContaienr/SecretariaAndando/Exclamação".visible = true
+	if Global.ExclamacaoSecr == false:
+		$"Areas2D_e_NPC/BodysContaienr/SecretariaAndando/Exclamação".visible = false
+	
+	if Global.ExclamacaoGui == true:
+		$Areas2D_e_NPC/BodysContaienr/GuilhermeBanquista/Exclamacao.visible = true
+	if Global.ExclamacaoGui == false:
+		$Areas2D_e_NPC/BodysContaienr/GuilhermeBanquista/Exclamacao.visible = false
+	
+	if Global.ExclamacaoTio == true:
+		$ClovisTio/Exclamacao.visible = true
+	if Global.ExclamacaoTio == false:
+		$ClovisTio/Exclamacao.visible = false
+	
+	if Global.ExclamacaoVo == true:
+		$"vo/Exclamacao".visible = true
+	if Global.ExclamacaoVo == false:
+		$"vo/Exclamacao".visible = false
 	## Dormir (escurecer e amanhecer)
 	if Global.F1_objetivo8 == true:
 		$Mapa/Casa/EscurecerAnimacao.play("Escurecer")
@@ -124,7 +165,4 @@ func _on_NextButton_pressed():
 #	$KinematicBody2D2/Camera2D/Dinheiro/Popups/Orientacoes/AvisoAoSairDoQuarto.visible = true
 #	yield(get_tree().create_timer(1.7), "timeout")
 #	$KinematicBody2D2/Camera2D/Dinheiro/Popups/Orientacoes/AvisoAoSairDoQuarto.visible = false
-
-
-
 

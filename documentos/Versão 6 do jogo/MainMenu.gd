@@ -64,6 +64,3 @@ func _on_Avatar_3_pressed():
 
 func _on_ComecarOGame_pressed():
 	get_tree().change_scene("res://Cidade.tscn")
-	
-func _process(delta):
-	$ColocarNome/BalaoNome/LineEdit.virtual_keyboard_enabled = true

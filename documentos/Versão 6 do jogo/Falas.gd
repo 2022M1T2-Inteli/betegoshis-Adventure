@@ -3,6 +3,13 @@ extends CanvasLayer
 func ready(): # no início do game, pra não esquecermos:
 	$GuilhermeFalas.visible = false # desaparece a falinha do guilherme ali embaixo
 	$SecretariaFalas.visible = false # idem
+	$RafaelFalas.visible = false
+	$ProfessoraFalas.visible = false
+	$JapinhaFalas/Falaorg.visible = false
+	$VoFalas.visible = false
+	$TioClovisFalas.visible = false
+	$Nin_YangFalas.visible = false
+
 
 #"O que você deseja pagar hoje?"
 # Falas do Banqueiro Guilherme 
@@ -36,15 +43,16 @@ func _on_SecrFalasButton_pressed(): # botão de próximo da secretária
 			$SecretariaFalas/FalaSecretaria.text = "Imagino que tenha vindo aqui para pagar a taxa de matrícula, certo?"
 		if contadorSecrFalasButton == 2: # segunda vez que se clica no botão
 			Global.passaTempo(1)
-			$SecretariaFalas/FalaSecretaria.text = "Certo, então aqui está o boleto para você pagar no banco"
+			$SecretariaFalas/FalaSecretaria.text = "Certo, então aqui está o boleto no valor de BT$ 80,00 para você pagar no banco."
 		if contadorSecrFalasButton == 3: # terceira vez que se clica no botao (obs.: ele recebe o boleto também)
 			Global.passaTempo(1)
 			$SecretariaFalas/FalaSecretaria.text = "Agora vá até o banco e pague o boleto, depois volte aqui para a primeira aula."
 			$SecretariaFalas/SairCvsaSecr.visible = true # aparece o botão de "até mais"
 			$SecretariaFalas/SecrFalasButton.visible = false
+			Global.ExclamacaoGui = true
 		if contadorSecrFalasButton == 4 and Global.F1_objetivo4 == true:
 			Global.passaTempo(1)
-			$SecretariaFalas/FalaSecretaria.text = "Com isso, você já pode assistir à sua primeira aula, é só continuar reto e virar à primeira esquerda. Boa aula!"
+			$SecretariaFalas/FalaSecretaria.text = "Com isso, você já pode assistir à sua primeira aula. É só continuar reto e virar à primeira esquerda. Boa aula!"
 			$SecretariaFalas/SairCvsaSecr.visible = true
 			Global.F1_objetivo5 = true
 		
@@ -149,6 +157,7 @@ func _on_proximafalavo_pressed():
 		$VoFalas/falaVo.text = "Para isso, abra o seu celular, entre no mapa, selecione a opção TÁXI e, em seguida, a casa do seu tio. Boa sorte e tome muito cuidado meu tesouro!"
 		$VoFalas/tchau_vo.visible = true
 		$VoFalas/proximafalavo.visible = false
+		Global.ExclamacaoTio = true
 		Global.passaTempo(1)
 	
 
@@ -170,6 +179,7 @@ func _on_nextfala_tio_pressed():
 			$TioClovisFalas/falastio.text = "Abra o celular e vá de ônibus até a faculdade falar com a Secretária"
 			$TioClovisFalas/nextfala_tio.visible = false
 			$TioClovisFalas/sairFala.visible = true
+			Global.ExclamacaoSecr = true 
 	if Global.dia == 2:
 		if contadorproximafalatio == 4:
 			Global.passaTempo(1)
@@ -197,6 +207,7 @@ func _on_Comprar_avatares_pressed():
 	$Nin_YangFalas/Sair_NinYang.visible = true
 	$Nin_YangFalas/Comprar_Bicicleta.visible = false
 	$Nin_YangFalas/Comprar_avatares.visible = false
+	
 	$Nin_YangFalas/Falas_Do_NinYang.text = "Ainda não temos avatares disponíveis."
 func _on_Sair_NinYang_pressed():
 	$Nin_YangFalas.visible = false

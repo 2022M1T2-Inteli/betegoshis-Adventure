@@ -1079,3 +1079,8 @@ func _on_Iniciar_RafaelFalas_body_entered(body):
 
 func _on_InvestirButton_pressed():
 	get_tree().change_scene("res://investimentos.tscn")
+
+func _on_Sair_NinYang_pressed():
+	$Camera2D/Falas/Nin_YangFalas.visible = false
+	$Camera2D/Controles/Controlesorg.visible = true
+	$Camera2D/Celular/AbrirCelular.visible = true

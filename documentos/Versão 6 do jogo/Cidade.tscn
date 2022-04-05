@@ -1,10 +1,11 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Professora.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cidade.png" type="Texture" id=3]
 [ext_resource path="res://Mercadin.png" type="Texture" id=4]
-[ext_resource path="res://Postes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Plantas.png" type="Texture" id=5]
+[ext_resource path="res://POSTE.png" type="Texture" id=6]
 [ext_resource path="res://Sala de Aula Dentro.png" type="Texture" id=7]
 [ext_resource path="res://Banco.png" type="Texture" id=8]
 [ext_resource path="res://Action RPG Resources/Player/caradoBTG andando.png" type="Texture" id=9]
@@ -18,6 +19,8 @@
 [ext_resource path="res://Pong/pong sprite.png" type="Texture" id=17]
 [ext_resource path="res://TioAndando.png" type="Texture" id=18]
 [ext_resource path="res://Casa.png" type="Texture" id=19]
+[ext_resource path="res://Arvore Pequena.png" type="Texture" id=20]
+[ext_resource path="res://Arvore grande.png" type="Texture" id=21]
 [ext_resource path="res://Action RPG Resources/Player/japinha andando.png" type="Texture" id=22]
 [ext_resource path="res://aulas/aula 1/Aula 1.5.png" type="Texture" id=23]
 [ext_resource path="res://VóAndando.png" type="Texture" id=24]
@@ -32,6 +35,8 @@
 [ext_resource path="res://Design sem nome (3).png" type="Texture" id=33]
 [ext_resource path="res://rafael andando.png" type="Texture" id=34]
 [ext_resource path="res://Fontes/golden_age/Golden Age.ttf" type="DynamicFontData" id=35]
+[ext_resource path="res://Exclamação.png" type="Texture" id=36]
+[ext_resource path="res://light.png" type="Texture" id=37]
 
 [sub_resource type="Animation" id=11]
 resource_name = "Escurecer"
@@ -105,10 +110,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
 "update": 0,
-"values": [ Vector2( -3055, 2047 ), Vector2( -2724, 2078 ), Vector2( -2659, 2187 ) ]
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Exclamacao:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1148.25, -626.989 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -124,6 +141,82 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -3055, 2047 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Exclamacao:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1148.25, -626.989 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1148.25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -626.988, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "cimabaixo"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1148.25, -0.25, 0, 0.25, 0, 1148.25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -650.879, -0.25, 0, 0.25, 0, -650.879, -0.7, 32.7932, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "pulapula"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1148.25, -642.971 ), Vector2( 1148.25, -626.988 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -165,7 +258,7 @@ font_data = ExtResource( 35 )
 position = Vector2( -255, -222 )
 script = ExtResource( 12 )
 __meta__ = {
-"_edit_horizontal_guides_": [ -4332.0, 109.0, 1227.0 ],
+"_edit_horizontal_guides_": [ -4332.0, 109.0, 1227.0, 878.0 ],
 "_edit_vertical_guides_": [ 51359.0, 50634.0, 49303.0, 3250.0, 3062.0 ]
 }
 
@@ -287,7 +380,7 @@ position = Vector2( 6736, -4319.77 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes Sala de aula/StaticBody2D"]
 position = Vector2( 1169, 525 )
 scale = Vector2( 0.886172, 0.886172 )
-polygon = PoolVector2Array( -59.8079, -154.853, 58.6793, -153.725, 62.0647, 508.675, -185.066, 513.189, -186.511, 578.224, -134.285, 582.024, -132.029, 638.447, -183.937, 639.575, -191.836, 817.87, -427.682, 829.154, -436.71, 884.448, -476.206, 875.421, -477.334, 840.439, -551.812, 832.54, -557.454, 879.935, -595.821, 879.935, -599.207, 842.696, -681.583, 839.311, -687.226, 876.549, -716.565, 878.806, -718.822, 839.311, -810.227, 831.411, -839.566, 831.408, -837.309, 890.087, -809.098, 891.215, -806.841, 917.173, -789.914, 1060.49, -130.9, 1063.87, -133.157, 1122.55, -835.052, 1118.04, -847.465, 695.997, -306.938, 695.997, -305.81, 514.317, -431.068, 515.446, -440.095, 561.712, -490.875, 572.996, -862.135, 580.896, -857.157, 697.759, -839, 1124, -99.3035, 1122.55, -60.9365, 1126.19, 57.5509, 1127.06, 88.019, 1242.16, -975, 1248, -973, -1466, 46, -1473, 58.6793, -1230.27, 56.4225, -1018.12, -58.6794, -1023.76, -63.1932, -1133.22, -243.745, -1130.97, -248.259, -1149.02, -309.195, -1151.28, -320.48, -1132.09, -469.435, -1133.22, -471.692, -1174.97, -499.903, -1174.97, -505.492, -1130.84, -653.372, -1129.84, -656.757, -1190.77, -728.978, -1193.03, -732.364, -1067.77, -842.952, -1068.9, -850.851, -704.408, -63.1932, -707.793, -53.0371, -882.703, 57.5509, -882.703, 58.6793, -290.267, -62.0648, -291.396, -64.3217, -337.662, -232.461, -337.662, -242.617, -406.498, -732.364, -397.47, -728.978, -284.625, -845.208, -275.597, -855.365, 278.471, -60.9363, 271.7 )
+polygon = PoolVector2Array( -59.8079, -154.853, 58.6793, -153.725, 62.0647, 508.675, -185.066, 513.189, -186.511, 578.224, -134.285, 582.024, -132.029, 638.447, -183.937, 639.575, -186.194, 823.509, -246.002, 826.894, -427.682, 829.154, -436.71, 884.448, -476.206, 875.421, -477.334, 840.439, -551.812, 832.54, -557.454, 879.935, -595.821, 879.935, -599.207, 842.696, -681.583, 839.311, -687.226, 876.549, -716.565, 878.806, -718.822, 839.311, -810.227, 831.411, -839.566, 831.408, -837.309, 890.087, -809.098, 891.215, -806.841, 917.173, -789.914, 1060.49, -130.9, 1063.87, -133.157, 1122.55, -835.052, 1118.04, -847.465, 695.997, -306.938, 695.997, -305.81, 514.317, -431.068, 515.446, -440.095, 561.712, -490.875, 572.996, -862.135, 580.896, -857.157, 697.759, -839, 1124, -99.3035, 1122.55, -60.9365, 1126.19, 57.5509, 1127.06, 88.019, 1242.16, -975, 1248, -973, -1466, 46, -1473, 58.6793, -1230.27, 56.4225, -1018.12, -58.6794, -1023.76, -63.1932, -1133.22, -243.745, -1130.97, -248.259, -1149.02, -309.195, -1151.28, -320.48, -1132.09, -469.435, -1133.22, -471.692, -1174.97, -499.903, -1174.97, -505.492, -1130.84, -653.372, -1129.84, -656.757, -1190.77, -728.978, -1193.03, -732.364, -1067.77, -842.952, -1068.9, -850.851, -704.408, -63.1932, -707.793, -53.0371, -882.703, 57.5509, -882.703, 58.6793, -290.267, -62.0648, -291.396, -64.3217, -337.662, -232.461, -337.662, -242.617, -406.498, -732.364, -397.47, -728.978, -284.625, -845.208, -275.597, -855.365, 278.471, -60.9363, 271.7 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Mapa/Paredes Sala de aula"]
 position = Vector2( 6736, -4319.77 )
@@ -502,7 +595,7 @@ position = Vector2( -2963, 1609 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/Paredes/Escola"]
 position = Vector2( 4086, -1006 )
 scale = Vector2( 1.38776, 1.36167 )
-polygon = PoolVector2Array( 110.97, 34.5164, 109.529, -97.674, 70.6177, -138.8, 98, -145.409, 98, -191.676, -272.381, -193.145, -244.999, -125.581, -278.867, -113.831, -468.381, -116.034, -475.586, -189.473, -499.366, -188.739, -508.013, -112.362, -641.321, -105.752, -647.807, -1567.92, -611, -1568, -604, -1119, -553, -1102, -504, -1100, -506, -1066, -473, -1067, -468, -1100, -331, -1102, -330, -1070, -296, -1070, -296, -1102, -214, -1099, -211, -1014, 24, -1016, 22, -1062, 67, -1060, 82.1468, -1022.27, 97.2791, -1022.27, 108, -1059, 146, -1066, 144, -1131, 204, -1129, 204, -1065, 237, -1061, 249.323, -1018.6, 280.308, -1020.07, 285, -1051, 331, -1052, 328, -1019, 551, -1012, 553, -1106, 643, -1106, 646, -1069, 680, -1073, 682, -1103, 813, -1098, 821, -1067, 861, -1067, 863, -1101, 950, -1103, 951, -1600, 1040, -1602, 1049.89, -837.205, 954.777, -839.409, 916.586, -785.064, 941.806, -743.203, 918.747, -686.655, 977.836, -624.966, 1039.81, -591.185, 1041.97, -195.348, 990.086, -195.348, 920.909, -137.331, 901.453, -102.08, 600.969, -104.284, 598.807, -188.738, 260.853, -192.41, 254.367, -152.753, 286.793, -126.315, 242.838, -105.752, 245, 38.9227, 286.793, 44.0634, 301.926, 71.9703, 1086.64, 73.439, 1106.82, -1683.23, -683.115, -1683.23, -685.998, 71.9703, 59.0884, 78.5798, 65.5735, 44.0634 )
+polygon = PoolVector2Array( 110.97, 34.5164, 109.529, -97.674, 70.6177, -138.8, 98, -145.409, 98, -191.676, -272.381, -193.145, -244.999, -125.581, -278.867, -113.831, -468.381, -116.034, -475.586, -189.473, -499.366, -188.739, -508.013, -112.362, -641.321, -105.752, -647.807, -1567.92, -611, -1568, -604, -1119, -553, -1102, -504, -1100, -506, -1066, -473, -1067, -468, -1100, -331, -1102, -330, -1070, -296, -1070, -296, -1102, -214, -1099, -211, -1014, 24, -1016, 22, -1062, 67, -1060, 82.1468, -1022.27, 97.2791, -1022.27, 108, -1059, 146, -1066, 144, -1131, 204, -1129, 204, -1065, 237, -1061, 249.323, -1018.6, 280.308, -1020.07, 285, -1051, 331, -1052, 328, -1019, 551, -1012, 553, -1106, 643, -1106, 646, -1069, 680, -1073, 682, -1103, 813, -1098, 821, -1067, 861, -1067, 863, -1101, 950, -1103, 951, -1600, 1040, -1602, 1049.89, -837.205, 954.777, -839.409, 916.586, -785.064, 941.806, -743.203, 918.747, -686.655, 977.836, -624.966, 1039.81, -591.185, 1041.97, -195.348, 1029.72, -160.832, 993.688, -141.738, 949.732, -138.066, 933.879, -143.206, 923.791, -138.066, 907.217, -106.487, 600.969, -104.284, 598.807, -188.738, 260.853, -192.41, 254.367, -152.753, 286.793, -126.315, 242.838, -105.752, 245, 38.9227, 286.793, 44.0634, 301.926, 71.9703, 1086.64, 73.439, 1106.82, -1683.23, -683.115, -1683.23, -685.998, 71.9703, 59.0884, 78.5798, 65.5735, 44.0634 )
 
 [node name="Fodase2" type="StaticBody2D" parent="Mapa/Paredes"]
 
@@ -865,7 +958,7 @@ position = Vector2( 3957, -51 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapa/ParedesBikeShop/StaticBody2D"]
 position = Vector2( -278, 185 )
-polygon = PoolVector2Array( 33, -36, 205, -36, 205, 21, -26, 22, -24, -626, 623, -627, 622, 22, 390, 22, 388, -36, 521, -36, 518, -49, 514, -68, 526, -84, 564, -78, 561, -157, 524, -158, 451, -162, 447, -189, 445, -222, 445, -273, 322, -273, 324, -393, 386, -392, 386, -334, 513, -333, 519, -387, 502, -389, 504, -454, 256, -455, 261, -415, 238, -402, 223, -410, 211, -398, 210, -391, 34, -391, 34, -270, 62, -276, 62, -290, 101, -290, 116, -305, 125, -298, 140, -292, 142, -277, 154, -247, 144, -221, 155, -195, 145, -174, 160, -152, 146, -127, 161, -98, 141, -75, 33, -77 )
+polygon = PoolVector2Array( 168, -54, 205, -36, 205, 21, -26, 22, -24, -626, 623, -627, 622, 22, 390, 22, 388, -36, 521, -36, 518, -49, 514, -68, 526, -84, 564, -78, 561, -131, 451, -130, 447, -189, 445, -222, 445, -273, 322, -273, 324, -393, 386, -392, 386, -334, 513, -333, 519, -387, 502, -389, 504, -454, 256, -455, 261, -415, 238, -402, 223, -410, 211, -398, 210, -391, 34, -391, 34, -270, 62, -276, 62, -290, 101, -290, 116, -305, 125, -298, 140, -292, 142, -277, 154, -247, 144, -221, 155, -195, 145, -174, 160, -152, 146, -127, 161, -98 )
 
 [node name="vo" type="KinematicBody2D" parent="."]
 position = Vector2( 63, 262 )
@@ -880,6 +973,11 @@ vframes = 8
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vo"]
 position = Vector2( -95, -94 )
 polygon = PoolVector2Array( 4128, 578, 4153, 562, 4184, 576, 4184, 633, 4178, 659, 4139.09, 661.115, 4129, 633 )
+
+[node name="Exclamacao" type="Sprite" parent="vo"]
+position = Vector2( 4063, 426 )
+scale = Vector2( 0.362625, 0.362625 )
+texture = ExtResource( 36 )
 
 [node name="ClovisTio" type="KinematicBody2D" parent="."]
 position = Vector2( -3055, 2047 )
@@ -899,6 +997,18 @@ polygon = PoolVector2Array( -3047.95, 2194.68, -2990.17, 2194.68, -2991.39, 2247
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ClovisTio"]
 anims/MimirTitioClovis = SubResource( 7 )
 anims/RESET = SubResource( 8 )
+
+[node name="Exclamacao" type="Sprite" parent="ClovisTio"]
+visible = false
+position = Vector2( 1148.25, -626.988 )
+scale = Vector2( 0.195305, 0.204363 )
+texture = ExtResource( 36 )
+offset = Vector2( -5968.67, 3136.75 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ClovisTio/Exclamacao"]
+anims/RESET = SubResource( 15 )
+anims/cimabaixo = SubResource( 19 )
+anims/pulapula = SubResource( 16 )
 
 [node name="Professora" parent="." instance=ExtResource( 2 )]
 position = Vector2( 565, -3092 )
@@ -924,7 +1034,538 @@ polygon = PoolVector2Array( 24.0865, 22.8822, 22.8822, -24.0865, 49.9795, -32.51
 position = Vector2( 4276, 1015 )
 scale = Vector2( 0.434376, 0.517166 )
 
-[node name="Postes" parent="." instance=ExtResource( 5 )]
+[node name="Postes" type="Container" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Poste" type="Sprite" parent="Postes"]
+position = Vector2( -2.00002, -2 )
+scale = Vector2( 1.00118, 1.00118 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste2" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1096, 1694 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste6" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1282.49, 1881.79 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste3" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1529, 1882 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste4" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1714, 1695 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste7" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1714, 1446 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste8" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1529, 1260 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste9" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1280, 1261 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste10" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1098, 1448 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste11" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1281, 886 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste12" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1529, 886 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste13" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1282, 2132 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste14" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 668, 2136 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste15" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 455, 2136 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste16" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 787, 1443 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste17" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 368, 1446 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste18" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2153, 1445 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste19" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2641, 1446 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste20" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2642, 1696 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste21" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2509, 2127 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste22" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1978, 2129 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste23" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 614, 1685 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste24" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2053, 1669 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste25" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 2053, 1669 )
+scale = Vector2( 1.26, 1.26 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Poste26" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1396.36, 1597.12 )
+scale = Vector2( 1.28947, 1.28947 )
+texture = ExtResource( 6 )
+offset = Vector2( -926.237, 75.9106 )
+
+[node name="Poste5" type="Sprite" parent="Postes/Poste"]
+position = Vector2( 1527.06, 2123.96 )
+scale = Vector2( 1.25348, 1.25348 )
+texture = ExtResource( 6 )
+offset = Vector2( -24.6032, 0 )
+
+[node name="Luzes" type="Sprite" parent="Postes"]
+visible = false
+position = Vector2( 1401, 1670 )
+
+[node name="Light2D" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -331, -5.00003 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D2" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -142, 182 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D3" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 104, 185 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D4" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 292, -5.00005 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D5" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 288, -256 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D6" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 722, -256 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D7" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 620, -34.0001 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D8" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -334, -256 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D9" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -149, -422 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D10" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 105, -436 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D11" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 110, 436 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D12" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -138, 433 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D13" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -762, 440 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D14" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -971, 444 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D15" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 554, 426 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D16" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 1090, 426 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D17" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 1223, -5.00005 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D18" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 1220, -250 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D19" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -638, -257 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D20" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -1058, -272 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D21" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -809, -11 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D22" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -144, -803 )
+scale = Vector2( 0.298527, 0.298527 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D23" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( 107, -822 )
+scale = Vector2( 0.298527, 0.298527 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D24" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -1193, -16 )
+scale = Vector2( 0.298527, 0.298527 )
+texture = ExtResource( 37 )
+texture_scale = 1.1
+energy = 1.01
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D25" type="Light2D" parent="Postes/Luzes"]
+position = Vector2( -1197, -11 )
+texture = ExtResource( 37 )
+energy = 0.9
+
+[node name="Plantas" type="Sprite" parent="Postes"]
+
+[node name="Plantas" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 977, -1853 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas6" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 384, -2017 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas11" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 4214, 47 )
+scale = Vector2( 1.19186, 1.19186 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas7" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 384, -1850 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+
+[node name="Plantas8" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 938, -2122 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas9" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 938, -2122 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas2" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 822, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas3" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 768, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas4" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 606, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="Plantas10" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( -104, 1430 )
+scale = Vector2( 1.72902, 1.72902 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 2
+
+[node name="Plantas5" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 552, -1852 )
+scale = Vector2( 1.1402, 1.1402 )
+texture = ExtResource( 5 )
+hframes = 3
+frame = 1
+
+[node name="ArvorePequena" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 817, 1704 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena3" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 879, 882 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena4" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 1867, 883 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena5" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 2610, 1080 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena2" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 2608, 2078 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena6" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 1867, 1942 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvorePequena7" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 1619, 1941 )
+scale = Vector2( 1.3767, 1.38639 )
+texture = ExtResource( 20 )
+
+[node name="ArvoreGrande" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 294, 1696 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande2" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 1159, 891 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande5" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 418, 954 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande3" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 1589, 888 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande4" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 2331, 950 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
+
+[node name="ArvoreGrande6" type="Sprite" parent="Postes/Plantas"]
+position = Vector2( 2516, 391 )
+scale = Vector2( 1.42477, 1.4348 )
+texture = ExtResource( 21 )
 
 [node name="Bikes" type="Container" parent="."]
 margin_right = 40.0
@@ -1202,7 +1843,7 @@ polygon = PoolVector2Array( -191.84, -18.29, 171.16, -18.29, 115.16, 9.70996, -1
 position = Vector2( 986, -2034 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas2D_e_NPC/FalasContainer/Iniciar_Secretária_Falas"]
-polygon = PoolVector2Array( -26, -190, -29, -32, -226, -19, -20, -18 )
+polygon = PoolVector2Array( -26, -190, -26, -26, -226, -19, -232, 4, 0, -1, 7, -189 )
 
 [node name="Iniciar_Japinha_Falas" type="Area2D" parent="Areas2D_e_NPC/FalasContainer"]
 position = Vector2( -668, 1172 )
@@ -1249,6 +1890,11 @@ hframes = 3
 vframes = 4
 frame = 1
 
+[node name="Exclamacao" type="Sprite" parent="Areas2D_e_NPC/BodysContaienr/GuilhermeBanquista"]
+position = Vector2( 4024, 1943 )
+scale = Vector2( 0.192447, 0.192447 )
+texture = ExtResource( 36 )
+
 [node name="SecretariaAndando" type="KinematicBody2D" parent="Areas2D_e_NPC/BodysContaienr"]
 position = Vector2( 806, -2223 )
 
@@ -1258,6 +1904,12 @@ scale = Vector2( 1.37863, 1.37863 )
 texture = ExtResource( 16 )
 hframes = 3
 vframes = 4
+
+[node name="Exclamação" type="Sprite" parent="Areas2D_e_NPC/BodysContaienr/SecretariaAndando"]
+visible = false
+position = Vector2( -13, -57 )
+scale = Vector2( 0.186998, 0.186998 )
+texture = ExtResource( 36 )
 
 [node name="JapinhaAndando" type="KinematicBody2D" parent="Areas2D_e_NPC/BodysContaienr"]
 position = Vector2( -556, 1104 )
@@ -1317,10 +1969,10 @@ polygon = PoolVector2Array( 11, -66, 11, 40, -16, 11, -17, -29 )
 
 [node name="Horas" type="Label" parent="Tempo"]
 modulate = Color( 0.137255, 0.133333, 0, 1 )
-margin_left = 4.00003
-margin_top = 96.0
-margin_right = 105.0
-margin_bottom = 111.0
+margin_left = 529.0
+margin_top = 11.0
+margin_right = 630.0
+margin_bottom = 26.0
 rect_scale = Vector2( 2.87333, 2.54451 )
 custom_fonts/font = SubResource( 6 )
 text = "fsxdfd"
@@ -1361,6 +2013,7 @@ frame = 12
 [connection signal="body_entered" from="Areas2D_e_NPC/MiniGames/Iniciar_FlapMoney" to="KinematicBody2D2" method="_on_Iniciar_FlapMoney_body_entered"]
 [connection signal="body_exited" from="Areas2D_e_NPC/MiniGames/Iniciar_FlapMoney" to="KinematicBody2D2" method="_on_Iniciar_FlapMoney_body_exited"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_Guilherme_Falas" to="KinematicBody2D2" method="_on_Iniciar_Guilherme_Falas_body_entered"]
+[connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_Secretária_Falas" to="." method="_on_Iniciar_Secretria_Falas_body_entered"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_Secretária_Falas" to="KinematicBody2D2" method="_on_Iniciar_Secretria_Falas_body_entered"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/Iniciar_Japinha_Falas" to="KinematicBody2D2" method="_on_Iniciar_Japinha_Falas_body_entered"]
 [connection signal="body_entered" from="Areas2D_e_NPC/FalasContainer/iniciar_falavo" to="KinematicBody2D2" method="_on_iniciar_falavo_body_entered"]

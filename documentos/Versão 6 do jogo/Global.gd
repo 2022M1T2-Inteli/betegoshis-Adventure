@@ -5,13 +5,20 @@ var Morrer = false
 var money = 1000.00
 var player_name
 var temBicicleta = false
+
 var precoTaxi = 20
 var precoOnibus = 8
 var precoBike = 0
+
 var Gastos_LojaDeItens : Array = []
 var Gastos_transporte : Array = []
 var Gastos_arcade : Array = []
 var Gastos_mercado : Array = []
+var Gastos_boleto : Array = []
+
+func gastarDinheiro(quantia, onde):
+	Global.money -= quantia
+	onde.append(-quantia)
 
 # Aulas/Professora
 var comecarAula = false
@@ -76,8 +83,14 @@ func passaTempo(taime):
 		Global.hora += 1
 		Global.minuto = (Global.minuto - 60)
 
-
 # Contadores
+var ExclamacaoSecr = false
+var ExclamacaoGui = false
+var ExclamacaoTio = false
+var ExclamacaoVo = true
+
+
+
 
 var select 
 var investimentos = 1000
