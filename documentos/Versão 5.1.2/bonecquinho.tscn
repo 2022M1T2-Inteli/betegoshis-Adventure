@@ -524,7 +524,6 @@ scale = Vector2( 0.711932, 0.634258 )
 texture = ExtResource( 6 )
 
 [node name="CelularPanel" type="Panel" parent="Camera2D/Celular/AbrirCelular"]
-visible = false
 margin_left = 108.04
 margin_top = 75.8257
 margin_right = 148.04

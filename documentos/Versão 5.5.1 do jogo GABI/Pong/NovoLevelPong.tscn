@@ -1,0 +1,239 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://cimabaixo.png" type="Texture" id=1]
+[ext_resource path="res://Pong/bolaPong.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pong/BarraEsqPong.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Pong/BarraEsqPong.gd" type="Script" id=4]
+[ext_resource path="res://Pong/bolaPong.gd" type="Script" id=5]
+[ext_resource path="res://preto.png" type="Texture" id=6]
+[ext_resource path="res://separator.png" type="Texture" id=7]
+[ext_resource path="res://Pong/setacima.gd" type="Script" id=8]
+[ext_resource path="res://Pong/NovoLevelPong.gd" type="Script" id=9]
+[ext_resource path="res://Pong/NPCPong.gd" type="Script" id=10]
+[ext_resource path="res://Pong/NPCPong.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 207, 118 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "clique"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 207, 118 ), Vector2( 207, 135 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 211, 426 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "clica"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 211, 426 ), Vector2( 210, 401 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.5, 307.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 501, 10 )
+
+[node name="LevelPongNovo" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Preto" type="Sprite" parent="."]
+position = Vector2( 564, 333 )
+scale = Vector2( 1.34131, 1.30782 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="setacima" type="Sprite" parent="."]
+position = Vector2( 207, 118 )
+scale = Vector2( 2.05556, 2.05556 )
+texture = ExtResource( 1 )
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="setacima"]
+anims/RESET = SubResource( 3 )
+anims/clique = SubResource( 4 )
+
+[node name="setabaixo" type="Sprite" parent="."]
+position = Vector2( 211, 426 )
+rotation = 3.14159
+scale = Vector2( 2.05556, 2.05556 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="setabaixo"]
+anims/RESET = SubResource( 5 )
+anims/clica = SubResource( 6 )
+
+[node name="Separator" type="Sprite" parent="."]
+position = Vector2( 512, 297 )
+scale = Vector2( 3.49999, 1.64391 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.329412 )
+margin_left = -6.0
+margin_top = -1.0
+margin_right = 1043.0
+margin_bottom = 605.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PontosD" type="Label" parent="."]
+margin_left = 836.0
+margin_top = 78.0
+margin_right = 876.0
+margin_bottom = 92.0
+rect_scale = Vector2( 0.998743, 2.6779 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PontosEsq" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 74.0
+margin_right = 180.0
+margin_bottom = 88.0
+rect_scale = Vector2( 1.00796, 2.76951 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bola" parent="." instance=ExtResource( 2 )]
+position = Vector2( 415, 225 )
+script = ExtResource( 5 )
+
+[node name="BarraEsq" parent="." instance=ExtResource( 3 )]
+position = Vector2( 40, 211 )
+scale = Vector2( 0.955917, 1.10256 )
+script = ExtResource( 4 )
+
+[node name="NPC" parent="." instance=ExtResource( 11 )]
+position = Vector2( 928, 93 )
+script = ExtResource( 10 )
+
+[node name="LadoD" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadoD"]
+position = Vector2( -4.5, 295.5 )
+shape = SubResource( 2 )
+
+[node name="LadoEsq" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadoEsq"]
+position = Vector2( 1034, 296 )
+shape = SubResource( 2 )
+
+[node name="topo" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topo"]
+position = Vector2( 512, 0 )
+shape = SubResource( 1 )
+
+[node name="base" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base"]
+position = Vector2( 512, 596 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="base"]
+visible = false
+modulate = Color( 0.941176, 0.85098, 0.85098, 1 )
+margin_left = 366.0
+margin_top = 123.0
+margin_right = 669.0
+margin_bottom = 183.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="base/ColorRect"]
+modulate = Color( 0.282353, 0.854902, 0.188235, 1 )
+self_modulate = Color( 0.905882, 0.886275, 0.886275, 1 )
+margin_left = 10.0
+margin_right = 140.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2.18411, 4.43587 )
+text = "Clique para começar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cima" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 17.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 295.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baixo" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 13.0
+margin_top = 304.0
+margin_right = 1017.0
+margin_bottom = 582.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="LadoD" to="." method="_on_LadoD_body_entered"]
+[connection signal="body_entered" from="LadoEsq" to="." method="_on_LadoEsq_body_entered"]
+[connection signal="button_down" from="Cima" to="BarraEsq" method="_on_Cima_button_down"]
+[connection signal="button_up" from="Cima" to="BarraEsq" method="_on_Cima_button_up"]
+[connection signal="button_down" from="Baixo" to="BarraEsq" method="_on_Baixo_button_down"]
+[connection signal="button_up" from="Baixo" to="BarraEsq" method="_on_Baixo_button_up"]

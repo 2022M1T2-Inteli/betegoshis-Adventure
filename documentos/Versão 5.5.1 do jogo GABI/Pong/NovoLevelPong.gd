@@ -1,0 +1,39 @@
+extends Node2D
+
+var PontosD = 0
+var PontosEsq = 0
+
+func _ready():
+	$setabaixo/AnimationPlayer.play("clica")
+	$setacima/AnimationPlayer.play("clique")
+	yield(get_tree().create_timer(2.0), "timeout")
+	$setabaixo.visible = false
+	$setacima.visible = false 
+
+func _on_LadoEsq_body_entered(body):
+	$Bola.position = Vector2(489,249)#lado esq
+	PontosEsq += 1
+	$BarraEsq.position = Vector2(40, 211)
+	$NPC.position = Vector2(928,93)
+
+
+func _on_LadoD_body_entered(body):
+	$Bola.position = Vector2(489,249)#lado d
+	PontosD += 1
+	$BarraEsq.position = Vector2(40, 211)
+	$NPC.position = Vector2(928,93)
+
+func _process(delta):
+	$PontosD.text = str(PontosD)
+	$PontosEsq.text = str(PontosEsq)
+	
+	if PontosEsq == 3:
+		Global.money += 10
+		get_tree().change_scene("res://Cidade.tscn")
+		Global.Pong_Game = true
+	if PontosD == 3:
+		Global.money -= 10
+		Global.Gastos_arcade.append(-10.00)
+		get_tree().change_scene("res://Cidade.tscn")
+		Global.Pong_Game = true
+
