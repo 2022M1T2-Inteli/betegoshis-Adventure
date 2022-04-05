@@ -163,6 +163,10 @@ func _process(_delta):
 	Global.BarraEnergia -= float(Global.MenosEnergia)
 	Global.BarraFome -= float(Global.MenosFome)
 	Global.BarraFelicidade -= float(Global.MenosFelicidade)
+	
+	if Global.BarraFome >= 100:
+		Global.BarraFome = 100
+	print(Global.BarraFome)
 
 
 var Avatar_1 = preload("res://Action RPG Resources/Player/Fox sheet.png")
@@ -468,9 +472,19 @@ func _on_CasaTPad_pressed():
 		$Camera2D/Celular/AbrirCelular/CelularPanel.visible = false #desaparece o celular
 		Global.Tempo = true
 		Global.TimeVelocity = Global.CidadeTime
+		
+		if Global.dia == 1 and Global.F1_objetivo2 == false:
+			$Camera2D/Dinheiro/Popups/Orientacoes/BalaoTioCasa.visible = true
+			$Camera2D/Controles/Controlesorg.visible = false
+			
+			yield(get_tree().create_timer(2), "timeout")
+			$Camera2D/Controles/Controlesorg.visible = true
+			$Camera2D/Dinheiro/Popups/Orientacoes/BalaoTioCasa.visible = false
+		
 		if Global.F1_objetivo6 == true:
 			$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 			Global.F1_objetivo7 = true
+		
 		yield(get_tree().create_timer(0.01), "timeout") #espera 0.01 sec
 		irCasa = false
 		contadorCasaTPButton = 0
@@ -718,7 +732,7 @@ func _on_OnibusB_pressed():
 		if contadorOnibusButton % 2 == 1:
 			irOnibus = true
 			$Camera2D/Celular/AbrirCelular/CelularPanel/apps/MapaB/MapaI/Onibusimg/OnibusB.modulate.a = 1
-
+ 
 # Pra ir de Bike
 var irBike = false 
 var contadorBikeButton = 0
@@ -752,6 +766,7 @@ func _on_Iniciar_Guilherme_Falas_body_entered(_body): # area2D no banco para fal
 	$Camera2D/Controles/Controlesorg.visible = false # desaparecem os controles (pra evitar andar durante a conversa)
 	$Camera2D/Celular/AbrirCelular.visible = false # desaparece o celular (a fim de evitar que liguem ele durante a conversa)
 	pararMovimento = true # para o movimento do boneco pra não bugar
+	Global.ExclamacaoGui = false
 # Sair da conversa dele
 func _on_SairCvsaGui_pressed(): # botão de "até mais"
 	$Camera2D/Controles/Controlesorg.visible = true # reaparecem os controles
@@ -768,15 +783,17 @@ func _on_Iniciar_Secretria_Falas_body_entered(_body): # area2D na escola/secreta
 	$Camera2D/Controles/Controlesorg.visible = false # desaparecem os controles (pra evitar andar durante a conversa)
 	$Camera2D/Celular/AbrirCelular.visible = false # desaparece o celular (a fim de evitar que liguem ele durante a conversa)
 	pararMovimento = true # para o movimento do boneco pra não bugar
+	Global.ExclamacaoSecr = false
 	
 	if Global.dia == 1 and Global.F1_objetivo4 == true: # ou seja, ele pagou o boleto (completando o segundo objetivo)
-		$Camera2D/Falas/SecretariaFalas/FalaSecretaria.text = "Olá novamente, já confirmamos que o seu boleto foi pago!"
 		$Camera2D/Falas/SecretariaFalas/SecrFalasButton.visible = true
-		$Camera2D/Falas/SecretariaFalas/SairCvsaSecr.visible = false
+	
+
 # Sair da conversa dela
 func _on_SairCvsaSecr_pressed(): # Botão de "Até mais"
 	$Camera2D/Controles/Controlesorg.visible = true
 	$Camera2D/Celular/AbrirCelular.visible = true
+	Global.ExclamacaoGui = true 
 	
 	Global.F1_objetivo3 = true
 	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
@@ -792,9 +809,9 @@ func _on_SecrFalasButton_pressed(): # botão de "próximo" da secretária
 		$Camera2D/Celular/AbrirCelular.visible = true # volta o celular
 		boleto = true # com o boleto, ele pode pagar no banco
 		$Camera2D/Dinheiro/Boleto.visible = true
-	if contadorSecrFalasButton == 4 and Global.F1_objetivo4 == true:
+	if contadorSecrFalasButton == 3 and Global.F1_objetivo4 == true:
 		$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
-
+		$Camera2D/Falas/SecretariaFalas/SairCvsaSecr.visible = false
 # Ação de Pagar o boleto com o Guilherme
 func _on_PagarBoleto_pressed(): # botão de "Pagar Boleto" na conversa do Guilherme
 	if boleto == true: # se ele possui o boleto (falou com a secretária)
@@ -802,8 +819,10 @@ func _on_PagarBoleto_pressed(): # botão de "Pagar Boleto" na conversa do Guilhe
 		$Camera2D/Falas/GuilhermeFalas/PagarBoleto.visible = false # desaparece esse botão
 		# Muda o texto para o que ele pagou a taxa de matrícula
 		$Camera2D/Falas/GuilhermeFalas/FalaGuilherme.text = "Prontinho, você pagou a taxa de matrícula. Sempre que precisar pagar algo pode falar comigo, até mais."
+		$Camera2D/Falas/SecretariaFalas/FalaSecretaria.text = "Olá novamente, já confirmamos que o seu boleto foi pago!"
+		$Camera2D/Falas/SecretariaFalas/SairCvsaSecr.visible = false
 		$Camera2D/Dinheiro/Boleto.visible = false
-		
+		Global.ExclamacaoSecr = true 
 		Global.F1_objetivo4 = true # completa o objetivo de pagar o boleto
 		$Camera2D/Celular/AbrirCelular/Notificacao.visible = true # aparece uma notificação de missão completa
 	else:
@@ -870,6 +889,7 @@ func _on_Iniciar_TioClovis_Falas_body_entered(_body):
 	$Camera2D/Controles/Controlesorg.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = false
 	pararMovimento = true
+	Global.ExclamacaoTio = false
 	if Global.dia == 2: 
 		$Camera2D/Falas/TioClovisFalas/falastio.text = "Bom dia, " + str(Global.player_name) + "! Obrigado por me acordar." 
 		$Camera2D/Falas/TioClovisFalas/nextfala_tio.visible = true
@@ -882,7 +902,7 @@ func _on_iniciar_falavo_body_entered(_body):
 	$Camera2D/Celular/AbrirCelular.visible = false
 	pararMovimento = true
 	Global.Tempo = false
-
+	Global.ExclamacaoVo = false
 func _on_tchau_vo_pressed():
 	$Camera2D/Falas/VoFalas.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = true
@@ -890,39 +910,50 @@ func _on_tchau_vo_pressed():
 	Global.Tempo = true
 	Global.F1_objetivo1 = true
 	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
+	Global.ExclamacaoTio = true
 
 func _on_sairFala_pressed():
 	$Camera2D/Falas/TioClovisFalas.visible = false
 	$Camera2D/Celular/AbrirCelular.visible = true
 	$Camera2D/Controles/Controlesorg.visible = true
-	
+	Global.ExclamacaoSecr = true
 	Global.F1_objetivo2 = true
 	$Camera2D/Celular/AbrirCelular/Notificacao.visible = true
 
 func _on_ComprarComida1_pressed():
-	Global.money -= 5
 	Global.BarraFome += 25 
 	Global.BarraFelicidade += 3
 	Global.BarraEnergia += 2
 	if Global.dia == 2:
 		Global.frango = true
-	Global.Gastos_mercado.append(-5.00)
+	Global.gastarDinheiro(5, Global.Gastos_mercado)
+	
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = true
+	yield(get_tree().create_timer(1), "timeout")
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = false
+
+
 
 func _on_ComprarComida2_pressed():
-	Global.money -= 9
+	Global.gastarDinheiro(9, Global.Gastos_mercado)
 	Global.BarraFome += 50
 	Global.BarraFelicidade += 3
 	Global.BarraEnergia += 2
 	if Global.dia == 2:
 		Global.cogumelo = true
-	Global.Gastos_mercado.append(-9.00)
-
+	
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = true
+	yield(get_tree().create_timer(1), "timeout")
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = false
 func _on_ComprarComida3_pressed():
-	Global.money -= 13
+	Global.gastarDinheiro(13, Global.Gastos_mercado)
 	Global.BarraFome += 75
 	Global.BarraFelicidade += 3
 	Global.BarraEnergia += 2
-	Global.Gastos_mercado.append(-13.00)
+	
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = true
+	yield(get_tree().create_timer(1), "timeout")
+	$Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/Exclamacao.visible = false
 ##
 
 
@@ -967,9 +998,7 @@ func _on_Iniciar_yang_Falas_body_entered(_body):
 func _on_Comprar_Bicicleta_pressed():
 	$Camera2D/Falas/Nin_YangFalas/Comprar_Bicicleta.visible = false
 	$Camera2D/Falas/Nin_YangFalas/Comprar_avatares.visible = false
-	Global.money -= 500
-	Global.Gastos_LojaDeItens.append(-500.00)
-	$Camera2D/Dinheiro/DinheiroLabel.text = "BT$" + str(Global.money)
+	Global.gastarDinheiro(500, Global.Gastos_LojaDeItens)
 	$Camera2D/Falas/Nin_YangFalas/Falas_Do_NinYang.text = "Prontinho, você desbloqueou a bicicleta, pode checar seu mapa, você já poderá utilizá-la para ir aos lugares."
 	$Camera2D/Falas/Nin_YangFalas/Sair_NinYang.visible = true
 	Global.temBicicleta = true
@@ -1084,3 +1113,56 @@ func _on_Sair_NinYang_pressed():
 	$Camera2D/Falas/Nin_YangFalas.visible = false
 	$Camera2D/Controles/Controlesorg.visible = true
 	$Camera2D/Celular/AbrirCelular.visible = true
+
+var contadorAvatar1Button = 0
+func _on_Avatar_1_pressed():
+	contadorAvatar1Button += 1
+	if contadorAvatar1Button % 2 == 1:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = true
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = true
+	if contadorAvatar1Button % 2 == 0:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = false
+
+var contadorAvatar2Button = 0
+func _on_Avatar_2_pressed():
+	contadorAvatar2Button += 1
+	if contadorAvatar2Button % 2 == 1:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = true
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = true
+	if contadorAvatar2Button % 2 == 0:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = false
+
+var contadorAvatar3Button = 0
+func _on_Avatar_3_pressed():
+	contadorAvatar3Button += 1
+	if contadorAvatar3Button % 2 == 1:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = true
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = true
+	if contadorAvatar3Button % 2 == 0:
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = false
+
+
+func _on_Comprar_pressed():
+	# essas linhas podem mudar depois para auxiliar no processo da mochila (criar variável "TemAvatar1" pra deixar na mochila e ele poder trocar de personagem a qualquer momento)
+	if contadorAvatar1Button % 2 == 1:
+		Global.select = 1 
+		Global.gastarDinheiro(100, Global.Gastos_LojaDeItens)
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.visible = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = false
+	if contadorAvatar2Button % 2 == 1:
+		Global.select = 2
+		Global.gastarDinheiro(100, Global.Gastos_LojaDeItens)
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.visible = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.disabled = false
+	if contadorAvatar3Button % 2 == 1:
+		Global.select = 3
+		Global.gastarDinheiro(100, Global.Gastos_LojaDeItens)
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3.visible = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1.disabled = false
+		$Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2.disabled = false
+
