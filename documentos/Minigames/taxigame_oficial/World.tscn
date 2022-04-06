@@ -20,7 +20,6 @@ animations = [ {
 position = Vector2( 505.556, 299.5 )
 scale = Vector2( 0.54537, 0.554629 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Background" type="Sprite" parent="."]
@@ -32,7 +31,7 @@ centered = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
 
-[node name="ObstaculoSpawner" parent="." instance=ExtResource( 3 )]
+[node name="ObstaculoGerador" parent="." instance=ExtResource( 3 )]
 
-[node name="Player" parent="ObstaculoSpawner" instance=ExtResource( 2 )]
+[node name="Player" parent="ObstaculoGerador" instance=ExtResource( 2 )]
 position = Vector2( 360, 274 )
