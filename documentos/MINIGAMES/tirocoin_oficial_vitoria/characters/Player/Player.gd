@@ -1,8 +1,9 @@
 extends KinematicBody2D
+class_name Player 
 
 signal spawn_laser(location)
 
-onready var muzzle = $Muzzle
+onready var local_tiro = $Local_tiro
 
 var velocidade = 450
 
@@ -18,30 +19,22 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot_laser()
+	move_and_slide(entrada_vetor)
 	
 func tomar_dano(dano):
+	print(vida)
 	vida -= dano
+	print(vida)
 	if vida <= 0:
 		queue_free()
 		get_tree().paused = true 
 		
 func _on_Player_area_entered(area):
+	print(area)
 	if area.is_in_group("inimigos"):
+		print('foi')
 		area.tomar_dano(1)
+		tomar_dano(1)
 		
 func shoot_laser():
-	emit_signal("spawn_laser", muzzle.global_position)
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	emit_signal("spawn_laser", local_tiro.global_position)

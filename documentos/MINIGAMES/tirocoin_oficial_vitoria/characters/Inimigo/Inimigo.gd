@@ -15,6 +15,6 @@ func tomar_dano(dano):
 		queue_free()
 		emit_signal("inimigo_morre")
 		
-func _on_Enemy_area_entered(area):
+func _on_Inimigo_area_entered(area):
 	if area is Player:
 		area.tomar_dano(1)

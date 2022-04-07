@@ -2,36 +2,35 @@ extends KinematicBody2D
 
 signal spawn_laser(location)
 
-onready var muzzle = $Muzzle
+onready var local_tiro = $Local_tiro
 
-var speed = 450
+var velocidade = 450
 
-var input_vector = Vector2.ZERO
+var entrada_vetor = Vector2.ZERO
 
-var hp = 3
+var vida = 3
 
 func _physics_process(delta):
-	input_vector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	input_vector.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	entrada_vetor.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	entrada_vetor.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	
-	global_position += input_vector * speed * delta 
+	global_position += entrada_vetor * velocidade * delta 
 	
 	if Input.is_action_just_pressed("shoot"):
 		shoot_laser()
 	
-func take_damage(damage):
-	hp -= damage
-	if hp <= 0:
+func tomar_dano(dano):
+	vida -= dano
+	if vida <= 0:
 		queue_free()
 		get_tree().paused = true 
 		
 func _on_Player_area_entered(area):
-	if area.is_in_group("enemies"):
-		area.take_damage(1)
+	if area.is_in_group("inimigos"):
+		area.tomar_dano(1)
 		
 func shoot_laser():
-	emit_signal("spawn_laser", muzzle.global_position)
-
+	emit_signal("spawn_laser", local_tiro.global_position)
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
