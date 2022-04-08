@@ -52,6 +52,7 @@ stream = ExtResource( 4 )
 autoplay = true
 
 [node name="Menuiniciar" type="Sprite" parent="."]
+visible = false
 
 [node name="NomeGame" type="Label" parent="Menuiniciar"]
 margin_left = 15.0
