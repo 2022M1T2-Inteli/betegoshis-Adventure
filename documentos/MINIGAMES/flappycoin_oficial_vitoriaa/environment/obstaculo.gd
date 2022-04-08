@@ -2,10 +2,10 @@ extends Node2D
 
 signal score
 
-const SPEED = 215
+const velocidade = 215
 
 func _physics_process(delta):
-	position.x += -SPEED * delta 
+	position.x += -velocidade * delta 
 	if global_position.x <= -200:
 		queue_free()
 

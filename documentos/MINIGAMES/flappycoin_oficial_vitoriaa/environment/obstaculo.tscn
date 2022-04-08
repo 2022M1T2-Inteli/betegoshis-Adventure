@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://environment/obstacle.gd" type="Script" id=1]
-[ext_resource path="res://environment/Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://environment/Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://environment/obstaculo.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.75, 90 )
 
 [node name="obstacle" type="Node2D" groups=["obstacles"]]
 position = Vector2( 0, 427 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
-[node name="Wall" parent="." instance=ExtResource( 2 )]
+[node name="Wall" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 75 )
 
-[node name="Wall2" parent="." instance=ExtResource( 2 )]
+[node name="Wall2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -75 )
 rotation = 3.14159
 
