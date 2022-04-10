@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CapaFlappyMoney.png-e823ed928e9abf55709f423981feb371.stex"
+path="res://.import/capaflappymoney.png-e4afb326c4ee803f3fd88cb8881cc213.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CapaFlappyMoney.png"
-dest_files=[ "res://.import/CapaFlappyMoney.png-e823ed928e9abf55709f423981feb371.stex" ]
+source_file="res://capaflappymoney.png"
+dest_files=[ "res://.import/capaflappymoney.png-e4afb326c4ee803f3fd88cb8881cc213.stex" ]
 
 [params]
 

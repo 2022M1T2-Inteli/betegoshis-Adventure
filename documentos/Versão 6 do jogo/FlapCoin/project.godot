@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "RigidBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Player.gd"
+"path": "res://FlapCoinPlayer.gd"
 } ]
 _global_script_class_icons={
 "Player": ""
