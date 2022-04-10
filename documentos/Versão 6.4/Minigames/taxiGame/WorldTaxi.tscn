@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Minigames/taxiGame/WorldTaxi.gd" type="Script" id=1]
+[ext_resource path="res://Minigames/taxiGame/TaxiPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minigames/taxiGame/obstaculo/ObstaculoSpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Minigames/taxiGame/estrada.png" type="Texture" id=4]
+[ext_resource path="res://Minigames/taxiGame/estrada2.png" type="Texture" id=5]
+[ext_resource path="res://Action RPG Resources/UI/HeartUIFull.png" type="Texture" id=6]
+[ext_resource path="res://Fontes/golden_age/Golden Age Shad.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+outline_size = 2
+font_data = ExtResource( 7 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 505.556, 299.5 )
+scale = Vector2( 0.54537, 0.554629 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="Background" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2, -10 )
+scale = Vector2( 0.539583, 0.562037 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+
+[node name="ObstaculoGerador" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="ObstaculoGerador" instance=ExtResource( 2 )]
+position = Vector2( 360, 274 )
+
+[node name="Tempo" type="Label" parent="."]
+margin_left = 1.0
+margin_right = 177.0
+margin_bottom = 77.0
+custom_colors/font_color = Color( 0.372549, 0.396078, 0.227451, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0/15"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vidas" type="HBoxContainer" parent="."]
+margin_left = 846.0
+margin_top = 55.0
+margin_right = 867.0
+margin_bottom = 68.0
+rect_scale = Vector2( 4.48055, 4.48055 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vida1" type="Sprite" parent="Vidas"]
+texture = ExtResource( 6 )
+
+[node name="Vida2" type="Sprite" parent="Vidas"]
+position = Vector2( 13.7294, 0 )
+texture = ExtResource( 6 )
+
+[node name="Vida3" type="Sprite" parent="Vidas"]
+position = Vector2( 28.4811, 0 )
+texture = ExtResource( 6 )
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 0, 600, 0, 0, -50, -1, -31, 597 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 1078, -1 )
+polygon = PoolVector2Array( 0, 600, 0, 0, -50, -1, -46, 598 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 1078, -1 )
+polygon = PoolVector2Array( -1074, -36, -55, -37, -50, -1, -1071, -1 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 1078, 631 )
+polygon = PoolVector2Array( -1074, -36, -55, -37, -50, -1, -1071, -1 )

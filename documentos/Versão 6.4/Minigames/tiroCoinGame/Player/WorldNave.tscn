@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Minigames/tiroCoinGame/assets/background espaço bonito.png" type="Texture" id=1]
+[ext_resource path="res://Minigames/tiroCoinGame/Player/NavePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minigames/tiroCoinGame/Inimigo/EnemySpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Minigames/tiroCoinGame/assets/background roxo.png" type="Texture" id=4]
+[ext_resource path="res://Minigames/tiroCoinGame/Player/WorldNave.gd" type="Script" id=5]
+[ext_resource path="res://Minigames/tiroCoinGame/assets/Minercraftory.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Action RPG Resources/UI/HeartUIFull.png" type="Texture" id=7]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 48, 46 )
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 502, 496 )
+scale = Vector2( 0.766212, 0.819124 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 4 )
+centered = false
+offset = Vector2( -754.351, -646.964 )
+
+[node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 468, 323 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 35, 30 )
+shape = SubResource( 5 )
+
+[node name="Player" type="Area2D" parent="Player"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player/Player"]
+polygon = PoolVector2Array( -13, 32, -12, 56, 3, 57, 6, 71, 25, 74, 59, 69, 66, 56, 77, 55, 83, 36, 68, 24, 62, -5, 52, -4, 49, 12, 41, 6, 39, -13, 30, -12, 25, 11, 19, 11, 14, -3, -2, 7, 2, 27 )
+
+[node name="Pontuacao" type="Label" parent="."]
+modulate = Color( 0.752941, 0.752941, 0.752941, 1 )
+margin_left = 47.0
+margin_top = 44.0
+margin_right = 126.0
+margin_bottom = 88.0
+rect_scale = Vector2( 1.90101, 1.97669 )
+custom_fonts/font = SubResource( 1 )
+text = "SCORE:  0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 14, 310 )
+polygon = PoolVector2Array( 0, -310, 5, 323, -57, 301, -57, -317 )
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 1058, 326 )
+polygon = PoolVector2Array( 0, -310, 6, 25, 5, 323, -43, 271, -53, 29, -57, -317 )
+
+[node name="CollisionShape2D3" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 972, 658.817 )
+scale = Vector2( 15.8972, 0.107152 )
+polygon = PoolVector2Array( 2.20165, -492.915, 5, 323, -59.13, 253.689, -58.0606, -464.917 )
+
+[node name="CollisionShape2D4" type="CollisionPolygon2D" parent="Paredes"]
+position = Vector2( 765, 302 )
+scale = Vector2( 1, 0.96875 )
+polygon = PoolVector2Array( -751, -399.484, 266, -395.452, 258, -316.903, -742, -300.484, -742, -403.71 )
+
+[node name="Vidas" type="HBoxContainer" parent="."]
+margin_left = 825.0
+margin_top = 62.0
+margin_right = 846.0
+margin_bottom = 75.0
+rect_scale = Vector2( 4.48055, 4.48055 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vida1" type="Sprite" parent="Vidas"]
+texture = ExtResource( 7 )
+
+[node name="Vida2" type="Sprite" parent="Vidas"]
+position = Vector2( 13.7294, 0 )
+texture = ExtResource( 7 )
+
+[node name="Vida3" type="Sprite" parent="Vidas"]
+position = Vector2( 28.4811, 0 )
+texture = ExtResource( 7 )
+
+[connection signal="add_score" from="EnemySpawner" to="." method="score"]
+[connection signal="spawn_laser" from="Player" to="." method="_on_Player_spawn_laser"]
+[connection signal="area_entered" from="Player/Player" to="Player" method="_on_Player_area_entered"]
