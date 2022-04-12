@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/point.wav-065cb57632e101d6038b685d99557778.sample"
+
+[deps]
+
+source_file="res://Minigames/flappyCoinGame/assets/audio/point.wav"
+dest_files=[ "res://.import/point.wav-065cb57632e101d6038b685d99557778.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

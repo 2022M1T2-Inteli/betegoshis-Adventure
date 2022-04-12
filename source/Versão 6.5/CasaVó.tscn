@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://bonecquinho.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Map010.png" type="Texture" id=2]
+[ext_resource path="res://Exclamação.png" type="Texture" id=3]
+[ext_resource path="res://VóAndando.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "PulaPula"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 24, -91 ), Vector2( 24, -119 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4063, 428 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 1, 57 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1195.0 ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="CasaVo" type="Sprite" parent="."]
+position = Vector2( -3439, -112 )
+offset = Vector2( 3049, -766 )
+
+[node name="SpriteCasavo" type="Sprite" parent="CasaVo"]
+position = Vector2( 3940, 422 )
+scale = Vector2( 2.7532, 2.7532 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="paredescasavo" type="Container" parent="CasaVo"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody" type="StaticBody2D" parent="CasaVo/paredescasavo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CasaVo/paredescasavo/StaticBody"]
+position = Vector2( -34, -265 )
+polygon = PoolVector2Array( 3672, 718, 3678, 918, 3544, 918, 3550, 1251, 3591, 1255, 3603, 1312, 4075, 1321, 4074, 1253, 3942, 1251, 3934, 1180, 3813, 1184, 3807, 1251, 3677, 1181, 3677, 989, 4141, 984, 4142, 1050, 4203, 1057, 4195, 1249, 4142, 1256, 4143, 1384, 4265, 1381, 4271, 1446, 3480, 1446, 3472.77, 813.531, 3470.75, 320.364, 4609, 328, 4600, 1463, 4405, 1443, 4404, 1382, 4536, 1382, 4533, 1181, 4479, 1177, 4477, 992, 4532, 986, 4536, 918, 4414, 924, 4405, 980, 4274, 980, 4278, 921, 4203, 915, 4202, 722, 4539, 720, 4535, 602, 4341, 605, 4336, 587, 4010, 590, 4010, 909, 3808, 914, 3812, 718, 3939, 721, 3936, 576, 3881, 576, 3878, 521, 3546, 519, 3547, 589, 3676, 594, 3679, 657, 3545, 657, 3545, 718 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="CasaVo/paredescasavo/StaticBody"]
+position = Vector2( -74, -90 )
+polygon = PoolVector2Array( 4314.5, 877.604, 4450.58, 876.633, 4445, 957, 4314.5, 952.356 )
+
+[node name="IniciarJogoDeVerdade" type="Area2D" parent="CasaVo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CasaVo/IniciarJogoDeVerdade"]
+position = Vector2( -1, -9 )
+polygon = PoolVector2Array( 4264, 1224, 4351, 1223, 4329, 1175, 4280, 1175 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 765, 693 )
+scale = Vector2( 0.434376, 0.517166 )
+
+[node name="vo" type="KinematicBody2D" parent="."]
+position = Vector2( 406, 813 )
+
+[node name="Sprite" type="Sprite" parent="vo"]
+position = Vector2( 26.1025, 1.97241 )
+scale = Vector2( 2.08761, 2.12868 )
+texture = ExtResource( 4 )
+hframes = 12
+vframes = 8
+frame = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vo"]
+position = Vector2( -4132, -579 )
+polygon = PoolVector2Array( 4132, 574, 4180, 575, 4187, 635, 4183, 666, 4136, 664, 4118, 633 )
+
+[node name="ExclamacaoVo" type="Sprite" parent="vo"]
+position = Vector2( 4063, 428 )
+scale = Vector2( 0.323169, 0.323169 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="vo/ExclamacaoVo"]
+anims/PulaPula = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="iniciar_falavo" type="Area2D" parent="."]
+position = Vector2( 440, 904 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="iniciar_falavo"]
+position = Vector2( -4246, -704 )
+polygon = PoolVector2Array( 4167, 632, 4194, 686, 4243, 729, 4156, 726 )
+
+[connection signal="body_entered" from="CasaVo/IniciarJogoDeVerdade" to="KinematicBody2D2" method="_on_IniciarJogoDeVerdade_body_entered"]
+[connection signal="body_entered" from="iniciar_falavo" to="KinematicBody2D2" method="_on_iniciar_falavo_body_entered"]
