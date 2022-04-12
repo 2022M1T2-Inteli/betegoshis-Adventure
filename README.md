@@ -18,7 +18,7 @@ Nosso projeto é um jogo que tem como finalidade ensinar educação financeira.
 <br><br>
 <p align="center">
 <img src="![foto_read_me](https://user-images.githubusercontent.com/83848719/163014026-d33f67be-6672-4631-a622-c666c6627443.jpg)" alt="BETEGOSHI'S ADVENTURE" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Sofia Pimazzoni, Pedro Oliveira, Gabriela Silva, Vitória Rodrigues, Lucas Sales, João Alcaraz, Daniel QUintão</a> <a rel="license" 
+  Game by <>Sofia Pimazzoni, Pedro Oliveira, Gabriela Silva, Vitória Rodrigues, Lucas Sales, João Alcaraz, Daniel QUintão</a> <a rel="license" 
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
