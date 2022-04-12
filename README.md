@@ -17,7 +17,7 @@
 Nosso projeto é um jogo que tem como finalidade ensinar educação financeira.
 <br><br>
 <p align="center">
-<img src="![foto_readme](https://user-images.githubusercontent.com/83848719/163013592-36660d3b-0671-48c8-80e9-3e4f219809a7.png)" alt="BETEGOSHI'S ADVENTURE" border="0">
+<img src="![foto_read_me](https://user-images.githubusercontent.com/83848719/163014026-d33f67be-6672-4631-a622-c666c6627443.jpg)" alt="BETEGOSHI'S ADVENTURE" border="0">
   Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
 </p>
 
