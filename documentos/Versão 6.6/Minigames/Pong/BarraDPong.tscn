@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://right_pallete.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 104.0
+
+[node name="BarraD" type="KinematicBody2D"]
+position = Vector2( 662, 13 )
+
+[node name="RightPallete" type="Sprite" parent="."]
+position = Vector2( 219, 256 )
+scale = Vector2( 2.96875, 3.98438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 220, 257 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}

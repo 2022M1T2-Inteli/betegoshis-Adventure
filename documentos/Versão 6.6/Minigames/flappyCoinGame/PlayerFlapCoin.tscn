@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Minigames/flappyCoinGame/PlayerFlapCoin.gd" type="Script" id=2]
+[ext_resource path="res://pixil-frame-0 (2).png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 36.3456
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=4]
+resource_name = "flap"
+length = 0.2
+loop = true
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+loop = true
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="Pixil-frame-0(2)" type="Sprite" parent="."]
+position = Vector2( 89, 61 )
+scale = Vector2( 2.23001, 2.0355 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, -5 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 2 )
+anims/flap = SubResource( 4 )
+anims/idle = SubResource( 3 )

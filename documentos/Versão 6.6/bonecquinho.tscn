@@ -1,0 +1,2715 @@
+[gd_scene load_steps=120 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Action RPG Resources/Player/Fox sheet.png" type="Texture" id=3]
+[ext_resource path="res://Action RPG Resources/Player/caradoBTG.png" type="Texture" id=4]
+[ext_resource path="res://Revisaoimg.png" type="Texture" id=5]
+[ext_resource path="res://ipad.png" type="Texture" id=6]
+[ext_resource path="res://Objetivos.gd" type="Script" id=7]
+[ext_resource path="res://onibus img.png" type="Texture" id=8]
+[ext_resource path="res://icones/Bancoicon.png" type="Texture" id=9]
+[ext_resource path="res://Modais.png" type="Texture" id=10]
+[ext_resource path="res://bike img.png" type="Texture" id=11]
+[ext_resource path="res://taxi img.png" type="Texture" id=12]
+[ext_resource path="res://Seta Direcional.png" type="Texture" id=13]
+[ext_resource path="res://Falas.gd" type="Script" id=14]
+[ext_resource path="res://Fontes/golden_age/Golden Age.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://email.png" type="Texture" id=16]
+[ext_resource path="res://Minimoney.png" type="Texture" id=17]
+[ext_resource path="res://Action RPG Resources/Player/secretaria.png" type="Texture" id=18]
+[ext_resource path="res://Ajustesimg.png" type="Texture" id=19]
+[ext_resource path="res://Mapaimg.png" type="Texture" id=20]
+[ext_resource path="res://Fontes/minecraftia/Minecraftia-Regular.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://carinha_da_loja.png" type="Texture" id=22]
+[ext_resource path="res://icones/document.png" type="Texture" id=23]
+[ext_resource path="res://professora.png" type="Texture" id=24]
+[ext_resource path="res://Action RPG Resources/Player/japinha.png" type="Texture" id=25]
+[ext_resource path="res://POng (4).png" type="Texture" id=26]
+[ext_resource path="res://CapaFlappyMoney.png" type="Texture" id=27]
+[ext_resource path="res://Image_from_iOS__5_-removebg-preview-3.png" type="Texture" id=28]
+[ext_resource path="res://cogumelo.png" type="Texture" id=29]
+[ext_resource path="res://queijo.png" type="Texture" id=30]
+[ext_resource path="res://frango.png" type="Texture" id=31]
+[ext_resource path="res://setinha_voltar.png" type="Texture" id=32]
+[ext_resource path="res://RostoVó.png" type="Texture" id=33]
+[ext_resource path="res://Lugares.png" type="Texture" id=34]
+[ext_resource path="res://RostoTio.png" type="Texture" id=35]
+[ext_resource path="res://cadeado.png" type="Texture" id=36]
+[ext_resource path="res://Image_from_iOS__5_-removebg-preview-3 2.png" type="Texture" id=37]
+[ext_resource path="res://images/buttons/audioOn.png" type="Texture" id=38]
+[ext_resource path="res://images/buttons/musicOn.png" type="Texture" id=39]
+[ext_resource path="res://ExtratoDesignFundo.png" type="Texture" id=40]
+[ext_resource path="res://rafael.png" type="Texture" id=41]
+[ext_resource path="res://balao de fala.png" type="Texture" id=42]
+[ext_resource path="res://cogumelo2.png" type="Texture" id=43]
+[ext_resource path="res://frango2.png" type="Texture" id=44]
+[ext_resource path="res://queijo2.png" type="Texture" id=45]
+[ext_resource path="res://Exclamação.png" type="Texture" id=46]
+[ext_resource path="res://Action RPG Resources/Player/Leaozinho sheet.png" type="Texture" id=47]
+[ext_resource path="res://Action RPG Resources/Player/Sapinho sheet.png" type="Texture" id=48]
+[ext_resource path="res://preto.png" type="Texture" id=49]
+[ext_resource path="res://onibus img 2.png" type="Texture" id=50]
+[ext_resource path="res://bike img 2.png" type="Texture" id=51]
+[ext_resource path="res://taxi img 2.png" type="Texture" id=52]
+[ext_resource path="res://images/buttons/audioOff.png" type="Texture" id=53]
+[ext_resource path="res://tIro CoIn (1).png" type="Texture" id=54]
+[ext_resource path="res://images/buttons/musicOff.png" type="Texture" id=55]
+[ext_resource path="res://capaTaxi.png" type="Texture" id=56]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 51.6294, 28.0725 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 15
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=74]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=56]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=29]
+font_data = ExtResource( 21 )
+
+[sub_resource type="StyleBoxFlat" id=57]
+bg_color = Color( 0.239216, 0.521569, 0.247059, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id=58]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=59]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=24]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=75]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=46]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=47]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=61]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=62]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=63]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=64]
+font_data = ExtResource( 21 )
+
+[sub_resource type="StyleBoxEmpty" id=67]
+
+[sub_resource type="StyleBoxEmpty" id=68]
+
+[sub_resource type="StyleBoxEmpty" id=69]
+
+[sub_resource type="StyleBoxEmpty" id=70]
+
+[sub_resource type="StyleBoxEmpty" id=71]
+
+[sub_resource type="StyleBoxEmpty" id=72]
+
+[sub_resource type="Animation" id=65]
+resource_name = "Brilhar"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=66]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=51]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=31]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=32]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=73]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=52]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=21]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=33]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=16]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=34]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=76]
+size = 50
+outline_color = Color( 0.921569, 0.921569, 0.921569, 1 )
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=53]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=35]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=36]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=37]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=38]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=54]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=45]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=42]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=48]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=44]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=49]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=50]
+font_data = ExtResource( 21 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "correndinho pra baixo"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "correndinho pra cima"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "correndinho pra direita"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "correndinho pra esquerda"
+length = 0.35
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "paradinhonzino pra esquerda"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "paradinhozinho"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "paradinhozinho pra cima"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "paradinhozinho pra direita"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Avatar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[node name="KinematicBody2D2" type="KinematicBody2D"]
+position = Vector2( 1452, 743 )
+scale = Vector2( 0.474283, 0.557933 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 848.0 ]
+}
+
+[node name="Avatar" type="Sprite" parent="."]
+position = Vector2( 2.10815, 10.7542 )
+scale = Vector2( 4.76439, 3.61414 )
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.10815, 40.7065 )
+scale = Vector2( 0.93928, 0.93928 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -2.10843, 7.62937e-05 )
+script = ExtResource( 2 )
+
+[node name="Dinheiro" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Minimoney" type="Sprite" parent="Camera2D/Dinheiro"]
+position = Vector2( 44, 35 )
+scale = Vector2( 0.129226, 0.129226 )
+texture = ExtResource( 17 )
+
+[node name="DinheiroLabel" type="RichTextLabel" parent="Camera2D/Dinheiro"]
+modulate = Color( 0.101961, 0.733333, 0.0784314, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -941.0
+margin_top = 10.0
+margin_right = -815.0
+margin_bottom = 29.0
+rect_scale = Vector2( 3.16571, 3.66128 )
+custom_fonts/normal_font = SubResource( 19 )
+text = "BT$ 1000,00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Boleto" type="Sprite" parent="Camera2D/Dinheiro"]
+visible = false
+modulate = Color( 0.992157, 1, 0.172549, 1 )
+self_modulate = Color( 0.992157, 1, 0, 1 )
+position = Vector2( 760, 52 )
+scale = Vector2( 0.205706, 0.178267 )
+texture = ExtResource( 23 )
+
+[node name="Boleto AGUA" type="Sprite" parent="Camera2D/Dinheiro"]
+visible = false
+modulate = Color( 0, 0.435294, 1, 1 )
+position = Vector2( 679, 51 )
+scale = Vector2( 0.205706, 0.178267 )
+texture = ExtResource( 23 )
+
+[node name="Boleto ENERGIA" type="Sprite" parent="Camera2D/Dinheiro"]
+visible = false
+modulate = Color( 0.964706, 0.290196, 0.290196, 1 )
+self_modulate = Color( 0.568627, 0.815686, 0.694118, 1 )
+position = Vector2( 598, 51 )
+scale = Vector2( 0.205706, 0.178267 )
+texture = ExtResource( 23 )
+
+[node name="Popups" type="Container" parent="Camera2D/Dinheiro"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarPongImg" type="Sprite" parent="Camera2D/Dinheiro/Popups"]
+visible = false
+position = Vector2( 773, 302 )
+scale = Vector2( 0.301088, 0.362757 )
+texture = ExtResource( 26 )
+
+[node name="IniciarPongButton" type="Button" parent="Camera2D/Dinheiro/Popups/IniciarPongImg"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = -0.240854
+anchor_top = -0.133196
+anchor_right = -0.0661265
+anchor_bottom = -0.0539944
+margin_left = -378.627
+margin_top = -286.693
+margin_right = -101.627
+margin_bottom = -85.6933
+rect_scale = Vector2( 2.68795, 2.68795 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="IniciarFlapImg" type="Sprite" parent="Camera2D/Dinheiro/Popups"]
+visible = false
+position = Vector2( 817, 296 )
+scale = Vector2( 1.48943, 1.48943 )
+texture = ExtResource( 27 )
+
+[node name="IniciarFlapMoneyButton" type="Button" parent="Camera2D/Dinheiro/Popups/IniciarFlapImg"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -142.0
+margin_top = -171.0
+margin_right = 141.0
+margin_bottom = 131.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarTaxiImg" type="Sprite" parent="Camera2D/Dinheiro/Popups"]
+visible = false
+position = Vector2( 816, 298 )
+scale = Vector2( 0.364505, 0.368011 )
+texture = ExtResource( 56 )
+
+[node name="IniciarTaxiGame" type="Button" parent="Camera2D/Dinheiro/Popups/IniciarTaxiImg"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -812.0
+margin_top = -294.0
+margin_right = 839.0
+margin_bottom = 361.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarNaveImg" type="Sprite" parent="Camera2D/Dinheiro/Popups"]
+visible = false
+position = Vector2( 760, 287 )
+scale = Vector2( 0.354733, 0.35697 )
+texture = ExtResource( 54 )
+
+[node name="IniciarNaveGame" type="Button" parent="Camera2D/Dinheiro/Popups/IniciarNaveImg"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -857.0
+margin_top = -305.0
+margin_right = 829.0
+margin_bottom = 338.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Orientacoes" type="Sprite" parent="Camera2D/Dinheiro/Popups"]
+
+[node name="BalaoTioCasa" type="Sprite" parent="Camera2D/Dinheiro/Popups/Orientacoes"]
+visible = false
+position = Vector2( 258, 164 )
+scale = Vector2( 2.37369, 1.57325 )
+texture = ExtResource( 42 )
+
+[node name="TextoBalaoTio" type="RichTextLabel" parent="Camera2D/Dinheiro/Popups/Orientacoes/BalaoTioCasa"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -86.0
+margin_top = -86.0
+margin_right = 53.0
+margin_bottom = 3.0
+rect_scale = Vector2( 1.2853, 1.91795 )
+custom_fonts/normal_font = SubResource( 74 )
+text = "Bom dia meu neto!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoDormir" type="TextureButton" parent="Camera2D/Dinheiro"]
+visible = false
+margin_left = 666.0
+margin_top = 392.0
+margin_right = 706.0
+margin_bottom = 432.0
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Dinheiro/BotaoDormir"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+margin_left = 50.0
+margin_top = 28.0
+margin_right = 102.0
+margin_bottom = 45.0
+rect_scale = Vector2( 4.15805, 4.15805 )
+custom_fonts/font = SubResource( 56 )
+text = "DORMIR"
+
+[node name="Controles" type="CanvasLayer" parent="Camera2D"]
+scale = Vector2( 1.405, 1.5123 )
+transform = Transform2D( 1.405, 0, 0, 1.5123, 0, 0 )
+
+[node name="Controlesorg" type="Sprite" parent="Camera2D/Controles"]
+modulate = Color( 0, 0, 0, 0.721569 )
+position = Vector2( -2.13523, 70.7532 )
+scale = Vector2( 0.859454, 0.859454 )
+
+[node name="Esquerda" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 96.8918
+margin_top = 298.519
+margin_right = 1296.89
+margin_bottom = 928.519
+rect_rotation = -180.0
+rect_scale = Vector2( 0.0768465, 0.0768465 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Direita" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 145.752
+margin_top = 253.125
+margin_right = 1345.75
+margin_bottom = 883.125
+rect_scale = Vector2( 0.0749087, 0.0749087 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Baixo" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 152.14
+margin_top = 294.714
+margin_right = 1352.14
+margin_bottom = 924.714
+rect_rotation = 90.0885
+rect_scale = Vector2( 0.0710162, 0.0954451 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Cima" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 91.088
+margin_top = 250.98
+margin_right = 1291.09
+margin_bottom = 880.98
+rect_rotation = -90.3585
+rect_scale = Vector2( 0.0668241, 0.0973746 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BaixoEsquerda" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 102.154
+margin_top = 323.919
+margin_right = 1302.15
+margin_bottom = 953.919
+rect_rotation = 138.325
+rect_scale = Vector2( 0.0669548, 0.0669548 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BaixoDireita" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 167.68
+margin_top = 294.712
+margin_right = 1367.68
+margin_bottom = 924.712
+rect_rotation = 37.3907
+rect_scale = Vector2( 0.0649367, 0.0649367 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CimaDireita" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 139.34
+margin_top = 226.945
+margin_right = 1339.34
+margin_bottom = 856.945
+rect_rotation = -38.9122
+rect_scale = Vector2( 0.0693573, 0.0693573 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CimaEsquerda" type="TextureButton" parent="Camera2D/Controles/Controlesorg"]
+margin_left = 68.163
+margin_top = 262.564
+margin_right = 1268.16
+margin_bottom = 892.564
+rect_rotation = -133.633
+rect_scale = Vector2( 0.0713274, 0.0713274 )
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Celular" type="CanvasLayer" parent="Camera2D"]
+
+[node name="AbrirCelular" type="Button" parent="Camera2D/Celular"]
+margin_left = 898.0
+margin_top = 19.0
+margin_right = 1098.0
+margin_bottom = 153.0
+rect_scale = Vector2( 0.509174, 0.44383 )
+text = "iPAD"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CelularTinyimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular"]
+position = Vector2( 105.405, 65.3526 )
+rotation = -1.56813
+scale = Vector2( 0.711932, 0.634258 )
+texture = ExtResource( 6 )
+
+[node name="CelularPanel" type="Panel" parent="Camera2D/Celular/AbrirCelular"]
+visible = false
+margin_left = 66.7747
+margin_top = 67.5934
+margin_right = 106.775
+margin_bottom = 107.594
+rect_scale = Vector2( 1.25697, 1.11362 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CelularBigimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel"]
+position = Vector2( -649.406, 501.451 )
+rotation = -1.57054
+scale = Vector2( 4.45136, 4.15333 )
+texture = ExtResource( 6 )
+
+[node name="Tasks" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel"]
+position = Vector2( -362.905, -58.2382 )
+scale = Vector2( 1.37048, 1.37048 )
+
+[node name="ObjetivosTitulo" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/Tasks"]
+modulate = Color( 0.835294, 0.494118, 0.0117647, 1 )
+margin_left = -590.883
+margin_top = 146.6
+margin_right = -505.883
+margin_bottom = 169.6
+rect_scale = Vector2( 3.25066, 3.24359 )
+custom_fonts/normal_font = SubResource( 28 )
+text = "Objetivos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objetivo" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/Tasks"]
+margin_left = -636.0
+margin_top = 199.0
+margin_right = -414.0
+margin_bottom = 306.0
+rect_scale = Vector2( 1.61743, 1.57316 )
+custom_fonts/normal_font = SubResource( 29 )
+bbcode_enabled = true
+bbcode_text = "[center]Vá até a faculdade e fale com a Secretária[center]"
+text = "Vá até a faculdade e fale com a Secretária"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FecharCelular" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel"]
+margin_left = -204.455
+margin_top = 139.074
+margin_right = -180.455
+margin_bottom = 163.074
+rect_scale = Vector2( 2.77434, 2.77434 )
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barras" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel"]
+
+[node name="Barra_Energia" type="ProgressBar" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras"]
+margin_left = -523.0
+margin_top = 313.0
+margin_right = -216.0
+margin_bottom = 363.0
+custom_styles/fg = SubResource( 57 )
+custom_styles/bg = SubResource( 58 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras/Barra_Energia"]
+margin_left = 79.4498
+margin_top = -49.9238
+margin_right = 170.45
+margin_bottom = -11.9238
+rect_scale = Vector2( 1.64561, 1.64561 )
+custom_fonts/font = SubResource( 59 )
+text = "ENERGIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barra_Fome" type="ProgressBar" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras"]
+margin_left = -522.645
+margin_top = 502.054
+margin_right = -215.645
+margin_bottom = 552.054
+custom_styles/fg = SubResource( 57 )
+custom_styles/bg = SubResource( 58 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras/Barra_Fome"]
+margin_left = 108.561
+margin_top = -50.2054
+margin_right = 199.561
+margin_bottom = -12.2054
+rect_scale = Vector2( 1.64561, 1.64561 )
+custom_fonts/font = SubResource( 59 )
+text = "FOME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Barra_Felicidade" type="ProgressBar" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras"]
+margin_left = -522.645
+margin_top = 708.9
+margin_right = -215.645
+margin_bottom = 758.9
+custom_styles/fg = SubResource( 57 )
+custom_styles/bg = SubResource( 58 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/barras/Barra_Felicidade"]
+margin_left = 55.8314
+margin_top = -62.2545
+margin_right = 167.831
+margin_bottom = -24.2545
+rect_scale = Vector2( 1.64561, 1.64561 )
+custom_fonts/font = SubResource( 59 )
+text = "FELICIDADE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="apps" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel"]
+position = Vector2( 410.981, 1200.91 )
+scale = Vector2( 1.21766, 1.21766 )
+
+[node name="BotaoAjustes" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+margin_left = -1291.88
+margin_top = -473.939
+margin_right = -1182.88
+margin_bottom = -379.939
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ajustesimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoAjustes"]
+position = Vector2( 54.2854, 48.1978 )
+scale = Vector2( 0.265238, 0.265238 )
+texture = ExtResource( 19 )
+
+[node name="Ajustestxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoAjustes"]
+margin_left = -1.55079
+margin_top = 116.477
+margin_right = 113.45
+margin_bottom = 156.477
+rect_scale = Vector2( 1.45678, 1.45678 )
+custom_fonts/normal_font = SubResource( 22 )
+text = "Ajustes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoBanco" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+margin_left = -1124.76
+margin_top = -670.744
+margin_right = -1015.76
+margin_bottom = -572.744
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bancoimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoBanco"]
+position = Vector2( 55.8313, 50.2054 )
+scale = Vector2( 0.27909, 0.27909 )
+texture = ExtResource( 9 )
+
+[node name="Bancotxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoBanco"]
+margin_left = 10.856
+margin_top = 114.468
+margin_right = 102.856
+margin_bottom = 142.468
+rect_scale = Vector2( 1.50325, 1.50325 )
+custom_fonts/normal_font = SubResource( 23 )
+text = "Banco"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoRevisao" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+margin_left = -1123.21
+margin_top = -477.956
+margin_right = -1014.21
+margin_bottom = -377.956
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Revisaoimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoRevisao"]
+position = Vector2( 52.7261, 48.1973 )
+scale = Vector2( 0.280773, 0.280773 )
+texture = ExtResource( 5 )
+
+[node name="Revisaotxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoRevisao"]
+margin_left = -38.7754
+margin_top = 120.493
+margin_right = 115.224
+margin_bottom = 220.493
+rect_scale = Vector2( 1.25253, 1.25253 )
+custom_fonts/normal_font = SubResource( 24 )
+bbcode_enabled = true
+bbcode_text = "[center] Revisão de Aula [center]"
+text = " Revisão de Aula "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RevisaoI" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoRevisao"]
+
+[node name="BotaoMapa" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+margin_left = -1289.16
+margin_top = -668.736
+margin_right = -1237.16
+margin_bottom = -617.736
+rect_scale = Vector2( 2.10295, 1.91315 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapaimg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoMapa"]
+position = Vector2( 25.0742, 26.2422 )
+scale = Vector2( 0.122469, 0.147818 )
+texture = ExtResource( 20 )
+
+[node name="Mapatxt" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoMapa"]
+margin_left = 5.16381
+margin_top = 58.7828
+margin_right = 103.164
+margin_bottom = 84.7827
+rect_scale = Vector2( 0.884187, 0.884187 )
+custom_fonts/normal_font = SubResource( 14 )
+text = "Mapa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mapaorg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+
+[node name="Modais" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg"]
+visible = false
+position = Vector2( -895.694, -584.974 )
+scale = Vector2( 0.469158, 0.530781 )
+texture = ExtResource( 10 )
+
+[node name="Titulo" type="RichTextLabel" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -782.222
+margin_top = -424.173
+margin_right = -491.222
+margin_bottom = -330.173
+rect_scale = Vector2( 6.252, 6.252 )
+custom_constants/shadow_as_outline = 1
+custom_fonts/normal_font = SubResource( 75 )
+text = "SELECIONE UM TRANSPORTE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoltarModal" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+margin_left = -938.119
+margin_top = -549.391
+margin_right = -793.119
+margin_bottom = -452.391
+rect_scale = Vector2( 1.44482, 1.44482 )
+texture_normal = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoOnibus" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+margin_left = -864.273
+margin_top = -267.652
+margin_right = 1055.73
+margin_bottom = 812.348
+rect_scale = Vector2( 0.275057, 0.275057 )
+toggle_mode = true
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 50 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoTaxi" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+margin_left = -229.744
+margin_top = -255.131
+margin_right = 1690.26
+margin_bottom = 824.869
+rect_scale = Vector2( 0.25914, 0.25914 )
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 52 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoBike" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+margin_left = 330.94
+margin_top = -273.913
+margin_right = 2278.94
+margin_bottom = 828.087
+rect_scale = Vector2( 0.288116, 0.288116 )
+toggle_mode = true
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 51 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cadeado" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/BotaoBike"]
+position = Vector2( 2059.94, 608.454 )
+scale = Vector2( 1.92844, 1.92844 )
+texture = ExtResource( 36 )
+
+[node name="SelecionarLugares" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais"]
+visible = false
+margin_left = 913.504
+margin_top = 577.565
+margin_right = 1058.5
+margin_bottom = 674.565
+rect_rotation = -180.0
+rect_scale = Vector2( 2.20407, 2.20407 )
+texture_normal = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lugares" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg"]
+position = Vector2( -896.01, -582.484 )
+scale = Vector2( 0.467692, 0.532314 )
+texture = ExtResource( 34 )
+
+[node name="VoltarLugares" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+margin_left = -912.948
+margin_top = -521.272
+margin_right = -767.948
+margin_bottom = -424.272
+rect_scale = Vector2( 1.56992, 1.56992 )
+texture_normal = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrFaculdade" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = -399.892
+margin_top = -433.872
+margin_right = 624.108
+margin_bottom = 180.128
+rect_scale = Vector2( 0.479835, 0.479835 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrMercado" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = -805.947
+margin_top = -156.066
+margin_right = -180.947
+margin_bottom = 457.934
+rect_scale = Vector2( 0.444037, 0.444037 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrArcade" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = -795.0
+margin_top = 197.0
+margin_right = -181.0
+margin_bottom = 811.0
+rect_scale = Vector2( 0.419867, 0.419867 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrLoja" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = 206.446
+margin_top = -159.187
+margin_right = 820.446
+margin_bottom = 454.813
+rect_scale = Vector2( 0.433121, 0.433121 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrBanco" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = 209.19
+margin_top = 190.412
+margin_right = 823.19
+margin_bottom = 804.412
+rect_scale = Vector2( 0.417804, 0.417804 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoIrCasa" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = 838.0
+margin_top = 131.0
+margin_right = 2123.0
+margin_bottom = 745.0
+rect_rotation = 89.9999
+rect_scale = Vector2( 0.236433, 0.236433 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoViajar" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares"]
+visible = false
+margin_left = 483.551
+margin_top = -465.086
+margin_right = 1683.55
+margin_bottom = 164.914
+rect_scale = Vector2( 0.436074, 0.436074 )
+toggle_mode = true
+texture_normal = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ajustesorg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+visible = false
+position = Vector2( -1691.26, -931.412 )
+scale = Vector2( 1.88465, 1.88465 )
+
+[node name="Fundo" type="ColorRect" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+margin_left = 183.0
+margin_top = 31.0
+margin_right = 661.0
+margin_bottom = 335.0
+color = Color( 0.2, 0.2, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfigLabel" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
+margin_left = 287.942
+margin_top = 56.3298
+margin_right = 491.942
+margin_bottom = 125.33
+rect_scale = Vector2( 1.23963, 1.23963 )
+custom_fonts/font = SubResource( 46 )
+text = "CONFIGURAÇÕES"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoSom" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 273.021
+margin_top = 121.0
+margin_right = 381.021
+margin_bottom = 221.0
+toggle_mode = true
+texture_normal = ExtResource( 38 )
+texture_pressed = ExtResource( 53 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoMusica" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 464.021
+margin_top = 125.0
+margin_right = 575.021
+margin_bottom = 230.0
+toggle_mode = true
+texture_normal = ExtResource( 39 )
+texture_pressed = ExtResource( 55 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoSairAjustes" type="Button" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 347.649
+margin_top = 236.364
+margin_right = 448.649
+margin_bottom = 260.364
+rect_scale = Vector2( 1.38985, 1.38985 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SalvarTexto" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg"]
+modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
+anchor_right = 0.128
+margin_left = 384.0
+margin_top = 240.687
+margin_right = 449.872
+margin_bottom = 270.687
+rect_scale = Vector2( 1.07809, 1.07809 )
+custom_fonts/font = SubResource( 47 )
+text = "Salvar"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bancoorg" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps"]
+visible = false
+position = Vector2( -948.87, -397.465 )
+scale = Vector2( 5.62952, 5.45556 )
+texture = ExtResource( 40 )
+
+[node name="BotaoSairBanco" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+margin_left = -67.3682
+margin_top = -90.6914
+margin_right = 252.633
+margin_bottom = 42.3086
+rect_scale = Vector2( 0.072527, 0.148299 )
+texture_normal = ExtResource( 32 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoInvestir" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+margin_left = -60.1812
+margin_top = -16.6268
+margin_right = 259.819
+margin_bottom = 116.374
+rect_scale = Vector2( 0.196839, 0.196839 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelInvestir" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/BotaoInvestir"]
+margin_left = 28.5986
+margin_top = 32.3966
+margin_right = 176.599
+margin_bottom = 54.3966
+rect_scale = Vector2( 1.77577, 3.0816 )
+custom_colors/font_color = Color( 0.0705882, 0.109804, 0.607843, 1 )
+custom_fonts/font = SubResource( 61 )
+text = "INVESTIMENTOS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoExtrato" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+margin_left = 15.8372
+margin_top = -16.9291
+margin_right = 335.838
+margin_bottom = 116.071
+rect_scale = Vector2( 0.199829, 0.199829 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelExtrato" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/BotaoExtrato"]
+margin_left = 82.6501
+margin_top = 33.282
+margin_right = 167.65
+margin_bottom = 55.282
+rect_scale = Vector2( 1.94894, 3.07726 )
+custom_colors/font_color = Color( 0.0705882, 0.109804, 0.607843, 1 )
+custom_fonts/font = SubResource( 61 )
+text = "EXTRATO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nome_banco" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -60.0
+margin_top = -68.0
+margin_right = -18.0
+margin_bottom = -46.0
+rect_scale = Vector2( 0.601158, 0.601158 )
+custom_fonts/font = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Saldo_banco" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -60.7236
+margin_top = -48.3523
+margin_right = -18.7236
+margin_bottom = -26.3523
+rect_scale = Vector2( 0.601158, 0.601158 )
+custom_fonts/font = SubResource( 62 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Extrato" type="Sprite" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg"]
+visible = false
+
+[node name="FundoExtrato" type="ColorRect" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/Extrato"]
+margin_left = -66.0
+margin_top = -72.0
+margin_right = 87.0
+margin_bottom = 13.0
+color = Color( 0.772549, 0.8, 0.858824, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label_extrato" type="Label" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/Extrato"]
+modulate = Color( 0.00392157, 0.180392, 0.517647, 1 )
+margin_left = -61.6299
+margin_top = -68.874
+margin_right = 154.37
+margin_bottom = -46.874
+rect_scale = Vector2( 0.669013, 0.669013 )
+custom_fonts/font = SubResource( 63 )
+text = "HISTÓRICO DE EXTRATO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lista_Itens_Comprados" type="ItemList" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/Extrato"]
+margin_left = -63.0
+margin_top = -52.0
+margin_right = 202.0
+margin_bottom = 64.0
+rect_scale = Vector2( 0.556249, 0.556249 )
+custom_colors/guide_color = Color( 0, 0, 0, 0 )
+custom_fonts/font = SubResource( 64 )
+custom_styles/cursor = SubResource( 67 )
+custom_styles/selected_focus = SubResource( 68 )
+custom_styles/bg_focus = SubResource( 69 )
+custom_styles/cursor_unfocused = SubResource( 70 )
+custom_styles/selected = SubResource( 71 )
+custom_styles/bg = SubResource( 72 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairExtrato" type="TextureButton" parent="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/Extrato"]
+margin_left = -67.3683
+margin_top = -90.5625
+margin_right = -67.3023
+margin_bottom = -90.4125
+rect_scale = Vector2( 349.063, 131.105 )
+texture_normal = ExtResource( 32 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notificacao" type="Sprite" parent="Camera2D/Celular/AbrirCelular"]
+visible = false
+position = Vector2( 24.15, 123.946 )
+scale = Vector2( 0.257359, 0.257359 )
+texture = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Celular/AbrirCelular/Notificacao"]
+anims/Brilhar = SubResource( 65 )
+anims/RESET = SubResource( 66 )
+
+[node name="Falas" type="CanvasLayer" parent="Camera2D"]
+script = ExtResource( 14 )
+
+[node name="GuilhermeFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 76, 477 )
+scale = Vector2( 1.12958, 1.12958 )
+texture = ExtResource( 4 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/GuilhermeFalas"]
+modulate = Color( 1, 1, 1, 0.301961 )
+show_behind_parent = true
+margin_left = -4.67627
+margin_top = -68.0155
+margin_right = 839.324
+margin_bottom = 104.984
+color = Color( 0.152941, 0.992157, 1, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/GuilhermeFalas"]
+margin_left = -66.6763
+margin_top = 71.9845
+margin_right = 73.3237
+margin_bottom = 104.984
+color = Color( 0, 0.243137, 0.705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/GuilhermeFalas/FundoNome"]
+margin_left = 13.5592
+margin_top = 3.26471
+margin_right = 107.559
+margin_bottom = 25.2647
+rect_scale = Vector2( 1.2018, 1.2018 )
+custom_fonts/font = SubResource( 51 )
+text = "Guilherme"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaGuilherme" type="RichTextLabel" parent="Camera2D/Falas/GuilhermeFalas"]
+margin_left = 80.0
+margin_top = -68.0
+margin_right = 436.0
+margin_bottom = 109.0
+rect_scale = Vector2( 1.55138, 1.55138 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Olá, eu sou Guilherme, o banqueiro do BeTeJóia.  
+Prazer em te conhecer!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoFalasGui" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -65.6763
+margin_top = -68.0155
+margin_right = 843.324
+margin_bottom = 106.984
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvsaGui" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+visible = false
+margin_left = 658.725
+margin_top = 44.2371
+margin_right = 738.725
+margin_bottom = 67.2371
+rect_scale = Vector2( 1.80497, 1.80497 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_atemais_gui" type="Sprite" parent="Camera2D/Falas/GuilhermeFalas/SairCvsaGui"]
+position = Vector2( 43.1489, 12.2767 )
+scale = Vector2( 0.291217, 0.223325 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/GuilhermeFalas/SairCvsaGui/sprite_atemais_gui"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -87.5791
+margin_top = -32.9431
+margin_right = -6.5791
+margin_bottom = -6.94312
+rect_scale = Vector2( 2.09587, 2.48512 )
+custom_fonts/font = SubResource( 31 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PagarBoleto" type="Button" parent="Camera2D/Falas/GuilhermeFalas"]
+visible = false
+margin_left = 653.34
+margin_top = -52.9009
+margin_right = 745.34
+margin_bottom = -29.9007
+rect_scale = Vector2( 1.80497, 1.80497 )
+toggle_mode = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_botao_boleto" type="Sprite" parent="Camera2D/Falas/GuilhermeFalas/PagarBoleto"]
+position = Vector2( 47.6036, 11.6516 )
+scale = Vector2( 0.293311, 0.225384 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/GuilhermeFalas/PagarBoleto/sprite_botao_boleto"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -135.977
+margin_top = -34.8184
+margin_right = -9.97668
+margin_bottom = -9.81836
+rect_scale = Vector2( 2.12544, 2.61053 )
+custom_fonts/font = SubResource( 32 )
+text = "Pagar boleto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RafaelFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 76, 477 )
+scale = Vector2( 1.12958, 1.12958 )
+hframes = 4
+vframes = 2
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/RafaelFalas"]
+position = Vector2( -209.812, 71.7081 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 41 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/RafaelFalas"]
+modulate = Color( 1, 1, 1, 0.301961 )
+show_behind_parent = true
+margin_left = -4.67627
+margin_top = -68.0155
+margin_right = 839.324
+margin_bottom = 104.984
+color = Color( 0.152941, 0.992157, 1, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/RafaelFalas"]
+margin_left = -66.6763
+margin_top = 71.9845
+margin_right = 73.3237
+margin_bottom = 104.984
+color = Color( 0, 0.243137, 0.705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/RafaelFalas/FundoNome"]
+margin_left = 28.609
+margin_top = 3.26471
+margin_right = 122.609
+margin_bottom = 25.2647
+rect_scale = Vector2( 1.2018, 1.2018 )
+custom_fonts/font = SubResource( 51 )
+text = "Rafael"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaRafael" type="RichTextLabel" parent="Camera2D/Falas/RafaelFalas"]
+margin_left = 80.0
+margin_top = -68.0
+margin_right = 427.0
+margin_bottom = 101.0
+rect_scale = Vector2( 1.55138, 1.55138 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Olá, eu sou o Rafael, o gerente da corretora do banco BeTeJóia. É comigo que você fará seus investimentos."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoFalasRafael" type="Button" parent="Camera2D/Falas/RafaelFalas"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -65.6763
+margin_top = -68.0155
+margin_right = 843.324
+margin_bottom = 106.984
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvsaRafa" type="Button" parent="Camera2D/Falas/RafaelFalas"]
+margin_left = 625.919
+margin_top = 44.2371
+margin_right = 705.919
+margin_bottom = 67.2371
+rect_scale = Vector2( 1.80497, 1.80497 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_atemais_gui" type="Sprite" parent="Camera2D/Falas/RafaelFalas/SairCvsaRafa"]
+position = Vector2( 43.1489, 12.2767 )
+scale = Vector2( 0.291217, 0.223325 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/RafaelFalas/SairCvsaRafa/sprite_atemais_gui"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -87.5791
+margin_top = -32.9431
+margin_right = -6.5791
+margin_bottom = -6.94312
+rect_scale = Vector2( 2.09587, 2.48512 )
+custom_fonts/font = SubResource( 31 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoInvestir" type="TextureButton" parent="Camera2D/Falas/RafaelFalas"]
+margin_left = 625.011
+margin_top = -39.8378
+margin_right = 945.011
+margin_bottom = 93.1622
+rect_scale = Vector2( 0.506267, 0.397317 )
+texture_normal = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/RafaelFalas/BotaoInvestir"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 54.2083
+margin_top = 40.1068
+margin_right = 134.208
+margin_bottom = 62.1068
+rect_scale = Vector2( 2.49201, 2.49201 )
+custom_fonts/font = SubResource( 73 )
+text = "Investir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecretariaFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 85, 480 )
+scale = Vector2( 1.13, 1.13 )
+texture = ExtResource( 18 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/SecretariaFalas"]
+show_behind_parent = true
+margin_left = -2.0
+margin_top = -72.0
+margin_right = 829.0
+margin_bottom = 103.0
+color = Color( 0.960784, 0.529412, 0.529412, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/SecretariaFalas"]
+margin_left = -76.0
+margin_top = 70.0
+margin_right = 62.0
+margin_bottom = 104.0
+color = Color( 0.737255, 0.380392, 0.380392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeSecretaria" type="Label" parent="Camera2D/Falas/SecretariaFalas/FundoNome"]
+margin_left = 33.5221
+margin_top = 4.33627
+margin_right = 99.5221
+margin_bottom = 26.3363
+rect_scale = Vector2( 1.20028, 1.1433 )
+custom_fonts/font = SubResource( 52 )
+text = "Amélia"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaSecretaria" type="RichTextLabel" parent="Camera2D/Falas/SecretariaFalas"]
+margin_left = 80.0
+margin_top = -68.0
+margin_right = 427.0
+margin_bottom = 142.0
+rect_scale = Vector2( 1.551, 1.551 )
+custom_fonts/normal_font = SubResource( 21 )
+text = "Olá, eu sou Amélia, a Secretária do INEDFIBA. Prazer em conhecer você."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SecrFalasButton" type="Button" parent="Camera2D/Falas/SecretariaFalas"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -71.7613
+margin_top = -70.3936
+margin_right = 830.239
+margin_bottom = 102.606
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvsaSecr" type="Button" parent="Camera2D/Falas/SecretariaFalas"]
+visible = false
+margin_left = 663.717
+margin_top = 44.2478
+margin_right = 732.717
+margin_bottom = 66.2478
+rect_scale = Vector2( 1.6842, 1.6842 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_atemais_secretaria" type="Sprite" parent="Camera2D/Falas/SecretariaFalas/SairCvsaSecr"]
+position = Vector2( 31.5266, 11.5598 )
+scale = Vector2( 0.324897, 0.264102 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/SecretariaFalas/SairCvsaSecr/sprite_atemais_secretaria"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -94.9696
+margin_top = -33.3805
+margin_right = -1.9696
+margin_bottom = -2.38049
+rect_scale = Vector2( 2.36585, 2.58652 )
+custom_fonts/font = SubResource( 33 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfessoraFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 515, 340 )
+scale = Vector2( 0.479781, 0.488193 )
+offset = Vector2( 1853.32, -526.945 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -900.0
+margin_top = 133.0
+margin_right = 1079.0
+margin_bottom = 534.0
+color = Color( 1, 0.498039, 0.498039, 0.537255 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -1071.0
+margin_top = 455.0
+margin_right = -725.0
+margin_bottom = 531.0
+rect_scale = Vector2( 1, 0.997385 )
+color = Color( 1, 0.717647, 0.717647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaProfessora" type="RichTextLabel" parent="Camera2D/Falas/ProfessoraFalas"]
+margin_left = -716.0
+margin_top = 133.0
+margin_right = -321.0
+margin_bottom = 247.0
+rect_scale = Vector2( 3.4987, 3.4987 )
+custom_fonts/normal_font = SubResource( 16 )
+text = "Olá, eu me chamo Dorothy. Serei sua professora nessa jornada pela educação financeira."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeProfessora" type="Label" parent="Camera2D/Falas/ProfessoraFalas"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -1018.38
+margin_top = 451.667
+margin_right = -925.38
+margin_bottom = 476.667
+rect_scale = Vector2( 2.8936, 3.48575 )
+custom_fonts/font = SubResource( 17 )
+text = "Dorothy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/ProfessoraFalas"]
+position = Vector2( -1394.24, 453.768 )
+scale = Vector2( -2.31186, 2.30117 )
+texture = ExtResource( 24 )
+
+[node name="BotaoFalasProf" type="Button" parent="Camera2D/Falas/ProfessoraFalas"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -1067.0
+margin_top = 134.0
+margin_right = 1077.0
+margin_bottom = 529.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniciarAula" type="Button" parent="Camera2D/Falas/ProfessoraFalas"]
+visible = false
+margin_left = 736.0
+margin_top = 393.0
+margin_right = 830.0
+margin_bottom = 427.0
+rect_scale = Vector2( 2.87482, 2.87482 )
+custom_fonts/font = SubResource( 18 )
+text = "AULA 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_inicio_aula1" type="Sprite" parent="Camera2D/Falas/ProfessoraFalas/IniciarAula"]
+position = Vector2( 47.7649, 16.4878 )
+scale = Vector2( 0.336905, 0.336905 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/ProfessoraFalas/IniciarAula/sprite_inicio_aula1"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -100.046
+margin_top = -36.8706
+margin_right = -32.0457
+margin_bottom = -12.8706
+rect_scale = Vector2( 3.0235, 3.14329 )
+custom_fonts/font = SubResource( 34 )
+text = "AULA 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quest_1" type="LineEdit" parent="Camera2D/Falas/ProfessoraFalas"]
+visible = false
+margin_left = 687.814
+margin_top = 145.434
+margin_right = 761.814
+margin_bottom = 172.434
+rect_scale = Vector2( 5.03862, 4.73976 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CalcularGastosDiarios" type="TextureButton" parent="Camera2D/Falas/ProfessoraFalas/Quest_1"]
+margin_left = 3.3092
+margin_top = 38.8951
+margin_right = 323.309
+margin_bottom = 171.895
+rect_scale = Vector2( 0.206141, 0.206141 )
+texture_normal = ExtResource( 37 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/ProfessoraFalas/Quest_1/CalcularGastosDiarios"]
+modulate = Color( 0.00784314, 0, 0, 1 )
+margin_left = 26.0874
+margin_top = 25.1575
+margin_right = 306.087
+margin_bottom = 99.1575
+custom_fonts/font = SubResource( 76 )
+text = "Calcular"
+
+[node name="SairCvsaProf" type="Button" parent="Camera2D/Falas/ProfessoraFalas"]
+visible = false
+margin_left = 702.0
+margin_top = 203.0
+margin_right = 798.0
+margin_bottom = 234.0
+rect_scale = Vector2( 3.15668, 3.15668 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_atemais_prof" type="Sprite" parent="Camera2D/Falas/ProfessoraFalas/SairCvsaProf"]
+position = Vector2( 48.3282, 15.5067 )
+scale = Vector2( 0.345161, 0.264693 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/ProfessoraFalas/SairCvsaProf/sprite_atemais_prof"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -87.5791
+margin_top = -32.9431
+margin_right = -6.5791
+margin_bottom = -6.94312
+rect_scale = Vector2( 2.09587, 2.48512 )
+custom_fonts/font = SubResource( 31 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JapinhaFalas" type="Sprite" parent="Camera2D/Falas"]
+position = Vector2( 398, 389 )
+scale = Vector2( 0.479322, 0.479322 )
+
+[node name="Falaorg" type="Sprite" parent="Camera2D/Falas/JapinhaFalas"]
+visible = false
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+margin_left = -626.0
+margin_top = 30.0
+margin_right = 1318.0
+margin_bottom = 440.0
+color = Color( 0.356863, 0.282353, 0.282353, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+margin_left = -831.0
+margin_top = 355.0
+margin_right = -487.0
+margin_bottom = 432.0
+color = Color( 0.403922, 0.341176, 0.341176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeJapinha" type="Label" parent="Camera2D/Falas/JapinhaFalas/Falaorg/FundoNome"]
+margin_left = 46.5586
+margin_top = 3.84021
+margin_right = 122.559
+margin_bottom = 25.8402
+rect_scale = Vector2( 3.12005, 3.06315 )
+custom_fonts/font = SubResource( 53 )
+text = "Lyorrei"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FalaJapinha" type="RichTextLabel" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+anchor_right = 36.0
+anchor_bottom = 7.0
+margin_left = -476.0
+margin_top = 25.0001
+margin_right = -167.0
+margin_bottom = 133.0
+rect_scale = Vector2( 3.61834, 3.61834 )
+custom_fonts/normal_font = SubResource( 35 )
+text = "Olá, eu sou o Lyorrei, dono do mercadinho MilGrau."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JapaFalasButton" type="Button" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -835.0
+margin_top = 32.0001
+margin_right = 1316.0
+margin_bottom = 428.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FotoJapinha" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+position = Vector2( -659.265, 187.765 )
+scale = Vector2( 2.35953, 2.35953 )
+texture = ExtResource( 25 )
+
+[node name="SairCvsaJapa" type="Button" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+visible = false
+margin_left = 874.152
+margin_top = 275.389
+margin_right = 1005.15
+margin_bottom = 320.389
+rect_scale = Vector2( 2.07604, 2.07604 )
+text = "Até Mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_atemais_japinha" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Falaorg/SairCvsaJapa"]
+position = Vector2( 66.3273, 23.1132 )
+scale = Vector2( 0.59257, 0.481686 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/JapinhaFalas/Falaorg/SairCvsaJapa/sprite_atemais_japinha"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -94.9696
+margin_top = -33.3805
+margin_right = -1.9696
+margin_bottom = -2.38049
+rect_scale = Vector2( 2.36585, 2.58652 )
+custom_fonts/font = SubResource( 36 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotaoComprarComida" type="Button" parent="Camera2D/Falas/JapinhaFalas/Falaorg"]
+visible = false
+anchor_right = 0.136531
+anchor_bottom = 0.173469
+margin_left = 853.289
+margin_top = 116.832
+margin_right = 999.152
+margin_bottom = 152.658
+rect_scale = Vector2( 2.12053, 2.12053 )
+text = "comprar comida"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite_comprar_comida" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Falaorg/BotaoComprarComida"]
+position = Vector2( 73.7886, 16.7251 )
+scale = Vector2( 0.580138, 0.47158 )
+texture = ExtResource( 28 )
+
+[node name="Label" type="Label" parent="Camera2D/Falas/JapinhaFalas/Falaorg/BotaoComprarComida/sprite_comprar_comida"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -135.671
+margin_top = -27.1216
+margin_right = 28.3287
+margin_bottom = 3.87836
+rect_scale = Vector2( 1.74962, 2.0519 )
+custom_fonts/font = SubResource( 37 )
+text = "Comprar comida"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Comidinhas" type="Sprite" parent="Camera2D/Falas/JapinhaFalas"]
+
+[node name="fundo_branco" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Comidinhas"]
+visible = false
+position = Vector2( 242.009, -121.004 )
+scale = Vector2( 6.06146, 6.06147 )
+texture = ExtResource( 28 )
+
+[node name="info_comprar_comida" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -126.691
+margin_top = -55.5806
+margin_right = 269.309
+margin_bottom = -25.5806
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "SELECIONE A COMIDA QUE DESEJA COMPRAR"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nomeC1" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -116.474
+margin_top = -38.0073
+margin_right = -44.474
+margin_bottom = -16.0073
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "FRANGO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nomeC2" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -33.9205
+margin_top = -38.0073
+margin_right = 62.0795
+margin_bottom = -16.0073
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "COGUMELO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nomeC3" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 69.8844
+margin_top = -37.5986
+margin_right = 150.884
+margin_bottom = -15.5986
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "QUEIJO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="infoC1" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -126.282
+margin_top = 13.4865
+margin_right = -39.2823
+margin_bottom = 60.4865
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "BT$ 5,00
++ 25% "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="infoC2" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = -30.651
+margin_top = 13.4865
+margin_right = 56.349
+margin_bottom = 60.4865
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "BT$ 9,00
++ 50% "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="infoC3" type="Label" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 64.1628
+margin_top = 13.0778
+margin_right = 156.163
+margin_bottom = 60.0778
+rect_scale = Vector2( 0.643311, 0.643311 )
+custom_fonts/font = SubResource( 38 )
+text = "BT$ 13,00
++ 75% "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComprarComida1" type="TextureButton" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+margin_left = -128.0
+margin_top = -34.0
+margin_right = 93.0
+margin_bottom = 231.0
+rect_scale = Vector2( 0.281996, 0.281996 )
+texture_normal = ExtResource( 44 )
+texture_hover = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComprarComida2" type="TextureButton" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+margin_left = -29.256
+margin_top = -30.9769
+margin_right = 145.744
+margin_bottom = 158.023
+rect_scale = Vector2( 0.279456, 0.279456 )
+texture_normal = ExtResource( 43 )
+texture_hover = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComprarComida3" type="TextureButton" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+margin_left = 62.9863
+margin_top = -27.535
+margin_right = 327.986
+margin_bottom = 285.465
+rect_scale = Vector2( 0.245571, 0.245571 )
+texture_normal = ExtResource( 45 )
+texture_hover = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoltarComidaJapa" type="TextureButton" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+margin_left = 93.9966
+margin_top = 62.1195
+margin_right = 238.997
+margin_bottom = 159.12
+rect_scale = Vector2( 0.286047, 0.286047 )
+texture_normal = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exclamacao" type="Sprite" parent="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco"]
+position = Vector2( -57.8237, -98.7818 )
+scale = Vector2( 0.138229, 0.138229 )
+texture = ExtResource( 46 )
+
+[node name="VoFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 560, 468 )
+scale = Vector2( 0.477, 0.477 )
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Falas/VoFalas"]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -1000.0
+margin_top = -132.0
+margin_right = 975.0
+margin_bottom = 271.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/Falas/VoFalas"]
+margin_left = -1168.0
+margin_top = 193.0
+margin_right = -827.0
+margin_bottom = 283.0
+rect_scale = Vector2( 0.896753, 0.896753 )
+color = Color( 0.482353, 0.172549, 0.756863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeVo" type="Label" parent="Camera2D/Falas/VoFalas/ColorRect2"]
+margin_left = 16.6826
+margin_top = 13.8843
+margin_right = 116.683
+margin_bottom = 35.8843
+rect_scale = Vector2( 3.0704, 3.0704 )
+custom_fonts/font = SubResource( 54 )
+text = "Vó Creuza"
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Falas/VoFalas"]
+position = Vector2( -1503.05, 194.956 )
+scale = Vector2( -2.34447, 2.35982 )
+texture = ExtResource( 33 )
+
+[node name="falaVo" type="RichTextLabel" parent="Camera2D/Falas/VoFalas"]
+margin_left = -813.0
+margin_top = -134.0
+margin_right = -449.0
+margin_bottom = -16.0
+rect_scale = Vector2( 3.90229, 3.53091 )
+custom_fonts/normal_font = SubResource( 45 )
+text = "Ah que orgulho! Parabéns por ter passado na faculdade."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="proximafalavo" type="Button" parent="Camera2D/Falas/VoFalas"]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -824.0
+margin_top = -130.0
+margin_right = 964.0
+margin_bottom = 262.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tchau_vo" type="TextureButton" parent="Camera2D/Falas/VoFalas"]
+visible = false
+margin_left = 651.949
+margin_top = 125.778
+margin_right = 971.949
+margin_bottom = 258.778
+rect_scale = Vector2( 0.956798, 0.956798 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Falas/VoFalas/tchau_vo"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 11.0
+margin_top = 28.4928
+margin_right = 71.0
+margin_bottom = 42.4928
+rect_scale = Vector2( 4.79216, 4.79216 )
+text = "Tchau vó!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TioClovisFalas" type="Sprite" parent="Camera2D/Falas"]
+visible = false
+position = Vector2( 498, 519 )
+scale = Vector2( 0.426, 0.329 )
+
+[node name="FundoFala" type="ColorRect" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 0.698039, 0.482353, 0.698039, 0.584314 )
+margin_left = -950.0
+margin_top = -361.0
+margin_right = 1121.0
+margin_bottom = 65.0
+rect_scale = Vector2( 1.05413, 1.4189 )
+color = Color( 0.164706, 0.615686, 0.113725, 0.611765 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundoNome" type="ColorRect" parent="Camera2D/Falas/TioClovisFalas"]
+margin_left = -1151.38
+margin_top = 124.509
+margin_right = -779.377
+margin_bottom = 340.509
+rect_scale = Vector2( 0.989165, 0.564825 )
+color = Color( 0.113725, 0.541176, 0.180392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NomeTio" type="Label" parent="Camera2D/Falas/TioClovisFalas/FundoNome"]
+margin_left = 16.1777
+margin_top = 33.0952
+margin_right = 106.178
+margin_bottom = 56.0952
+rect_scale = Vector2( 3.80796, 7.24206 )
+custom_fonts/font = SubResource( 42 )
+text = "Tio Clóvis"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foto" type="Sprite" parent="Camera2D/Falas/TioClovisFalas"]
+position = Vector2( -1496.09, 121.472 )
+scale = Vector2( -2.40072, 3.51342 )
+texture = ExtResource( 35 )
+
+[node name="falastio" type="RichTextLabel" parent="Camera2D/Falas/TioClovisFalas"]
+margin_left = -732.0
+margin_top = -362.0
+margin_right = -368.0
+margin_bottom = -220.0
+rect_scale = Vector2( 4.261, 4.34 )
+custom_fonts/normal_font = SubResource( 48 )
+text = "Oi! Que felicidade em te ver, quanto tempo! Estou muito feliz que você veio morar comigo, que bom que chegou bem!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nextfala_tio" type="Button" parent="Camera2D/Falas/TioClovisFalas"]
+modulate = Color( 0.65098, 0.482353, 0.482353, 0.258824 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -1020.0
+margin_top = -355.0
+margin_right = 1222.0
+margin_bottom = 234.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sairFala" type="TextureButton" parent="Camera2D/Falas/TioClovisFalas"]
+visible = false
+margin_left = 819.249
+margin_top = 18.2369
+margin_right = 1139.25
+margin_bottom = 151.237
+rect_scale = Vector2( 1.19397, 1.39353 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atemais2" type="Label" parent="Camera2D/Falas/TioClovisFalas/sairFala"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 32.0985
+margin_top = 22.1666
+margin_right = 119.099
+margin_bottom = 44.1666
+rect_scale = Vector2( 3.10315, 3.58945 )
+custom_fonts/font = SubResource( 44 )
+text = "Até mais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nin_YangFalas" type="Sprite" parent="Camera2D/Falas"]
+position = Vector2( 522, 334 )
+scale = Vector2( 0.485002, 0.485002 )
+
+[node name="Falaorg" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas"]
+visible = false
+
+[node name="Fundo Fala" type="ColorRect" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+margin_left = -903.0
+margin_top = 138.0
+margin_right = 1043.0
+margin_bottom = 536.0
+color = Color( 0.309804, 0.0470588, 0.0470588, 0.607843 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fundo Nome" type="ColorRect" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+margin_left = -1075.0
+margin_top = 462.0
+margin_right = -740.0
+margin_bottom = 538.0
+color = Color( 0.270588, 0.0117647, 0.0117647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nome NIn" type="Label" parent="Camera2D/Falas/Nin_YangFalas/Falaorg/Fundo Nome"]
+margin_left = 27.5816
+margin_top = -2.20813
+margin_right = 107.582
+margin_bottom = 19.7919
+rect_scale = Vector2( 3.4007, 3.30891 )
+custom_fonts/font = SubResource( 49 )
+text = "Nin Yang"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Falas_Do_NinYang" type="RichTextLabel" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+margin_left = -701.0
+margin_top = 148.0
+margin_right = -338.0
+margin_bottom = 255.0
+rect_scale = Vector2( 3.59155, 3.59155 )
+custom_fonts/normal_font = SubResource( 15 )
+text = "Olá, eu me chamo Nin Yang, trabalho aqui na loja de itens. Você deseja comprar alguma coisa hoje?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nin_Yang" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+position = Vector2( -1416.49, 461.854 )
+rotation = -3.14121
+scale = Vector2( 2.35033, -2.31715 )
+texture = ExtResource( 22 )
+
+[node name="NinYangFalasButton" type="Button" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -1071.0
+margin_top = 142.0
+margin_right = 1075.0
+margin_bottom = 533.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ComprarButton_NinYang2" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+margin_left = 647.42
+margin_top = 185.566
+margin_right = 967.42
+margin_bottom = 318.566
+rect_scale = Vector2( 1.08026, 1.08857 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Falas/Nin_YangFalas/Falaorg/ComprarButton_NinYang2"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 106.885
+margin_top = 30.3054
+margin_right = 154.885
+margin_bottom = 57.3054
+rect_scale = Vector2( 3.15947, 3.15947 )
+custom_fonts/font = SubResource( 50 )
+text = "Sim"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SairCvrs_NinYang" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+margin_left = 651.544
+margin_top = 369.071
+margin_right = 971.544
+margin_bottom = 502.071
+rect_scale = Vector2( 1.08026, 1.0811 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/Nin_YangFalas/Falaorg/SairCvrs_NinYang"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 93.5242
+margin_top = 28.6077
+margin_right = 141.524
+margin_bottom = 55.6077
+rect_scale = Vector2( 3.15947, 3.15947 )
+custom_fonts/font = SubResource( 50 )
+text = "Não"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Comprar_Bicicleta" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+visible = false
+margin_left = -544.328
+margin_top = 331.957
+margin_right = -224.328
+margin_bottom = 464.957
+rect_scale = Vector2( 1.28824, 1.28924 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/Nin_YangFalas/Falaorg/Comprar_Bicicleta"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 33.6108
+margin_top = 30.3863
+margin_right = 115.611
+margin_bottom = 57.3863
+rect_scale = Vector2( 2.99107, 2.99107 )
+custom_fonts/font = SubResource( 50 )
+text = "Bicicleta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Comprar_avatares" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Falaorg"]
+visible = false
+margin_left = 224.741
+margin_top = 334.019
+margin_right = 544.741
+margin_bottom = 467.019
+rect_scale = Vector2( 1.25655, 1.25752 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D/Falas/Nin_YangFalas/Falaorg/Comprar_avatares"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 32.8175
+margin_top = 31.1526
+margin_right = 124.818
+margin_bottom = 58.1526
+rect_scale = Vector2( 2.7844, 2.7844 )
+custom_fonts/font = SubResource( 50 )
+text = "Avatares"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatares" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas"]
+visible = false
+position = Vector2( 2.06177, -49.4844 )
+
+[node name="Fundo" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+position = Vector2( -8.24744, 0 )
+scale = Vector2( 6.05241, 6.05241 )
+texture = ExtResource( 37 )
+
+[node name="SpriteAvatar1" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+position = Vector2( -564.946, -59.7936 )
+scale = Vector2( 12.0333, 12.0333 )
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="SpriteAvatar2" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+position = Vector2( -101.031, -82.4739 )
+scale = Vector2( 13.5094, 13.5094 )
+texture = ExtResource( 48 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="SpriteAvatar3" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+position = Vector2( 385.565, -78.3502 )
+scale = Vector2( 14.4564, 14.4564 )
+texture = ExtResource( 47 )
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="Avatar_1" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+modulate = Color( 1, 1, 1, 0.564706 )
+margin_left = -410.307
+margin_top = -315.462
+margin_right = 613.693
+margin_bottom = 298.538
+rect_rotation = 89.9999
+rect_scale = Vector2( 0.493307, 0.493307 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar_2" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+modulate = Color( 1, 1, 1, 0.564706 )
+margin_left = 127.0
+margin_top = -289.0
+margin_right = 1151.0
+margin_bottom = 325.0
+rect_rotation = 89.9999
+rect_scale = Vector2( 0.425961, 0.71762 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+
+[node name="Avatar_3" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+modulate = Color( 1, 1, 1, 0.564706 )
+margin_left = 624.74
+margin_top = -315.463
+margin_right = 1732.74
+margin_bottom = 298.537
+rect_rotation = 89.9999
+rect_scale = Vector2( 0.439186, 0.725397 )
+toggle_mode = true
+texture_pressed = ExtResource( 49 )
+
+[node name="Comprar" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+margin_left = 152.577
+margin_top = 329.896
+margin_right = 472.577
+margin_bottom = 462.896
+rect_scale = Vector2( 1.50702, 1.43988 )
+texture_normal = ExtResource( 37 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VoltarAvatar" type="TextureButton" parent="Camera2D/Falas/Nin_YangFalas/Avatares"]
+margin_left = -777.316
+margin_top = 296.906
+margin_right = -624.316
+margin_bottom = 393.906
+rect_scale = Vector2( 2.61051, 2.61051 )
+texture_normal = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bike" type="Sprite" parent="Camera2D/Falas/Nin_YangFalas"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+"anims/correndinho pra baixo" = SubResource( 3 )
+"anims/correndinho pra cima" = SubResource( 4 )
+"anims/correndinho pra direita" = SubResource( 5 )
+"anims/correndinho pra esquerda" = SubResource( 6 )
+"anims/paradinhonzino pra esquerda" = SubResource( 8 )
+anims/paradinhozinho = SubResource( 7 )
+"anims/paradinhozinho pra cima" = SubResource( 9 )
+"anims/paradinhozinho pra direita" = SubResource( 10 )
+
+[connection signal="pressed" from="Camera2D/Dinheiro/Popups/IniciarPongImg/IniciarPongButton" to="." method="_on_IniciarPongButton_pressed"]
+[connection signal="pressed" from="Camera2D/Dinheiro/Popups/IniciarFlapImg/IniciarFlapMoneyButton" to="." method="_on_IniciarFlapMoneyButton_pressed"]
+[connection signal="pressed" from="Camera2D/Dinheiro/Popups/IniciarTaxiImg/IniciarTaxiGame" to="." method="_on_IniciarTaxiGame_pressed"]
+[connection signal="pressed" from="Camera2D/Dinheiro/Popups/IniciarNaveImg/IniciarNaveGame" to="." method="_on_IniciarNaveGame_pressed"]
+[connection signal="pressed" from="Camera2D/Dinheiro/BotaoDormir" to="." method="_on_BotaoDormir_pressed"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/Esquerda" to="." method="_on_Esquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/Esquerda" to="." method="_on_Esquerda_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/Direita" to="." method="_on_Direita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/Direita" to="." method="_on_Direita_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/Baixo" to="." method="_on_Baixo_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/Baixo" to="." method="_on_Baixo_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/Cima" to="." method="_on_Cima_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/Cima" to="." method="_on_Cima_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/BaixoEsquerda" to="." method="_on_BaixoEsquerda_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/BaixoDireita" to="." method="_on_BaixoDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/BaixoDireita" to="." method="_on_BaixoDireita_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/CimaDireita" to="." method="_on_CimaDireita_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/CimaDireita" to="." method="_on_CimaDireita_button_up"]
+[connection signal="button_down" from="Camera2D/Controles/Controlesorg/CimaEsquerda" to="." method="_on_CimaEsquerda_button_down"]
+[connection signal="button_up" from="Camera2D/Controles/Controlesorg/CimaEsquerda" to="." method="_on_CimaEsquerda_button_up"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular" to="." method="_on_AbrirCelular_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/FecharCelular" to="." method="_on_FecharCelular_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoAjustes" to="." method="_on_BotaoAjustes_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoBanco" to="." method="_on_BotaoBanco_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/BotaoMapa" to="." method="_on_BotaoMapa_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/VoltarModal" to="." method="_on_VoltarModal_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/BotaoOnibus" to="." method="_on_BotaoOnibus_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/BotaoTaxi" to="." method="_on_BotaoTaxi_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/BotaoBike" to="." method="_on_BotaoBike_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Modais/SelecionarLugares" to="." method="_on_SelecionarLugares_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/VoltarLugares" to="." method="_on_VoltarLugares_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrFaculdade" to="." method="_on_BotaoIrFaculdade_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrMercado" to="." method="_on_BotaoIrMercado_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrArcade" to="." method="_on_BotaoIrArcade_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrLoja" to="." method="_on_BotaoIrLoja_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrBanco" to="." method="_on_BotaoIrBanco_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoIrCasa" to="." method="_on_BotaoIrCasa_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Mapaorg/Lugares/BotaoViajar" to="." method="_on_BotaoViajar_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Ajustesorg/BotaoSairAjustes" to="." method="_on_BotaoSairAjustes_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/BotaoSairBanco" to="." method="_on_BotaoSairBanco_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/BotaoInvestir" to="." method="_on_BotaoInvestir_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/BotaoExtrato" to="." method="_on_BotaoExtrato_pressed"]
+[connection signal="pressed" from="Camera2D/Celular/AbrirCelular/CelularPanel/apps/Bancoorg/Extrato/SairExtrato" to="." method="_on_SairExtrato_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/BotaoFalasGui" to="Camera2D/Falas" method="_on_BotaoFalasGui_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/SairCvsaGui" to="Camera2D/Falas" method="_on_SairCvsaGui_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/GuilhermeFalas/PagarBoleto" to="." method="_on_PagarBoleto_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/RafaelFalas/SairCvsaRafa" to="Camera2D/Falas" method="_on_SairCvsaRafa_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SecrFalasButton" to="." method="_on_SecrFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SecrFalasButton" to="Camera2D/Falas" method="_on_SecrFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SairCvsaSecr" to="." method="_on_SairCvsaSecr_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/SecretariaFalas/SairCvsaSecr" to="Camera2D/Falas" method="_on_SairCvsaSecr_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/BotaoFalasProf" to="Camera2D/Falas" method="_on_BotaoFalasProf_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/IniciarAula" to="." method="_on_IniciarAula_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/Quest_1/CalcularGastosDiarios" to="Camera2D/Falas" method="_on_CalcularGastosDiarios_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/SairCvsaProf" to="." method="_on_SairCvsaProf_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/ProfessoraFalas/SairCvsaProf" to="Camera2D/Falas" method="_on_SairCvsaProf_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Falaorg/JapaFalasButton" to="Camera2D/Falas" method="_on_JapaFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Falaorg/SairCvsaJapa" to="." method="_on_SairCvsaJapa_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Falaorg/SairCvsaJapa" to="Camera2D/Falas" method="_on_SairCvsaJapa_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Falaorg/BotaoComprarComida" to="." method="_on_BotaoComprarComida_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/ComprarComida1" to="." method="_on_ComprarComida1_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/ComprarComida2" to="." method="_on_ComprarComida2_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/ComprarComida3" to="." method="_on_ComprarComida3_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/JapinhaFalas/Comidinhas/fundo_branco/VoltarComidaJapa" to="Camera2D/Falas" method="_on_VoltarComidaJapa_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/VoFalas/proximafalavo" to="Camera2D/Falas" method="_on_proximafalavo_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/VoFalas/tchau_vo" to="." method="_on_tchau_vo_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/TioClovisFalas/nextfala_tio" to="Camera2D/Falas" method="_on_nextfala_tio_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/TioClovisFalas/sairFala" to="Camera2D/Falas" method="_on_sairFala_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Falaorg/NinYangFalasButton" to="Camera2D/Falas" method="_on_NinYangFalasButton_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Falaorg/ComprarButton_NinYang2" to="Camera2D/Falas" method="_on_ComprarButton_NinYang2_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Falaorg/SairCvrs_NinYang" to="Camera2D/Falas" method="_on_SairCvrs_NinYang_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Falaorg/Comprar_Bicicleta" to="." method="_on_Comprar_Bicicleta_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Falaorg/Comprar_avatares" to="Camera2D/Falas" method="_on_Comprar_avatares_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_1" to="." method="_on_Avatar_1_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_2" to="." method="_on_Avatar_2_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Avatares/Avatar_3" to="." method="_on_Avatar_3_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Avatares/Comprar" to="." method="_on_Comprar_pressed"]
+[connection signal="pressed" from="Camera2D/Falas/Nin_YangFalas/Avatares/VoltarAvatar" to="Camera2D/Falas" method="_on_VoltarAvatar_pressed"]
