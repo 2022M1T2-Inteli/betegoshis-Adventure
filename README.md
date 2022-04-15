@@ -17,7 +17,7 @@
 Nosso projeto é um jogo que tem como finalidade ensinar educação financeira.
 <br><br>
 <p align="center">
-<img src="![foto_read_me](https://user-images.githubusercontent.com/83848719/163014026-d33f67be-6672-4631-a622-c666c6627443.jpg)" alt="BETEGOSHI'S ADVENTURE" border="0">
+<img src="![foto_read_me](https://user-images.githubusercontent.com/83848719/163014026-d33f67be-6672-4631-a622-c666c6627443.jpg)" (imagem do projeoto) alt="BETEGOSHI'S ADVENTURE" border="0">
   Game by Sofia Pimazzoni, Pedro Oliveira, Gabriela Silva, Vitória Rodrigues, Lucas Sales, João Alcaraz, Daniel Quintão</a> <a rel="license" 
                                                                                                                                
 <br><br>
@@ -41,36 +41,20 @@ O jogo está sendo criado a partir do zero em um contexto universitário, em par
   &emsp;|GDD.docx ou Documentação.docx<br>
 |-->executáveis<br>
   &emsp;|-->windows<br>
-  &emsp;|-->android<br>
   &emsp;|-->HTML<br>
 |-->imagens<br>
-|-->src<br>
+|-->rpg<br>
+|-->source<br>
+  &emsp;|-->antigos<br>
+  &emsp;|-->Mapas<br>
+  &emsp;|-->Minigames<br>
+  &emsp;|-->VERSÃO 7 - FINAL<br>
+|-->imagens<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
-
-<b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há no mínimo 3 pastas, uma para binários <b>Windows</b>, uma para binários <b>android</b> e uma para a <b>Web/HTML</b>
-
-<b>imagens</b>: Algumas imagens do jogo/sistema e logos prontos para serem utilizados e visualizados.
-
-<b>src</b>: Nesta pasta irá todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
 
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
 
 <b>Windows:</b>
 
@@ -86,15 +70,11 @@ Coloque código do prompt de comnando se for necessário
 Não há instalação!
 Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
 
+
 ## 📈 Exemplo de uso
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado.
-
-Adicione blocos de códigos e, se necessário, screenshots.
-
-Este modelo pode ser copiado e utilizado à vontade.
-
-Através da cópia/clone/ download do repositório, altere os dados do readme.md e carregue os arquivos de seu projeto.
+O projeto é usado com a finalidade de ensinar educação financeira para os jovens brasileiros
+(imagem do projeto)
 
 ## 💻 Configuração para Desenvolvimento
 
