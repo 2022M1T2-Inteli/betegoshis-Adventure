@@ -22,8 +22,6 @@
 📜 Nosso projeto é um jogo que tem como finalidade ensinar educação financeira.
 <br><br>
 <p align="center">
-                                     
-<br><br>
 
 💡O objetivo do projeto é multilateral. Analisando a partir do lado privado, o objetivo é ensinar aos alunos Inteli como desenvolver um jogo e como realizar um projeto. Analisando a partir do lado público, o objetivo primordial é ensinar educação financeira para adolescentes e jovens de uma forma divertida e lúdica, isto é, o jogo está sendo criado para que indivíduos aprendam a administrar o próprio dinheiro (posto que há um déficit na cultura de educação financeira na sociedade).
 
