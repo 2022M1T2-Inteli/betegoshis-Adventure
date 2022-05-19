@@ -43,6 +43,7 @@ O jogo está sendo criado a partir do zero em um contexto universitário, em par
   &emsp;&emsp;| --> betegoshi<br>
 | --> imagens<br>
 | --> source<br>
+  &emsp;| --> VERSÃO 7 - FINAL
 | readme.md<br>
 
 A pasta raiz contém um arquivo principal:
