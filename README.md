@@ -29,21 +29,21 @@ O jogo estimulará o hábito de organização da própria vida financeira, imple
 
 O jogo está sendo criado a partir do zero em um contexto universitário, em parceria com empresas que notaram problemas que podiam ser resolvidos por meio de sua gamificação.
 
-<br><br>
+<br>
 
 ## 🛠 Estrutura de pastas
-
-    📦Projeto 3
-&emsp;&emsp;|--> documentos<br>
-&emsp;&emsp;&emsp;|-->antigos<br>
-&emsp;&emsp;&emsp;|--> GDD grupo 3.docx<br>
-💻executáveis<br>
-  &emsp;&emsp;&emsp;📁|-->windows<br>
-  &emsp;&emsp;&emsp;📁|-->HTML<br>
-📷|-->imagens<br>
-💾|-->source<br>
-📄|readme.md<br>
-📜|license.txt<br>
+    
+- Raiz<br><br>
+| --> documentos<br>
+  &emsp;| --> antigos<br>
+  &emsp;|  GDD grupo 3.docx<br>
+| --> executáveis<br>
+  &emsp;| --> windows<br>
+  &emsp;| --> html<br>
+  &emsp;&emsp;| --> betegoshi<br>
+| --> imagens<br>
+| --> source<br>
+| readme.md<br>
 
 A pasta raiz contém um arquivo principal:
 
@@ -57,7 +57,7 @@ E, também, 4 subpastas que se organizam da seguinte forma:
 
 - <b>imagens</b>, ondem encontram-se algumas imagens relacionadas ao jogo, sistema e logos, prontos para serem utilizados e visualizados.
 
-- <b>src</b>, onde encontra-se todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
+- <b>source</b>, onde encontra-se todo o código fonte do jogo/sistema, pronto para para ser baixado e modificado.
 
 ## 🛠 Instalação
 
